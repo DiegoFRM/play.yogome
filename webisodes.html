@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Play Yogome!</title>
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="assets/css/play.css">
+    <link rel="stylesheet" href="assets/css/webisodes.css">
+    <!-- Slick Carousel CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/plugins/slick/slick.css" />
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="application/javascript" ></script>
+    <!-- Slick Carousel JS -->
+    <script type="text/javascript" src="assets/plugins/slick/slick.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="assets/js/bootstrap.min.js" type="application/javascript"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+                 <!-- MENU WEBPAGE -->
+            <nav id="sidebar">
+                <div id="dismiss">
+                    <i class="glyphicon glyphicon-arrow-left"></i>
+                </div>
+
+                <div class="sidebar-header">
+                  <div id="navbar-logo-container homeButton">
+                    <img class="img img-responsive " src="assets/images/logo-yogome.png" alt="Logo Yogome">
+                  </div>
+                </div>
+
+                <ul class="list-unstyled components">
+                    <li class="active">
+                        <ul class="list-unstyled" id="homeSubmenu">
+                          <li><a class="play-colors-orange webisodesSec"href="#">Webisodes</a></li>
+                          <li><a class="play-colors-bluesea yogodexSec"href="#">Yogodex</a></li>
+                          <li><a class="play-colors-blue html5Games">Games</a></li>
+                          <li><a class="play-colors-purple resourcesSec"href="#">Resources</a></li>
+                          <li><a class="play-colors-green"href="#">Books</a></li>
+
+                        </ul>
+                        <button type="button" id="register-btn-sm" class="navbar-btn hidden">
+                              <span>Register</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+
+            
+            <div id="content">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                      <div class="menu-desktop">
+
+                        <div class="navbar-header col-xs-12 col-sm-2">
+                          <div class="col-xs-4 display-inline">
+                            <button type="button" id="sidebarCollapse" class="btn-burger-menu hidden-sm hidden-md hidden-lg">
+                                  <i class="glyphicon glyphicon-menu-hamburger"></i>
+                                  <span></span>
+                            </button>
+                          </div>
+                          <div class="col-xs-4 col-sm-12 display-inline">
+                            <a class="navbar-logo" href="index.html">
+                              <div id="navbar-logo-container">
+                                <img class="img img-responsive" src="assets/images/logo-yogome.png" alt="Logo Yogome">
+                              </div>
+                            </a>
+                          </div>
+
+                        </div>
+
+                        <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><a class="play-colors-orange webisodesSec"href="#">Webisodes</a></li>
+                                <li><a class="play-colors-bluesea yogodexSec"href="#">Yogodex</a></li>
+                                <li><a class="play-colors-blue html5Games">Games</a></li>
+                                <li><a class="play-colors-purple resourcesSec"href="#">Resources</a></li>
+                                <li><a class="play-colors-green"href="#">Books</a></li>
+                                
+                                <li>
+                                  <button type="button" id="register-btn-lg" class="navbar-btn">
+                                    Register
+                                  </button>
+                                </li>
+                            </ul>
+                        </div>
+
+                        </div>
+                    </div>
+                </nav>
+                <!--END MENU WEBPAGE -->
+            <section class="container-fluid bg-webisodes-main">
+                <div class="star-zip">
+                    <div class="row">
+                      <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2"  style="margin-top:5%;">
+                          <div class="videos-new-banner">
+                            <img class="img-responsive" src="assets/images/new-banner.png" />
+                          </div>
+                          <div class="embed-responsive embed-responsive-16by9">
+                              <!-- Youtube API: The <iframe> (and video player) will replace this <div> tag. Code in mixpanel.js-->
+                              <div id="player"></div>
+                              <iframe width="560" height="315" src="https://www.youtube.com/embed/qUlr1PpJamU" frameborder="0" allowfullscreen></iframe>
+                          </div>
+                          <div class="video-title-container">
+                            <p class="video-title">
+                              Video Title
+                            </p>
+                          </div>
+                      </div>
+                    </div>
+                    </div>
+                <div><img src="assets/images/bg-main-nubes.png" /></div>
+            </section>
+
+            <section>
+                
+                <div class="mid-conatiner">
+                    <div class="row more-videos">
+                        <div class="col-xs-12">
+                            <h2>Featured:</h2>
+                            <div id="wallpaper-slider">
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="buttonsCenter">
+                                <div class="slick-nav-buttons"></div>
+                            </div>
+                        
+                    </div>
+                    
+                    <div class="row more-videos">
+                        <div class="col-xs-12">
+                            <h2>Popular webisodes:</h2>
+                            <div id="activities-slider">
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                                <div class="video-item text-center">
+                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
+                                    <p>Space Adventure</p>
+                                </div>
+                            </div>
+                        </div>
+                            <div class="buttonsCenter">
+                                <div id="slick-nav-buttons-activities"  class="slick-buttons"></div>
+                            </div>
+                        
+                    </div>
+
+
+                </div>
+            </section>
+
+            <div class="container-fluid">
+                <div class="col-xs-12"></div>
+            </div>
+        
+            <footer>
+                <div class="container">
+                    <div class="col-xs-12 play-footer">
+                        <img class="img img-responsive footer-logo" src="assets/images/logo-yogome.png" alt="Logo Yogome">
+                        <img class="img img-responsive footer-logo" src="assets/images/logo-student-safe.png" alt="Logo Student Safe">
+                        <p>Read our
+                            <a href="">Privacy policy</a> and
+                            <a href="">Terms of service</a>.</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- jQuery Nicescroll CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
+    <script src="assets/js/yogofun.js"></script>
+</body>
+
+</html>

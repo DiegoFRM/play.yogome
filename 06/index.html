@@ -34,7 +34,7 @@
                 max-width: 95%;
             }
             .colorText{
-                color:#3F7487
+                color:#3F7487;
             }
 
             .pastaPortada{
@@ -87,6 +87,7 @@
             .newColor{
                 color:#FFF;
                 background: "#0000ff";
+                padding: 0.2vh;
 
             }    
             
@@ -146,7 +147,7 @@
 							         <p id="texto1">Oona está muy enojada con Oof. Él acaba de caer encima de su computadora.
                                      </p>
 						        </div>
-                                <div class="bb-custom-side customImageside">
+                                <div class="bb-custom-side">
                                 <img src="images/pages/pag1.png"/>
                             </div>
                         </div>
@@ -159,15 +160,19 @@
                         <div class="page-border"></div>
 				            <div class="image-yogome">
                                 <div class="bb-custom-side customText">
-							         <p>Calma, primero dinos qué sientes Oona.
-                                         <br><span class="oona-text">-¡Estoy enojada! Muy enojada</span>
-                                         <br>-dice Oona
+							         <p  id="texto2">Calma, primero dinos qué sientes Oona.
+                                        <span class="oona-text"><p>-¡Estoy enojada! Muy enojada</p></span>
+                                         -dice Oona
                                      </p>
 						        </div>
-                                <div class="bb-custom-side customImageside">
+                                <div class="bb-custom-side">
                                 <img src="images/pages/pag2.png"/>
                             </div>
                         </div>
+                        
+                        <p class="line">
+                            <audio style="width:100%;" id="audiofile" src="audios/EstoyEnojada_scene2.mp3" controls=""></audio>      
+                      </p>
 					</div>  
                     
                     <div class="bb-item">
@@ -249,11 +254,7 @@
 				</div>
                 
                 
-                <!--Este es el que da el número de páginas-->
-                <div id="numPages">
-                    <p>1</p>
-                    <img src="images/numPages.png"/>
-                </div>
+
                 <!--Estos son los botones de home y de retroceso y avance-->
 				<nav>
 					<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first home-Button">
@@ -273,10 +274,10 @@
 <script src="js/tracks.js" type="text/javascript"></script>
     <script src="js/audioSync.js" type="text/javascript"></script>
   <script>  
-     var colorBg = "blue";
-      var colorText = "white";
+     var colorBG = "blue";
       
-      audioSync("texto1","audiofile",pista1);
+      audioSync("texto1","audiofile",pista1,colorBG);      
+      audioSync("texto2","audiofile",pista2,colorBG);
 				
 		</script>  
         
@@ -284,8 +285,7 @@
 		<script src="js/jquerypp.custom.js"></script>
 		<script src="js/jquery.bookblock.js"></script>
 		<script>
-            var counter = 1;
-            var totalPages = 8;
+
 			var Page = (function() {
 				
 				var config = {
@@ -306,39 +306,23 @@
 					initEvents = function() {
 						
                         
-                        function counterSume(){
-                            if(counter != totalPages){
-                                counter++
-                                $("#numPages").find("p").html(counter);     
-                            }
-                        }
-                        
-                        function counterRest(){
-                            if(counter != 1){
-                                counter--
-                                $("#numPages").find("p").html(counter);     
-                            }
-                        }
+                       
                         
 						var $slides = config.$bookBlock.children();
 
 						// add navigation events
 						config.$navNext.on( 'click touchstart', function() {
-                            counterSume();                         
 							config.$bookBlock.bookblock( 'next' );
 							return false;
 						} );
 
 						config.$navPrev.on( 'click touchstart', function() {
-                            counterRest();  
 							config.$bookBlock.bookblock( 'prev' );
 							return false;
 						} );
 
 						config.$navFirst.on( 'click touchstart', function() {
-                            
-                                counter = 1;
-                                $("#numPages").find("p").html(counter);
+                   
 							config.$bookBlock.bookblock( 'first' );
                             
 							return false;
@@ -353,13 +337,11 @@
 						// add swipe events
 						$slides.on( {
 							'swipeleft' : function( event ) {
-                                counterSume();
 								config.$bookBlock.bookblock( 'next' );
 								return false;
                                 
 							},
 							'swiperight' : function( event ) {
-                                counterRest();                              
 								config.$bookBlock.bookblock( 'prev' );
 								return false;
 							}

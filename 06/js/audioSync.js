@@ -1,4 +1,4 @@
-function audioSync(subtitles,soundTrack,arraypistas){
+function audioSync(subtitles,soundTrack,arraypistas,colorBG){
         $("#" + subtitles).blast({ delimiter: "word" });
 
         $("#" + subtitles).find('span').each(function(i){
@@ -32,9 +32,10 @@ function audioSync(subtitles,soundTrack,arraypistas){
                       var object = subtitles1.children[index];
                       if( audioPlayer.currentTime > element.start /*&& audioPlayer.currentTime <= element.end*/ ){
                           $(object).addClass("newColor");
+                          subtitles1.children[index].style.background = colorBG;
                       }else{
                           $(object).removeClass("newColor");
-                          //subtitles1.children[index].style.background = 'none';
+                          subtitles1.children[index].style.background = 'none';
                       }
                       
                       

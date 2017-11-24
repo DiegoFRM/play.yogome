@@ -166,7 +166,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6259d0', end
     background-position: center;
 }
 
-
+.monsterSize img{
+    height: 60%;
+    width: 60%;
+}
 
 .buttonsgamesMenu{
     width: auto;

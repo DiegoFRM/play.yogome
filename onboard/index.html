@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <link rel="stylesheet" type="text/css" href="css/modal.css">
+    <link href="https://fonts.googleapis.com/css?family= Open+Sans|Quicksand:700" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+</head>
+<body>
+
+<h2>Log In</h2>
+
+<!-- Trigger/Open The Modal -->
+<button id="singInBtn">Sing In</button>
+
+<button id="singUpBtn">Sing up</button>
+    
+    
+<!-- Sing In Modal-->
+<div id="singIn" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+        <div class="navigation">
+            <button id="closeModal" class="closeModal"></button>
+        </div>
+       <!-- Modal header -->
+    <div class="modal-header">
+            <div class="topImg">
+                <img style="padding-top: 10%; padding-right: 10%;" src="images/particle-01.png"/>
+                <img src="images/yogome-logo.png"/>
+                <img style="padding-top: 10%; padding-left: 10%;" src="images/particle-02.png"/>
+            </div>
+        <h2>- Login to Yogome -</h2>
+        <div style="text-align: justify;">
+            <span id="error" class="smallRed fontOpenSans"></span>
+            <span id="recover" class="smallBlue fontOpenSans"></span>
+            <p></p>
+        </div>
+    </div>
+      
+       <!-- Modal body Text box and sumbit button-->
+    <div class="modal-body">
+        <!--<form action="welcome.html">-->
+            <input type="text" id="email" class="inputText" placeholder="Email" name="Email"/>
+            <input type="text" id="pass" class="inputText" placeholder="Password" name="Password"/>
+            <button type="submit" id="login" class="loginBtn"></button>
+            <button class="recoverBtn" id="recoverPass">I Forgot My Password</button>
+        <!--</form>-->
+        <h3>Or</h3>
+    </div>
+      
+       <!-- Modal footer -->
+    <div class="modal-footer">
+        <button id="google" class="fbBtn"></button>
+        <button id="fb" class="googleBtn"></button>
+    </div>
+      
+    <div class="fontOpenSans" style="text-align: center; font-size: 1.6vw; color: #444444">
+            <p>Don't have an account?
+                <span><a href="welcome.html" target="_blank" style="color: #009cee">Sing Up</a></span>
+            </p>
+    </div>
+      
+  </div>
+
+</div>
+
+    
+    
+<!-- Restore Pass Modal-->
+<div id="resetPass" class="modalBranch">
+     <!-- Modal content -->
+  <div class="modalBranch-content">
+        <div class="navigation">
+            <button id="closeModal2" class="closeModal"></button>
+            <button id="backModal" class="backModal"></button>
+        </div>
+       <!-- Modal header -->
+    <div class="modal-header">
+            <div class="topImg">
+                <img style="padding-top: 15%; padding-right: 25%;" src="images/particle-01.png"/>
+                <img style="width: 50%;" src="images/lock-icon-closed.png"/>
+                <img style="padding-top: 15%; padding-left: 25%;" src="images/particle-02.png"/>
+            </div>
+        <h2 style="color: #213f48">Reset Password</h2>
+         <div style="text-align: justify; color: #727984" class="smallRed fontOpenSans">
+            <p>Enter your email address and we'll send you instructions to reset your password.</p>
+        </div>
+        <div style="text-align: center;">
+            <span id="requestError" class="smallRed fontOpenSans"></span>
+            <p></p>
+        </div>
+    </div>
+      
+       <!-- Modal body Text box and sumbit button-->
+    <div class="modal-body">
+            <input type="text" id="emailRequest" class="inputText" placeholder="Email" name="Email"/>
+            <button type="submit" id="request" class="requestBtn"></button>
+    </div>
+      
+  </div>
+
+</div>
+    
+    
+    
+<!-- Restore Pass Modal Success-->
+<div id="succsesResetPass" class="modalBranch">
+     <!-- Modal content -->
+  <div class="modalBranch-content">
+        <div class="navigation">
+            <button id="closeModal3" class="closeModal"></button>
+            <button id="backModal2" class="backModal"></button>
+        </div>
+       <!-- Modal header -->
+    <div class="modal-header">
+            <div class="topImg">
+                <img style="padding-top: 15%; padding-right: 25%;" src="images/particle-01.png"/>
+                <img style="width: 50%;" src="images/lock-icon-opened.png"/>
+                <img style="padding-top: 15%; padding-left: 25%;" src="images/particle-02.png"/>
+            </div>
+        <h2 style="color: #213f48">Succses!</h2>
+         <div style="text-align: justify; color: #727984; font-size: 1.5vw" class="fontOpenSans">
+            <p>Instructions to reset your password have been emailed to you. Please check your email.</p>
+        </div>
+    </div>
+      
+       <!-- Modal body Text box and sumbit button-->
+    <div class="modal-body">
+            <button type="submit" id="requestSuccses" class="requestBtnComplete"></button>
+    </div>
+      
+  </div>
+
+</div>
+
+    
+    
+<!-- Sing Up Modal-->
+<div id="singUp" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+        <div class="navigation">
+            <button id="closeModal4" class="closeModal"></button>
+        </div>
+       <!-- Modal header -->
+    <div class="modal-header">
+            <div class="topImg">
+                <img style="padding-top: 10%; padding-right: 10%;" src="images/particle-03.png"/>
+                <img src="images/yogome-logo.png"/>
+                <img style="padding-top: 10%; padding-left: 10%;" src="images/particle-04.png"/>
+            </div>
+        <h2 style="color: #213f48">Create Account</h2>
+        <div class="smallPink fontOpenSans">
+            <p>- Please fill the sing up form to continue -</p>
+        </div>
+       
+    </div>
+      
+       <!-- Modal body Text box and sumbit button-->
+    <div class="modal-body">
+        
+        <input type="text" id="createName" class="inputText" placeholder="Full Name" name="Name"/>
+        <input type="text" id="createEmail" class="inputText" placeholder="Email" name="Email"/>
+        <input type="text" id="createPass" class="inputText" placeholder="Password" name="Password"/>
+        <button type="submit" id="createAccountBtn" class="createAccountBtn"></button>
+        
+        <div style="text-align: center;">
+            <span id="missData" class="smallRed fontOpenSans"></span>
+        </div>
+      
+        <h3>Or</h3>
+    </div>
+      
+       <!-- Modal footer -->
+    <div class="modal-footer">
+        
+        <button id="google2" class="fbBtn"></button>
+        <button id="fb2" class="googleBtn"></button><br>
+        
+        <div class="fontOpenSans agreeLegend">
+            <p><input type="checkbox" id="agree"> By registering, you agreeto the
+                <span><a href="welcome.html" target="_blank" class="agreeLink">Terms of Service</a></span> and 
+                <span><a href="welcome.html" target="_blank" class="agreeLink">Privacy Policy</a></span>
+            </p>
+            <div style="text-align: center">
+                <span id="unchecked" class="smallRed fontOpenSans"></span>
+            </div>
+        </div>
+        
+        <div class="fontOpenSans" style="text-align: center; font-size: 1.6vw; color: #444444">
+            <p>Already have an account?
+                <span><a href="welcome.html" target="_blank" style="color: #009cee">Sing In</a></span>
+            </p>
+        </div>
+        
+    </div>
+      
+  </div>
+
+</div>
+    
+<script src="js/modal.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

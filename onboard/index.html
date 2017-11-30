@@ -5,14 +5,18 @@
     <link rel="stylesheet" type="text/css" href="css/modal.css">
     <link href="https://fonts.googleapis.com/css?family= Open+Sans|Quicksand:700" rel="stylesheet">
     <script src="js/jquery-3.2.1.min.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css“>
+    <script src=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js” 
+            integrity=“sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa” 
+            crossorigin=“anonymous”></script>
 </head>
 <body>
 
 <h2>Log In</h2>
 
 <!-- Trigger/Open The Modal -->
-<button id="singInBtn">Sing In</button>
+<button id="singInBtn" >Sing In</button>
 
 <button id="singUpBtn">Sing up</button>
     
@@ -21,10 +25,11 @@
 <div id="singIn" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content">
+  <div class="modal-content" >
         <div class="navigation">
-            <button id="closeModal" class="closeModal"></button>
+            <button class="closeModal close"></button>
         </div>
+      
        <!-- Modal header -->
     <div class="modal-header">
             <div class="topImg">
@@ -43,18 +48,18 @@
        <!-- Modal body Text box and sumbit button-->
     <div class="modal-body">
         <!--<form action="welcome.html">-->
-            <input type="text" id="email" class="inputText" placeholder="Email" name="Email"/>
-            <input type="text" id="pass" class="inputText" placeholder="Password" name="Password"/>
-            <button type="submit" id="login" class="loginBtn"></button>
-            <button class="recoverBtn" id="recoverPass">I Forgot My Password</button>
+            <input type="text" id="email" class="inputText" placeholder="Email" name="Email"/><br>
+            <input type="text" id="pass" class="inputText" placeholder="Password" name="Password"/><br>
+            <button type="submit" id="login" class="loginBtn"></button><br>
+            <button class="recoverBtn" id="recoverPass">I Forgot My Password</button><br>
         <!--</form>-->
         <h3>Or</h3>
     </div>
       
        <!-- Modal footer -->
     <div class="modal-footer">
-        <button id="google" class="fbBtn"></button>
-        <button id="fb" class="googleBtn"></button>
+        <button id="google" class="fbBtn"></button><br>
+        <button id="fb" class="googleBtn"></button><br>
     </div>
       
     <div class="fontOpenSans" style="text-align: center; font-size: 1.6vw; color: #444444">
@@ -74,7 +79,7 @@
      <!-- Modal content -->
   <div class="modalBranch-content">
         <div class="navigation">
-            <button id="closeModal2" class="closeModal"></button>
+            <button class="closeModal close"></button>
             <button id="backModal" class="backModal"></button>
         </div>
        <!-- Modal header -->
@@ -96,8 +101,8 @@
       
        <!-- Modal body Text box and sumbit button-->
     <div class="modal-body">
-            <input type="text" id="emailRequest" class="inputText" placeholder="Email" name="Email"/>
-            <button type="submit" id="request" class="requestBtn"></button>
+            <input type="text" id="emailRequest" class="inputText" placeholder="Email" name="Email"/><br>
+            <button type="submit" id="request" class="requestBtn"></button><br>
     </div>
       
   </div>
@@ -111,7 +116,7 @@
      <!-- Modal content -->
   <div class="modalBranch-content">
         <div class="navigation">
-            <button id="closeModal3" class="closeModal"></button>
+            <button class="closeModal close"></button>
             <button id="backModal2" class="backModal"></button>
         </div>
        <!-- Modal header -->
@@ -144,7 +149,7 @@
   <!-- Modal content -->
   <div class="modal-content">
         <div class="navigation">
-            <button id="closeModal4" class="closeModal"></button>
+            <button class="closeModal close"></button>
         </div>
        <!-- Modal header -->
     <div class="modal-header">
@@ -163,9 +168,9 @@
        <!-- Modal body Text box and sumbit button-->
     <div class="modal-body">
         
-        <input type="text" id="createName" class="inputText" placeholder="Full Name" name="Name"/>
-        <input type="text" id="createEmail" class="inputText" placeholder="Email" name="Email"/>
-        <input type="text" id="createPass" class="inputText" placeholder="Password" name="Password"/>
+        <input type="text" id="createName" class="inputText" placeholder="Full Name" name="Name"/><br>
+        <input type="text" id="createEmail" class="inputText" placeholder="Email" name="Email"/><br>
+        <input type="text" id="createPass" class="inputText" placeholder="Password" name="Password"/><br>
         <button type="submit" id="createAccountBtn" class="createAccountBtn"></button>
         
         <div style="text-align: center;">
@@ -178,7 +183,7 @@
        <!-- Modal footer -->
     <div class="modal-footer">
         
-        <button id="google2" class="fbBtn"></button>
+        <button id="google2" class="fbBtn"></button><br>
         <button id="fb2" class="googleBtn"></button><br>
         
         <div class="fontOpenSans agreeLegend">

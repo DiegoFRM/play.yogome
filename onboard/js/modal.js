@@ -116,7 +116,7 @@ function validate(){
     
 //Recover Pass Succses
 requestSuccses.onclick = function(){
-    succsesResetPass.style.display = "none";
+    $("#succsesResetPass").fadeOut();
 }
 
 // clicks anywhere outside of the modal, close it
@@ -137,26 +137,18 @@ window.onclick = function(event) {
     }
 }
 
+//Close the modals
+$(".close").click(function() {
+    $("#singIn").fadeOut();
+    $("#resetPass").fadeOut();
+    $("#succsesResetPass").fadeOut();
+    $("#singUp").fadeOut();
+});
+
 //Modal transitions
 $("#recoverPass").click(function() {
     $("#singIn").hide();
     $("#resetPass").show();
-});
-
-$("#closeModal").click(function() {
-    $("#singIn").hide();
-});
-
-$("#closeModal2").click(function() {
-     $("#resetPass").hide();
-});
-
-$("#closeModal3").click(function() {
-     $("#succsesResetPass").hide();
-});
-
-$("#closeModal4").click(function() {
-    $("#singUp").hide();
 });
 
 $("#backModal").click(function() {
@@ -169,6 +161,21 @@ $("#backModal2").click(function() {
     $("#resetPass").show();
 });
 
+$('#singIn').on('show', function () {
+      $('.modal-content',this).css({width:'auto',height:'auto', 'max-height':'100%'});
+});
+
+$('#singUp').on('show', function () {
+      $('.modal-content',this).css({width:'auto',height:'auto', 'max-height':'100%'});
+});
+
+$('#resetPass').on('show', function () {
+      $('.modal-content',this).css({width:'auto',height:'auto', 'max-height':'100%'});
+});
+
+$('#succsesResetPass').on('show', function () {
+      $('.modal-content',this).css({width:'auto',height:'auto', 'max-height':'100%'});
+});
 
 
 

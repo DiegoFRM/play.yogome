@@ -1,0 +1,25 @@
+<div class="odd gradient"></div>
+<div class="textPage">
+<div id="texto5">
+    <p class="oona-text">-Oof, sigo muy enojada<br>
+    pero no quiero pelear.<br> 
+    ¿Qué podemos hacer?
+    </p>     
+    <p class="oof-text">
+    -Puedo pedir ayuda<br>
+    para arreglarla.<br>
+    </p>    
+</div>
+    
+    <script>
+    if(!$("#texto5").find("br")){
+            
+        }else{
+          $("#texto5").blast({ delimiter: "word" });
+
+        $("#texto5").find('span').each(function(i){
+        $(this).attr('id', 'c_' + i);
+         });       
+        } 
+</script>
+

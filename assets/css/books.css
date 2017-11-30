@@ -1,23 +1,32 @@
-body{
- overflow-x: hidden;   
-    background-image: url("../images/books/Fondo.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position:top center;    
+html{
+    overflow-x: hidden;
 }
+
+body{
+     background-image: url("../images/books/sky.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    margin: 0px;
+     overflow-x: hidden;
+
+}
+
 
 #content {
     width: 100%;
     min-height: 100vh;
     transition: all 0.3s;
     position: relative;
-    top: 0;
+    background-image: url("../images/books/floor.png");
+    background-repeat: no-repeat;
+    background-size: 100%;    
+    background-position: bottom center;       
     right: 0;
 }
 
 .section-main{
-
-    padding-bottom: 4vh;
+    width: 100%;
 }
 
 .panel-books{
@@ -66,15 +75,20 @@ body{
 
 
 .btn-next-main{
-   transform: scaleX(-1); 
+  margin-top: 25%;
+    z-index: 3;
+    transform: translate(-20%,-50%);
 }
+
+
 
 .btn-back-main{
     z-index: 3;
+    margin-top: 25%;
+    transform: translate(0%,-50%);
 }
 
 footer{
-    bottom: 0;
 }
 
 /*COVERFLOW*/
@@ -82,7 +96,7 @@ footer{
     position: absolute;
     left: 50%;
     z-index: 2;
-    width: 80%;
+    width: 90%;
     transform: translate(-50%,50%);
 }
 
@@ -97,4 +111,17 @@ footer{
 
 .bookStar img{
     width: 100%;
+}
+
+.yogotars{
+    position: relative;
+}
+
+.bookframe{
+    display: none;
+    position: absolute;
+    top: 10;
+    width: 100%;
+    height: 90%;
+    z-index:213;
 }

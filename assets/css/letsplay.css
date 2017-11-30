@@ -170,3 +170,14 @@ body{
     }
 }
 
+/* Portrait */
+@media all and (orientation:portrait)
+{
+
+.img-minigames{
+    border-radius: 2vh;
+    width: 300px !important;
+    height: 90px !important;
+    padding: 1vh;
+}
+}

@@ -3,6 +3,7 @@ body {
 
 h1{
     color: white;
+    font-size: 2em;
 }
 
 h2{
@@ -37,17 +38,19 @@ h2{
 .green-bgtext{
     background-color:#66DB67;
     color:#FFF;
-    width: 40%;
+    width: 50%;
     font-size: 2em;
     margin: 2vh auto;
     margin-bottom: 2vh;
+    max-width: 500px;
 }
 
 .blue-bgtext{
     position: relative;
     background-color:#4CA2F1;
     color:#FFF;
-    width: 60%;
+    width: 80%;
+    max-width: 700px;
     font-size: 2em;
     margin: 0 auto;
 }
@@ -61,8 +64,9 @@ h2{
 }
 
 .mainText{
-    width:50%;
+    width:80%;
     margin:5vh auto 5vh auto;
+    max-width: 700px;
 }
 
 .image-banner{

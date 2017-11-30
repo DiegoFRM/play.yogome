@@ -85,12 +85,12 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6259d0', end
 }
 
 .card-monster{
-    text-align: center;
 }
 
 .card-monster img{
     width: 100%;
     max-width: 500px;
+    
 }
 
 .xp-monster{
@@ -122,7 +122,6 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6259d0', end
 
 .xpPoints p{
     color: #FFF;
-    font-size: 3vh;
     font-weight: 900;
     transform: translate(0%,20%);
 }
@@ -132,14 +131,13 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6259d0', end
     border-radius: 2vh;
     margin-top:2%;
     height: 100%;
-    margin-top:10%;   
+    margin-top:15%;   
 }
 
 
 
 .hpPoints p{
     color: #FFF;
-    font-size: 3vh;
     font-weight: 900;
     transform: translate(0%,20%);    
 }

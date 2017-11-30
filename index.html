@@ -29,22 +29,22 @@
 
                 <div class="sidebar-header">
                   <div id="navbar-logo-container homeButton">
-                    <img class="img img-responsive " src="assets/images/logo-yogome.png" alt="Logo Yogome">
+                    <img style="width:80%;" class="img img-responsive " src="assets/images/logo-yogome.png" alt="Logo Yogome">
                   </div>
                 </div>
 
                 <ul class="list-unstyled components">
                     <li class="active">
                         <ul class="list-unstyled" id="homeSubmenu">
-                          <li><a class="play-colors-orange webisodesSec"href="#">Webisodes</a></li>
-                          <li><a class="play-colors-bluesea yogodexSec"href="#">Yogodex</a></li>
-                          <li><a class="play-colors-blue html5Games">Games</a></li>
-                          <li><a class="play-colors-purple resourcesSec"href="#">Resources</a></li>
-                          <li><a class="play-colors-green"href="#">Books</a></li>
+                          <li><a class="play-colors-orange webisodesSec" href="webisodes.html">Webisodes</a></li>
+                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>
+                          <li><a class="play-colors-blue html5Games" href="letsplay.html">Games</a></li>
+                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>
+                          <li><a class="play-colors-green" href="yogobooks.html">Books</a></li>
 
                         </ul>
                         <button type="button" id="register-btn-sm" class="navbar-btn hidden">
-                              <span>Register</span>
+                              <span>Registrer</span>
                         </button>
                     </li>
                 </ul>
@@ -75,15 +75,15 @@
 
                         <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a class="play-colors-orange webisodesSec"href="#">Webisodes</a></li>
-                                <li><a class="play-colors-bluesea yogodexSec"href="#">Yogodex</a></li>
-                                <li><a class="play-colors-blue html5Games">Games</a></li>
-                                <li><a class="play-colors-purple resourcesSec"href="#">Resources</a></li>
-                                <li><a class="play-colors-green"href="#">Books</a></li>
+                          <li><a class="play-colors-orange webisodesSec" href="webisodes.html">Webisodes</a></li>
+                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>
+                          <li><a class="play-colors-blue html5Games" href="letsplay.html">Games</a></li>
+                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>
+                          <li><a class="play-colors-green" href="yogobooks.html">Books</a></li>
                                 
                                 <li>
                                   <button type="button" id="register-btn-lg" class="navbar-btn">
-                                    Register
+                                    Registrer
                                   </button>
                                 </li>
                             </ul>
@@ -104,11 +104,19 @@
                           </div>
                           <div class="separator1"></div>
                           <div class="separator1"></div>
-                          <div class="btn-play text-center"></div>
+                          <a href="http://yogome.com/epic/minigames/epicSite/"><div class="btn-play text-center"></div></a>
                           <div class="separator1"></div>
                       </div>
+                        
                     </div>
                 </section>
+                
+                <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 text-center" style="padding:12vh;">
+                    <p class="text-center" ><b>Boost your child's education with Yogome Fun Learning only for 5.99 per month.<br> Join us now! Boost your child's learning only for 5.99 per month. </b></p>
+                    <a href="https://yogomepayments.com/"><div id="" class="html5Games btn btn-orange text-center center-block">
+                     Join us now!
+                            </div></a>
+                </div>
 
                 <section id="play-section-videos">
                   <div class="container">
@@ -116,8 +124,8 @@
                         <div class="col-xs-12">
                             <div class="shadow-ray">
                     </div>
-                    <div class="title-blue">
-                        WEBISODES
+                    <div class="title-blue text-center center-block">
+                       Webisodes
                     </div>
                             <div class="separator1"></div>
                         </div>
@@ -130,11 +138,18 @@
                           <div class="embed-responsive embed-responsive-16by9">
                               <!-- Youtube API: The <iframe> (and video player) will replace this <div> tag. Code in mixpanel.js-->
                               <div id="player"></div>
-                              <iframe width="560" height="315" src="https://www.youtube.com/embed/qUlr1PpJamU" frameborder="0" allowfullscreen></iframe>
+                              <video id="playVideo1" width="560" height="315" poster="assets/images/previewvideo.jpg">
+                                <source src="assets/videos/capsula1.mp4" type="video/mp4">
+                              </video>
+                              <script>
+                              $("#playVideo1").click(function(){
+                                  this.paused ? this.play() : this.pause();
+                              })
+                              </script>
                           </div>
                           <div class="video-title-container">
                             <p class="video-title">
-                              Video Title
+                              Yogome video
                             </p>
                           </div>
                       </div>
@@ -168,15 +183,14 @@
                     </div>
                 </section>
                 <section id="yogodex-section">
-                    <div class="yogodex-contain">
-                            <div class="yogodex-logo">
-                                <img src="assets/images/yogodex-logo.png" />
+                    <div class="yogodex-contain row">
+                            <div class="yogodex-logo col-xs-12 col-md-6 ">
+                                <img  src="assets/images/yogodex-logo.png" />
                             </div>
-                            <div class="yogodex-texto">
-                            <p>Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet, consecte
-                                Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet, consecte</p>
+                            <div class="yogodex-texto col-xs-12 col-md-6">
+                            <p>Learn all you need to know about the Yogotar's special powers and all the creature's magical skills you will encounter in the Knowledge Galaxy. </p>
                                 <div class="yogodex-button yogodexSec">
-                                    EXPLORE
+                                    Explore!
                                 </div>
                             </div>
                     </div>
@@ -191,7 +205,7 @@
                     <div class="shadow-ray">
                     </div>
                     <div class="title-purple">
-                        GAMES
+                        More Games
                     </div>
                   <div id="container-html5games" class="container container-webgames">
                       <!--Juegos HTML5-->
@@ -207,9 +221,9 @@
                         </div>
                         <div class="col-xs-12">
                           <div class="">
-                            <div class="separator2 hidden-xsz"></div>
+                            <div class="separator2 hidden-xs"></div>
                             <div id="" class="html5Games btn btn-orange text-center center-block">
-                              I WANT MORE!
+                              I want more!
                             </div>
                           </div>
                         </div>
@@ -218,17 +232,18 @@
                 </section>
                 
                 <section id="resources-section">
-                    <div class="resources-contain">
-                        <div class="resources-text">
-                            <p>Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet, consecte
-                            Lorem ipsum dolor sit amet, consecteLorem ipsum dolor sit amet, consecte</p>
+                    <div class="resources-contain row ">
+                        
+                        <div class="resources-text col-xs-12 col-sm-6 col-md-6">
+                            <div class="title-blue">Resources</div>
+                            <p>Get Epic Wallpapers, posters and cool coloring sheets with activities for more fun beyond the screen.</p>
                         </div>
-                        <div class="resources-img">
+                        <div class="resources-img col-xs-12 col-sm-6 col-md-6">
                             <div>
                                 <img src="assets/images/resource-img.png" />
                             </div>
-                            <div class="resources-button btn-orange resourcesSec">
-                                I WANT MORE
+                            <div id="" class="html5Games btn btn-orange text-center center-block">
+                              I want more!
                             </div>
                             
                         </div>
@@ -246,7 +261,7 @@
                     </div>
                     <div class="row">
                       <div class="col-xs-12 col-md-12">
-                        <img style="width:100%;" src="assets/images/books-main.png"/>
+                        <img style="width:90%; margin-left:5%" src="assets/images/books-main.png"/>
                       </div>
                     </div>
                     <div id="" class="html5Games btn btn-purple text-center center-block">
@@ -318,28 +333,7 @@
    <!-- jQuery Nicescroll CDN -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
    <script src="assets/js/play.js"></script>
-    <script>
-        
-    $("homeButton").click(function(){
-        window.open("index.html","_self"); 
-    })    
-        
-    $(".html5Games").click(function(){
-        window.open("letsplay.html","_self");   
-    });   
-        
-    $(".webisodesSec").click(function(){
-        window.open("webisodes.html","_self");   
-    });   
-        
-    $(".yogodexSec").click(function(){
-        window.open("yogodex.html","_self");   
-    }); 
-        
-        
-    $(".resourcesSec").click(function(){
-        window.open("yogofun.html","_self");   
-    });   
+    <script> 
         
       var pathGames = "games/nonrefactored/"
   		var games = yogomeGames.getGames();

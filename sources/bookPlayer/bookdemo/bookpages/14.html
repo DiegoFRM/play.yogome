@@ -1,0 +1,20 @@
+<div class="odd gradient"></div>
+<div class="textPage">
+<div id="texto6">
+    <p class="oona-text">-Me parece bien.</p>     
+    <p class="oof-text">-¡Me disculpas?</p>
+    <p class="oona-text">-Tú sabes que sí.</p>  
+</div>
+<script>
+    for(i= 1; i<=6;i++){
+    if(!$("#texto" + i).find("br")){
+            
+        }else{
+          $("#texto" + i).blast({ delimiter: "word" });
+
+        $("#texto" + i).find('span').each(function(i){
+        $(this).attr('id', 'c_' + i);
+         });       
+        } 
+    }
+</script>

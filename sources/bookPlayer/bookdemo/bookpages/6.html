@@ -1,0 +1,23 @@
+
+<div class="odd gradient"></div>
+
+<div class="textPage">
+<div id="texto2">
+    Calma, primero dinos qué sientes Oona.
+    <div class="oona-text">-¡Estoy enojada!<br>Muy enojada</div>
+    -dice Oona.
+    </div>
+</div>
+<script>
+    for(i= 1; i<=6;i++){
+    if(!$("#texto" + i).find("br")){
+            
+        }else{
+          $("#texto" + i).blast({ delimiter: "word" });
+
+        $("#texto" + i).find('span').each(function(i){
+        $(this).attr('id', 'c_' + i);
+         });       
+        } 
+    }
+</script>

@@ -1,15 +1,18 @@
 <!DOCTYPE html>
-<html>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="css/modal.css">
     <link href="https://fonts.googleapis.com/css?family= Open+Sans|Quicksand:700" rel="stylesheet">
-    <script src="js/jquery-3.2.1.min.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link rel=“stylesheet” href=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css“>
-    <script src=“https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js” 
-            integrity=“sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa” 
-            crossorigin=“anonymous”></script>
+    
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -25,7 +28,7 @@
 <div id="singIn" class="modal">
 
   <!-- Modal content -->
-  <div class="modal-content" >
+  <div class="modal-content container" >
         <div class="navigation">
             <button class="closeModal close"></button>
         </div>
@@ -33,14 +36,16 @@
        <!-- Modal header -->
     <div class="modal-header">
             <div class="topImg">
-                <img style="padding-top: 10%; padding-right: 10%;" src="images/particle-01.png"/>
-                <img src="images/yogome-logo.png"/>
-                <img style="padding-top: 10%; padding-left: 10%;" src="images/particle-02.png"/>
+<div class="topImg">
+                <img class="particule" src="images/particle-03.png"/>
+                <img class="logo" src="images/yogome-logo.png"/>
+                <img class="particule" src="images/particle-04.png"/>
+            </div>
             </div>
         <h2>- Login to Yogome -</h2>
-        <div style="text-align: justify;">
-            <span id="error" class="smallRed fontOpenSans"></span>
-            <span id="recover" class="smallBlue fontOpenSans"></span>
+        <div>
+            <span id="error" class="fontOpenSans"></span>
+            <span id="recover" class="fontOpenSans"></span>
             <p></p>
         </div>
     </div>
@@ -50,28 +55,29 @@
         <!--<form action="welcome.html">-->
             <input type="text" id="email" class="inputText" placeholder="Email" name="Email"/><br>
             <input type="text" id="pass" class="inputText" placeholder="Password" name="Password"/><br>
-            <button type="submit" id="login" class="loginBtn"></button><br>
+            <button type="submit" id="login" class="loginBtn">Login</button><br>
             <button class="recoverBtn" id="recoverPass">I Forgot My Password</button><br>
         <!--</form>-->
         <h3>Or</h3>
     </div>
       
        <!-- Modal footer -->
-    <div class="modal-footer">
+    <div >
         <button id="google" class="fbBtn"></button><br>
         <button id="fb" class="googleBtn"></button><br>
     </div>
       
-    <div class="fontOpenSans" style="text-align: center; font-size: 1.6vw; color: #444444">
+    <div class="fontOpenSans" style="color: #444444">
             <p>Don't have an account?
                 <span><a href="welcome.html" target="_blank" style="color: #009cee">Sing Up</a></span>
             </p>
     </div>
       
   </div>
+    
 
 </div>
-
+<!--FIN DE MODAL LOGIN-->
     
     
 <!-- Restore Pass Modal-->
@@ -85,9 +91,11 @@
        <!-- Modal header -->
     <div class="modal-header">
             <div class="topImg">
-                <img style="padding-top: 15%; padding-right: 25%;" src="images/particle-01.png"/>
-                <img style="width: 50%;" src="images/lock-icon-closed.png"/>
-                <img style="padding-top: 15%; padding-left: 25%;" src="images/particle-02.png"/>
+<div class="topImg">
+                <img class="particule" src="images/particle-03.png"/>
+                <img class="logo" src="images/yogome-logo.png"/>
+                <img class="particule" src="images/particle-04.png"/>
+            </div>
             </div>
         <h2 style="color: #213f48">Reset Password</h2>
          <div style="text-align: justify; color: #727984" class="smallRed fontOpenSans">
@@ -122,9 +130,11 @@
        <!-- Modal header -->
     <div class="modal-header">
             <div class="topImg">
-                <img style="padding-top: 15%; padding-right: 25%;" src="images/particle-01.png"/>
-                <img style="width: 50%;" src="images/lock-icon-opened.png"/>
-                <img style="padding-top: 15%; padding-left: 25%;" src="images/particle-02.png"/>
+<div class="topImg">
+                <img class="particule" src="images/particle-03.png"/>
+                <img class="logo" src="images/yogome-logo.png"/>
+                <img class="particule" src="images/particle-04.png"/>
+            </div>
             </div>
         <h2 style="color: #213f48">Succses!</h2>
          <div style="text-align: justify; color: #727984; font-size: 1.5vw" class="fontOpenSans">
@@ -154,9 +164,9 @@
        <!-- Modal header -->
     <div class="modal-header">
             <div class="topImg">
-                <img style="padding-top: 10%; padding-right: 10%;" src="images/particle-03.png"/>
-                <img src="images/yogome-logo.png"/>
-                <img style="padding-top: 10%; padding-left: 10%;" src="images/particle-04.png"/>
+                <img class="particule" src="images/particle-03.png"/>
+                <img class="logo" src="images/yogome-logo.png"/>
+                <img class="particule" src="images/particle-04.png"/>
             </div>
         <h2 style="color: #213f48">Create Account</h2>
         <div class="smallPink fontOpenSans">
@@ -166,8 +176,8 @@
     </div>
       
        <!-- Modal body Text box and sumbit button-->
-    <div class="modal-body">
-        
+    <div class="modal-body row">
+        <div class="col-sm-6">
         <input type="text" id="createName" class="inputText" placeholder="Full Name" name="Name"/><br>
         <input type="text" id="createEmail" class="inputText" placeholder="Email" name="Email"/><br>
         <input type="text" id="createPass" class="inputText" placeholder="Password" name="Password"/><br>
@@ -176,15 +186,17 @@
         <div style="text-align: center;">
             <span id="missData" class="smallRed fontOpenSans"></span>
         </div>
-      
-        <h3>Or</h3>
+        </div>
+        <div class="col-sm-6">
+            <h3>Or</h3>
+            <button id="google2" class="fbBtn"></button><br>
+            <button id="fb2" class="googleBtn"></button><br>
+        </div>
+        
     </div>
       
        <!-- Modal footer -->
     <div class="modal-footer">
-        
-        <button id="google2" class="fbBtn"></button><br>
-        <button id="fb2" class="googleBtn"></button><br>
         
         <div class="fontOpenSans agreeLegend">
             <p><input type="checkbox" id="agree"> By registering, you agreeto the

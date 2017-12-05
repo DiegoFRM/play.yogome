@@ -23,12 +23,13 @@ body{
 /* Modal Content */
 .modal-content {
     position: relative;
+    margin: 0 auto;
     background-color: #fefefe;
     padding: 2vh;
     border: 2px solid #888;
     width: 90%;
     top:0%;
-    max-width: 600px; 
+    max-width: 800px; 
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.5s;
@@ -117,12 +118,12 @@ body{
 
 h2{
     font-size: 3vh;
-    color: #7fc83c;
+    color: #7fc83c !important;
     font-family: 'Quicksand', sans-serif;
 }
 
 h3{
-    font-size: 0.7vw;
+    font-size: 1.5em !important;
     font-family: 'Open Sans', sans-serif;
 }
 

@@ -36,6 +36,9 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 </head>
 
 <body>
+    <audio id="pop" src="assets/sounds/pop.mp3"></audio>
+    <audio id="flipcard" src="assets/sounds/flipcard.mp3"></audio>
+    <audio id="magic" src="assets/sounds/magic.mp3"></audio>
             <!-- MENU WEBPAGE -->
             <nav id="sidebar">
                 <div id="dismiss">
@@ -52,9 +55,9 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                     <li class="active">
                         <ul class="list-unstyled" id="homeSubmenu">
                           <li><a class="play-colors-orange webisodesSec" href="webisodes.html">Webisodes</a></li>
-                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>
+<!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
                           <li><a class="play-colors-blue html5Games" href="letsplay.html">Games</a></li>
-                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>
+<!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
                           <li><a class="play-colors-green" href="yogobooks.html">Books</a></li>
 
                         </ul>
@@ -91,9 +94,9 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                         <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                           <li><a class="play-colors-orange webisodesSec" href="webisodes.html">Webisodes</a></li>
-                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>
+<!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
                           <li><a class="play-colors-blue html5Games" href="letsplay.html">Games</a></li>
-                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>
+<!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
                           <li><a class="play-colors-green" href="yogobooks.html">Books</a></li>
                                 
                                 <li>
@@ -111,47 +114,49 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 <iframe class="bookframe" src="http://yogome.com/yogobookDemo/06/"></iframe>
             <section id="bookContainer" class="section-main container">
                
- <div class="w-gallery" >
+ <div class="w-gallery">
   <section id="responsiveGallery-container" class="responsiveGallery-container">
 
    
-    <ul class="responsiveGallery-wrapper">
+    <ul class="responsiveGallery-wrapper container">
         
-      <li class="responsiveGallery-item"><img src="assets/images/pics/0.png" height="320" width="320" alt="" class="responsivGallery-pic">
+      <li class="responsiveGallery-item"><img class="locked" src="assets/images/pics/0.png" height="320" width="320" alt="" class="responsivGallery-pic">
           <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>
-        <div class="w-responsivGallery-info">
-          <h2 class="responsivGallery-name">El comienzo</h2>
+        <div class="w-responsivGallery-info2">
+          <h2 class="responsivGallery-name">El<br> comienzo</h2>
         </div>
       </li>
-      <li class="responsiveGallery-item"> <img src="assets/images/pics/2.png" height="320" width="320" alt="" class="responsivGallery-pic">
+      <li class="responsiveGallery-item"> <img class="locked"  src="assets/images/pics/2.png" height="320" width="320" alt="" class="responsivGallery-pic">
           <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>
         <div class="w-responsivGallery-info2">
           <h2 class="responsivGallery-name">Camino a <br>la escuela</h2>
         </div>
       </li>        
-      <li id="loadBook" class="responsiveGallery-item"><img src="assets/images/pics/1.png" height="320" width="320" alt="" class="responsivGallery-pic">
+      <li id="loadBook" class="responsiveGallery-item">
+          <div class="new-ribbon"></div>
+          <img src="assets/images/pics/1.png" height="320" width="320" alt="" class="responsivGallery-pic">
         <div class="bookStar"><img src="assets/images/books/Estrella.png"/></div>
-        <div class="w-responsivGallery-info">
-          <h2 class="responsivGallery-name">Estoy enojada</h2>
+        <div class="w-responsivGallery-info2">
+          <h2 class="responsivGallery-name">Estoy<br>enojada</h2>
         </div>
       </li>
       
-      <li class="responsiveGallery-item"> <img src="assets/images/pics/3.png" height="320" width="320" alt="" class="responsivGallery-pic">
+      <li class="responsiveGallery-item"> <img class="locked"  src="assets/images/pics/3.png" height="320" width="320" alt="" class="responsivGallery-pic">
         <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>  
-        <div class="w-responsivGallery-info">
-          <h2 class="responsivGallery-name">Cosas hermosas</h2>
+        <div class="w-responsivGallery-info2">
+          <h2 class="responsivGallery-name">Cosas<br>hermosas</h2>
         </div>
       </li>
-      <li class="responsiveGallery-item"><img src="assets/images/pics/4.png" height="320" width="320" alt="" class="responsivGallery-pic">
+      <li class="responsiveGallery-item"><img class="locked"  src="assets/images/pics/4.png" height="320" width="320" alt="" class="responsivGallery-pic">
         <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>  
         <div class="w-responsivGallery-info2">
           <h2 class="responsivGallery-name">El hogar de <br>Arthurius</h2>
         </div>
       </li>
-      <li class="responsiveGallery-item"><img src="assets/images/pics/5.png" height="320" width="320" alt="" class="responsivGallery-pic">
+      <li class="responsiveGallery-item"><img class="locked"  src="assets/images/pics/5.png" height="320" width="320" alt="" class="responsivGallery-pic">
         <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>  
-        <div class="w-responsivGallery-info">
-          <h2 class="responsivGallery-name">El espacio ideal</h2>
+        <div class="w-responsivGallery-info2">
+          <h2 class="responsivGallery-name">El espacio<br> ideal</h2>
         </div>
       </li>
 
@@ -160,44 +165,36 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     </ul>
   </section>
 </div>            
-                <div class="row">
 
-                    <div class="col-sm-12 row hidden-xs">
-                        <div id="prevButton" class="responsiveGallery-btn_prev col-xs-1 btn-back-main"><img src="assets/images/books/BotonBooks.png">
+                <div class="row panel-player">
+                    <div id="prevButton" class="responsiveGallery-btn_prev col-xs-1">
+                        <img class="img-responsive" src="assets/images/books/BotonBooksBack.png">
                         </div>
                         
-                        <div class="col-xs-10 ">
+                        <div class="col-xs-10">
                         <img class="img-responsive" src="assets/images/books/Panel.png"/>
                         </div>
                         
                         
-                        <div id="nextButton" class="responsiveGallery-btn_next col-xs-1 btn-next-main">
-                        
-                        <img src="assets/images/books/BotonBooksNext.png">
+                        <div id="nextButton" class="responsiveGallery-btn_next col-xs-1">
+                        <img  class="img-responsive" src="assets/images/books/BotonBooksNext.png">
                         </div>
-                    </div>
+                    </div>                
+                
+            </section> 
+            <section class="container yogotars">
+                        <div class="col-xs-6">
+                            <img src="assets/images/books/Eagle.png"/>
+                        </div>
+                        <div class="col-xs-6">
+                            <img src="assets/images/books/Luna.png"/>
+                        </div>
                     
-                    <div class="hidden-xs row col-xs-12 text-center yogotars">
-                        <div class="col-xs-4">
-                            <img  class="img img-responsive" src="assets/images/books/Eagle.png"/>
-                        </div>
-                        <div class="col-xs-4"></div>
-                        <div class="col-xs-4">
-                            <img class="img img-responsive" src="assets/images/books/Luna.png"/>
-                        </div>
-                    </div>
-                    
-                </div>
-
+            </section> 
                 
-            </section>
-
-                
-
-                
-
-           
         </div>
+    
+    
          <footer>
                 <div class="container">
                     <div class="col-xs-12 play-footer">
@@ -216,9 +213,12 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
     <script src="assets/js/yogofun.js"></script>
     <script>
+        var magic = document.getElementById("magic");
     $("#loadBook").click(function(){
-        $(".bookframe").css("display","block");
-        $("#bookContainer").css("display","none");
+        //$(".bookframe").css("display","block");
+        //$("#bookContainer").css("display","none");
+        magic.play();
+        window.open("http://yogome.com/yogobookDemo/06/","_blank");
     });
     </script>
 

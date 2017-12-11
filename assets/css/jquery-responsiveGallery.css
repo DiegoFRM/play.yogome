@@ -13,6 +13,15 @@
 
 }
 .responsiveGallery-btn_next{
+    
+}
+
+.responsiveGallery-btn_prev:active {
+  transform: translateX(-10px);
+}
+
+.responsiveGallery-btn_next:active {
+  transform: translateX(10px);
 }
 
 .responsiveGallery-wrapper{
@@ -47,15 +56,21 @@
 	visibility: hidden;
 }
 @media (max-width: 1000px){
+
+    
 	.responsiveGallery-item{
-		width: 33.3%;
+		width: 33.3%; 
+        margin-top: -5%;
         
 	}
+
+	.responsiveGallery-btn{
+		width: 1%;
+	}    
     
     
 	.responsiveGallery-wrapper{
-        padding-top: 23%;
-        transform: scale(1);
+        transform: scale(0.8);
 	}
 
 }
@@ -73,23 +88,34 @@
 }
 
 @media (max-width: 560px){
-     
+     .yogotars,
+    .panel-player{
+        opacity: 0;
+    }    
     
-.visible-xs {
-    display: block!important;
-}    
+#content {
+    width: 100%;
+    min-height: 44em !important;
+    transition: all 0.3s;
+    position: relative;
+    background-image: url(../images/books/floor.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom center;
+}
     
-.hidden-xs {
-    display: none !important;
-}    
 	.responsiveGallery-wrapper{
-		width: 60%;
+		width: 100%;
+        
+        
 	}
 	.responsiveGallery-item{
 		width: 100%; 
+        
 	}
 	.responsiveGallery-wrapper{
 		padding-top: 20%;
+        
     }
 	.responsiveGallery-btn{
 		width: 8%;
@@ -104,14 +130,20 @@
 	width: 100%;
 	height: auto;
 }
+
+.locked{
+    filter: grayscale(1);
+    width: 100%;
+    height: 100%;
+}
+
 .w-responsivGallery-info{
     position: absolute;
-	width: 80%;
-	margin: -10% auto;
-	padding: 1%;
-    left: 10%;
+	width: 100%;
+	margin: 10% auto;
+    left: 0%;
 	text-align: center;
-    background-image: url("../images/books/ContenedorTitulo.png");
+    background-image: url("../images/books/ContenedorTitulo02.png");
     background-size:contain;
     background-repeat: no-repeat;
     background-position:bottom center;
@@ -120,16 +152,16 @@
 
 .w-responsivGallery-info2{
     position: absolute;
-	width: 80%;
+	width: 100%;
 	margin: -10% auto;
-	padding: 1%;
-    left: 10%;
+    left: 0%;
 	text-align: center;
     background-image: url("../images/books/ContenedorTitulo02.png");
     background-size:contain;
     background-repeat: no-repeat;
-    background-position:bottom center;
+    background-position:center;
     z-index: 1;
+    padding-bottom: 1vh;
 }
 .responsivGallery-name{
 	font-size: 1em;

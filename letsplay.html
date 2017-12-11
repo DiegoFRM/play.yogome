@@ -42,9 +42,9 @@
                     <li class="active">
                         <ul class="list-unstyled" id="homeSubmenu">
                           <li><a class="play-colors-orange webisodesSec" href="webisodes.html">Webisodes</a></li>
-                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>
+<!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
                           <li><a class="play-colors-blue html5Games" href="letsplay.html">Games</a></li>
-                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>
+<!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
                           <li><a class="play-colors-green" href="yogobooks.html">Books</a></li>
 
                         </ul>
@@ -81,9 +81,9 @@
                         <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
                           <li><a class="play-colors-orange webisodesSec" href="webisodes.html">Webisodes</a></li>
-                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>
+<!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
                           <li><a class="play-colors-blue html5Games" href="letsplay.html">Games</a></li>
-                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>
+<!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
                           <li><a class="play-colors-green" href="yogobooks.html">Books</a></li>
                                 
                                 <li>
@@ -123,9 +123,9 @@
 
             <section id="tab-minigames">
                 <div id="minigamesContainer" class="container">
-                    <div id="nameSubject" class="math-section">
+                    <div id="nameSubject" class="">
                         <p class="second-title text-center">
-                            All subjects games
+                            All subjects
                         </p>
                     </div>
                             <!--Carga de minijuegos-->
@@ -256,12 +256,12 @@
   		var games = yogomeGames.getGames();
     
     for(var i= 0;i<=subjectsButtons.length-1;i++){
-        $("#subject-slider").append('<div class="subject-select-btns" style="color:#000;"><div class="subject-btn '+subjectsButtons[i].img+'"></div><div class="subject-name text-center" style="color:#000;">'+subjectsButtons[i].name+'</div></div>');
+        $("#subject-slider").append('<div class="subject-select-btns" style="color:#FFF;"><div class="subject-btn '+subjectsButtons[i].img+'"></div><div class="subject-name text-center" style="color:#FFF;">'+subjectsButtons[i].name+'</div></div>');
         
         $("." + subjectsButtons[i].img).attr("index",i);
         $("." + subjectsButtons[i].img).click(function(){
             var index = $(this).attr("index");
-           $("#nameSubject").find("p").text(subjectsButtons[index].name + " games"); 
+           $("#nameSubject").find("p").text(subjectsButtons[index].name); 
                 for(var p = 0 ; p<= games.length-1 ;p++){
                     if(subjectsButtons[index].name == "All subjects"){
                         $("#minigamesContainer").find("." + games[p].subject).show();

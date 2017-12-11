@@ -197,6 +197,9 @@
 		}
 
 		function moveGallery(direction){
+            var pop = document.getElementById("pop");
+            var flipcard = document.getElementById("flipcard");
+
 			isAnimating = true;
 
 			rgCurrentIndex = direction + rgCurrentIndex;
@@ -217,11 +220,12 @@
 
 		opts.$btn_next.on('click',function(e){
 			!isAnimating && moveGallery(+1);
+            flipcard.play();
 			
 		});
 		opts.$btn_prev.on('click',function(e){
 			!isAnimating && moveGallery(-1);
-			
+			flipcard.play();
 		});
 
 		$rgWrapper.on('touchstart',function(e){
@@ -230,7 +234,7 @@
 		}).on('touchend touchcancel',function(e){
 			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0],
 				touchGap = touch.pageX - touchX;
-
+            
 			if(touchGap>5){ //swipe right
 				opts.$btn_prev.trigger('click');
 			}

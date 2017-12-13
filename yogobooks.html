@@ -29,6 +29,8 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 	$btn_next: $('.responsiveGallery-btn_next')
 });
 		});
+        
+        var language = "EN";
 		
 	</script>
     
@@ -118,49 +120,7 @@ $('.responsiveGallery-wrapper').responsiveGallery({
   <section id="responsiveGallery-container" class="responsiveGallery-container">
 
    
-    <ul class="responsiveGallery-wrapper container">
-        
-      <li class="responsiveGallery-item"><img class="locked" src="assets/images/pics/0.png" height="320" width="320" alt="" class="responsivGallery-pic">
-          <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>
-        <div class="w-responsivGallery-info2">
-          <h2 class="responsivGallery-name">El<br> comienzo</h2>
-        </div>
-      </li>
-      <li class="responsiveGallery-item"> <img class="locked"  src="assets/images/pics/2.png" height="320" width="320" alt="" class="responsivGallery-pic">
-          <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>
-        <div class="w-responsivGallery-info2">
-          <h2 class="responsivGallery-name">Camino a <br>la escuela</h2>
-        </div>
-      </li>        
-      <li id="loadBook" class="responsiveGallery-item">
-          <div class="new-ribbon"></div>
-          <img src="assets/images/pics/1.png" height="320" width="320" alt="" class="responsivGallery-pic">
-        <div class="bookStar"><img src="assets/images/books/Estrella.png"/></div>
-        <div class="w-responsivGallery-info2">
-          <h2 class="responsivGallery-name">Estoy<br>enojada</h2>
-        </div>
-      </li>
-      
-      <li class="responsiveGallery-item"> <img class="locked"  src="assets/images/pics/3.png" height="320" width="320" alt="" class="responsivGallery-pic">
-        <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>  
-        <div class="w-responsivGallery-info2">
-          <h2 class="responsivGallery-name">Cosas<br>hermosas</h2>
-        </div>
-      </li>
-      <li class="responsiveGallery-item"><img class="locked"  src="assets/images/pics/4.png" height="320" width="320" alt="" class="responsivGallery-pic">
-        <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>  
-        <div class="w-responsivGallery-info2">
-          <h2 class="responsivGallery-name">El hogar de <br>Arthurius</h2>
-        </div>
-      </li>
-      <li class="responsiveGallery-item"><img class="locked"  src="assets/images/pics/5.png" height="320" width="320" alt="" class="responsivGallery-pic">
-        <div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div>  
-        <div class="w-responsivGallery-info2">
-          <h2 class="responsivGallery-name">El espacio<br> ideal</h2>
-        </div>
-      </li>
-
-
+    <ul id="container-books" class="responsiveGallery-wrapper container">
 
     </ul>
   </section>
@@ -211,7 +171,7 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 </body>
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
-    <script src="assets/js/yogofun.js"></script>
+    <script src="assets/js/book.js"></script>
     <script>
         var magic = document.getElementById("magic");
     $("#loadBook").click(function(){

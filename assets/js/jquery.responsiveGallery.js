@@ -22,11 +22,11 @@
 
 		function getTransform3dCSS(tx,ty,ry,zIndex,opacity,visibility){
 			return {
-				'-webkit-transform'	: 'translateX('+tx+') translateZ('+ty+'px) rotateY('+ry+'deg)',
-				'-moz-transform'	: 'translateX('+tx+') translateZ('+ty+'px) rotateY('+ry+'deg)',
-				'-o-transform'		: 'translateX('+tx+') translateZ('+ty+'px) rotateY('+ry+'deg)',
-				'-ms-transform'		: 'translateX('+tx+') translateZ('+ty+'px) rotateY('+ry+'deg)',
-				'transform'			: 'translateX('+tx+') translateZ('+ty+'px) rotateY('+ry+'deg)',
+				'-webkit-transform'	: 'translateX('+tx+') translateZ('+ty+'px)',
+				'-moz-transform'	: 'translateX('+tx+') translateZ('+ty+'px)',
+				'-o-transform'		: 'translateX('+tx+') translateZ('+ty+'px)',
+				'-ms-transform'		: 'translateX('+tx+') translateZ('+ty+'px)',
+				'transform'			: 'translateX('+tx+') translateZ('+ty+'px)',
 				'z-index'			: zIndex,
 				'opacity'			: opacity,
 				'visibility'		: visibility
@@ -197,9 +197,6 @@
 		}
 
 		function moveGallery(direction){
-            var pop = document.getElementById("pop");
-            var flipcard = document.getElementById("flipcard");
-
 			isAnimating = true;
 
 			rgCurrentIndex = direction + rgCurrentIndex;
@@ -220,12 +217,11 @@
 
 		opts.$btn_next.on('click',function(e){
 			!isAnimating && moveGallery(+1);
-            flipcard.play();
 			
 		});
 		opts.$btn_prev.on('click',function(e){
 			!isAnimating && moveGallery(-1);
-			flipcard.play();
+			
 		});
 
 		$rgWrapper.on('touchstart',function(e){
@@ -234,7 +230,7 @@
 		}).on('touchend touchcancel',function(e){
 			var touch = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0],
 				touchGap = touch.pageX - touchX;
-            
+
 			if(touchGap>5){ //swipe right
 				opts.$btn_prev.trigger('click');
 			}

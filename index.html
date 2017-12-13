@@ -341,10 +341,10 @@
         
       var pathGames = "games/nonrefactored/"
   		var games = yogomeGames.getGames();
-  		for(var i = 0 ; i < 7 ;i++){
+  		for(var i = 0 ; i <= games.length-1 ;i++){
 
   			var num = i;
-  			if(games[i].review){
+  			if(games[i].demo){
   				$("#container-html5games").append("<div class='col-xs-6 col-sm-4 game-container "+games[i].subject+"'><a href='"+games[i].url+"' rev='"+games[i].name+"' class='gameCatalog' id='gameimg" + num+"' ><img class='growMouse img-responsive' src='" +games[num].url +"/images/fbpost.png" + "'/></a> </div>");
   				$("#gameimg" + num).attr("value",i);
   			}

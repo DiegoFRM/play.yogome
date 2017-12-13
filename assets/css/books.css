@@ -3,12 +3,13 @@ html{
 }
 
 body{
-     background-image: url("../images/books/sky.jpg");
-    background-size: 100% 100%;
+     background-image: url("../images/books/Fondo.png");
+    background-size: cover;
     background-repeat: no-repeat;
-    background-position: top center;
+    background-position: bottom center;
     margin: 0px;
      overflow-x: hidden;
+    background-color: #73b7c0;
 
 }
 
@@ -29,10 +30,12 @@ body{
     min-height: auto;
     transition: all 0.3s;
     position: relative;
+/*
     background-image: url(../images/books/floor.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: bottom center;
+*/
 }
 
 .section-main{

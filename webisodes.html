@@ -106,13 +106,13 @@
                           <div class="embed-responsive embed-responsive-16by9">
                               <!-- Youtube API: The <iframe> (and video player) will replace this <div> tag. Code in mixpanel.js-->
                               <div id="player"></div>
-                              <video id="playVideo1" width="560" height="315" poster="assets/images/previewvideo.jpg">
-                                <source src="assets/videos/capsula1.mp4" type="video/mp4">
+                              <video id="playVideo1" controls width="560" height="315" poster="assets/images/previewvideo.jpg">
+                                <source src="epicweb/videoplayer/localvideos/1.mp4" type="video/mp4">
                               </video>
                               <script>
-                              $("#playVideo1").click(function(){
+                              /*$("#playVideo1").click(function(){
                                   this.paused ? this.play() : this.pause();
-                              })
+                              })*/
                               </script>
                           </div>
                           <div class="video-title-container">
@@ -134,19 +134,19 @@
                             <h2>Featured:</h2>
                             <div id="wallpaper-slider">
                                 <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="epicweb/videoplayer/images/thumb-video1.png" alt="Card image cap">
+                                    <img id="button1" name="Webisode 1" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video1.png" alt="Card image cap" number="1">
                                     <p>Webisode 1</p>
                                 </div>
                                 <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="epicweb/videoplayer/images/thumb-video2.png" alt="Card image cap">
+                                    <img id="button2" name="Webisode 2" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video2.png" alt="Card image cap" number="2">
                                     <p>Webisode 2</p>
                                 </div>
                                 <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="epicweb/videoplayer/images/thumb-video3.png" alt="Card image cap">
+                                    <img id="button3" name="Webisode 3" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video3.png" alt="Card image cap" number="3">
                                     <p>Webisode 3</p>
                                 </div>
                                 <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="epicweb/videoplayer/images/thumb-video4.png" alt="Card image cap">
+                                    <img id="button4" name="Entrepreneur" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video4.png" alt="Card image cap" number="1">
                                     <p>Entrepreneur</p>
                                 </div>
                                 <!--
@@ -198,6 +198,20 @@
 
                 </div>
             </section>
+                
+            <script>
+                for(i=1;i<=4;i++){
+                    $("#button" + i).attr("number",i);
+                    if(!$("#button" + i).hasClass("lock") ){
+                       $("#button" + i).click(function(){
+                        $("#playVideo1").attr("src", "epicweb/videoplayer/localvideos/" +  $(this).attr("number") + ".mp4"  )
+                        $('#playVideo1').attr('poster', "epicweb/videoplayer/images/poster" +  $(this).attr("number") + ".png" );
+                           $(".video-title").text( $(this).attr("name") )
+                    }); 
+                    }
+
+                }
+            </script>
 
             <div class="container-fluid">
                 <div class="col-xs-12"></div>

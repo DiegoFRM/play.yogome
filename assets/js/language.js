@@ -53,11 +53,11 @@ var languageArrayIndex = [
                     id:5,
                     NAME:"mainMenu5",
                     ES:"Idiomas",
-                    EN:"Languages",
-                    PT:"Languages",
-                    ZH:"Languages",
-                    JA:"Languages",
-                    KO:"Languages"
+                    EN:"Language",
+                    PT:"Language",
+                    ZH:"Language",
+                    JA:"Language",
+                    KO:"Language"
                 },
                 { 
                     id:6,
@@ -414,13 +414,20 @@ var languageArrayIndex = [
           ]
           
 
-var language = "EN"
 
 function changeLanguage(){
     for(i=0;i<=languageArrayIndex.length-1;i++){
         if(language == "ES"){
             $(".text" + i).text(languageArrayIndex[i][language])
         }else if(language == "EN"){
+            $(".text" + i).text(languageArrayIndex[i][language])    
+        }else if(language == "PT"){
+            $(".text" + i).text(languageArrayIndex[i][language])    
+        }else if(language == "ZH"){
+            $(".text" + i).text(languageArrayIndex[i][language])    
+        }else if(language == "JA"){
+            $(".text" + i).text(languageArrayIndex[i][language])    
+        }else if(language == "KO"){
             $(".text" + i).text(languageArrayIndex[i][language])    
         }else{
             $(".text" + i).text(languageArrayIndex[i].EN)    

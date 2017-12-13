@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Books</title>
+    <title class="text3">Books</title>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery-responsiveGallery.css">
@@ -33,6 +33,21 @@ $('.responsiveGallery-wrapper').responsiveGallery({
         var language = "EN";
 		
 	</script>
+    <script>
+    //AQUI VA PARA SABER EL LENGUAGE
+        function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+        
+        var language = getParameterByName("language").toUpperCase();
+    
+    </script>
     
 		  
 </head>
@@ -56,11 +71,17 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                 <ul class="list-unstyled components">
                     <li class="active">
                         <ul class="list-unstyled" id="homeSubmenu">
-                          <li><a class="play-colors-orange webisodesSec" href="webisodes.html"><div id="text0">Webisodes</div></a></li>
+                          <li><a class="play-colors-orange webisodesSec" href="webisodes.html">
+                              <div class="text0">Webisodes</div>
+                              </a></li>
 <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                          <li><a class="play-colors-blue html5Games" href="letsplay.html">Games</a></li>
+                          <li><a class="play-colors-blue html5Games" href="letsplay.html">
+                              <div class="text2">Games</div>
+                              </a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                          <li><a class="play-colors-green" href="yogobooks.html">Books</a></li>
+                          <li><a class="play-colors-green" href="yogobooks.html">
+                              <div class="text3">Books</div>
+                              </a></li>
                           
                            
                         </ul>
@@ -70,7 +91,9 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                         </button>
 -->
                         <button type="button" id="register-btn-sm" class="navbar-btn hidden">
-                              <span>Registrer</span>
+                            <span>
+                                <div class="text4">Registrer</div>
+                            </span>
                         </button>
                     </li>
                 </ul>
@@ -101,14 +124,18 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 
                         <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                          <li><a class="play-colors-orange webisodesSec" href="webisodes.html">Webisodes</a></li>
+                          <li><a class="play-colors-orange webisodesSec" href="webisodes.html">
+                              <div class="text0">Webisodes</div>
+                              </a></li>
 <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                          <li><a class="play-colors-blue html5Games" href="letsplay.html">Games</a></li>
+                          <li><a class="play-colors-blue html5Games text2" href="letsplay.html">Games</a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                          <li><a class="play-colors-green" href="yogobooks.html">Books</a></li>
+                          <li><a class="play-colors-green" href="yogobooks.html">
+                              <div class="text3">Books</div>
+                              </a></li>
   
                    <li class="dropdown">
-                       <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang" data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
+                       <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang text5" data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
                        <ul class="dropdown-menu">
                            <li><a href="" id="lang-es" rel="es" class="language-switch">ESPAÑOL</a></li>
                            <li><a href="" id="lang-en" rel="en" class="language-switch">ENGLISH</a></li>
@@ -126,7 +153,7 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                         </li>
 -->
                                 <li>
-                                  <button type="button" id="register-btn-lg" class="navbar-btn">
+                                  <button type="button" id="register-btn-lg" class="navbar-btn text4">
                                     Registrer
                                   </button>
                                 </li>
@@ -204,6 +231,9 @@ $('.responsiveGallery-wrapper').responsiveGallery({
         magic.play();
         window.open("http://yogome.com/yogobookDemo/06/","_blank");
     });
+    </script>
+    <script src="assets/js/language.js">
+        
     </script>
 
 </html>

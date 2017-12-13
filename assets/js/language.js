@@ -63,11 +63,11 @@ var languageArrayIndex = [
                     id:6,
                     NAME:"mainMenu6",
                     ES:"Ingresar",
-                    EN:"Log In",
-                    PT:"Log In",
-                    ZH:"Log In",
-                    JA:"Log In",
-                    KO:"Log In"
+                    EN:"LogIn",
+                    PT:"LogIn",
+                    ZH:"LogIn",
+                    JA:"LogIn",
+                    KO:"LogIn"
                 },
                 { 
                     id:7,
@@ -152,76 +152,46 @@ var languageArrayIndex = [
                 { 
                     id:13,
                     NAME:"mainMenu13",
-                    ES:"Idiomas",
-                    EN:"Languages",
-                    PT:"Languages",
-                    ZH:"Languages",
-                    JA:"Languages",
-                    KO:"Languages"
+                    ES:"Festividades de invierno en el mundo",
+                    EN:"Winter Holidays Around the World",
+                    PT:"Feriados de inverno ao redor do mundo",
+                    ZH:"世界各地的冬季假日",
+                    JA:"世界の冬のホリデーシーズン",
+                    KO:"전 세계의 겨울 명절"
                 },
                 { 
                     id:14,
                     NAME:"mainMenu14",
-                    ES:"Ingresar",
-                    EN:"Log In",
-                    PT:"Log In",
-                    ZH:"Log In",
-                    JA:"Log In",
-                    KO:"Log In"
+                    ES:"Invasión a Mathdrómeda",
+                    EN:"Invasion on Mathdromeda",
+                    PT:"Invasão na Matedrômeda",
+                    ZH:"入侵Mathdromeda",
+                    JA:"マスドロメダへの侵略",
+                    KO:"수학 안드로메다 침략하기"
+                },
+                { 
+                    id:15,
+                    NAME:"mainMenu15",
+                    ES:"¡Quiero más!",
+                    EN:"I want more!",
+                    PT:"Quero mais!",
+                    ZH:"我想查看更多内容！",
+                    JA:"もっと見る",
+                    KO:"더 보여주세요!"
+                },
+                { 
+                    id:16,
+                    NAME:"mainMenu16",
+                    ES:"Impulsa el desarrollo de tus hijos por 5.99 al mes. Únete y descubre cómo Aprender es Divertido con Yogome.",
+                    EN:"Boost your child's development for only $5.99 per month. Join over 500,000 families and discover how learning is fun with Yogome.",
+                    PT:"Impulsione o desenvolvimento de seu filho por apenas US$ 5,99 por mês. Junte-se a mais de 500 mil famílias e descubra como é divertido aprender com a Yogome.",
+                    ZH:"每月仅需5.99美元，帮助孩子更好地成长。全球已有超过500,000个家庭加入我们的平台，您也快来加入吧，看看Yogome如何做到寓教于乐。",
+                    JA:"月々わずか$5.99でお子様の能力を向上。50万以上の家族に利用されているYogomeで、学ぶことの楽しさを発見しましょう。",
+                    KO:"아이들의 학습 능력 발달은 월 5.99 달러로 가능합니다. 50만 이상의 가족이 선택한 요고미와 함께 재미있는 놀이 학습을 즐겨보세요"
                 },
                 { 
                     id:17,
-                    NAME:"mainMenu15",
-                    ES:"Progreso",
-                    EN:"Progress",
-                    PT:"Progresso",
-                    ZH:"进度",
-                    JA:"進度",
-                    KO:"완성도"
-                },
-                { 
-                    id:18,
-                    NAME:"mainMenu16",
-                    ES:"Powercoins",
-                    EN:"Powercoins",
-                    PT:"Powercoins",
-                    ZH:"能量币",
-                    JA:"パワーコイン",
-                    KO:"파워 코인"
-                },
-                { 
-                    id:19,
                     NAME:"mainMenu17",
-                    ES:"¡Premios!",
-                    EN:"Prizes",
-                    PT:"Prêmios",
-                    ZH:"奖品",
-                    JA:"賞品",
-                    KO:"보상!"
-                },
-                { 
-                    id:20,
-                    NAME:"mainMenu18",
-                    ES:"Episodios",
-                    EN:"Webisodes",
-                    PT:"Episódios",
-                    ZH:"网络视频短片",
-                    JA:"ウェブエピソード",
-                    KO:"웹피소드"
-                },
-                { 
-                    id:21,
-                    NAME:"mainMenu1",
-                    ES:"Yogodex",
-                    EN:"Yogodex",
-                    PT:"Yogodex",
-                    ZH:"Yogodex",
-                    JA:"Yogodex",
-                    KO:"요고덱스"
-                },
-                { 
-                    id:22,
-                    NAME:"mainMenu2",
                     ES:"Juegos",
                     EN:"Games",
                     PT:"Jogos",
@@ -230,74 +200,214 @@ var languageArrayIndex = [
                     KO:"게임"
                 },
                 { 
+                    id:18,
+                    NAME:"mainMenu18",
+                    ES:"¡Vamos a jugar!",
+                    EN:"Let's play!",
+                    PT:"Vamos jogar!",
+                    ZH:"让我们开始游戏吧！",
+                    JA:"レッツプレイ！",
+                    KO:"지금 시작해요!"
+                },
+                { 
+                    id:19,
+                    NAME:"mainMenu19",
+                    ES:"Elige tu materia favorita",
+                    EN:"Choose your favorite subject",
+                    PT:"Escolha sua matéria favorita",
+                    ZH:"选择您最喜欢的科目",
+                    JA:"好きな科目を選んでください",
+                    KO:"가장 좋아하는 과목을 골라보세요"
+                },
+                { 
+                    id:20,
+                    NAME:"mainMenu20",
+                    ES:"Matemáticas",
+                    EN:"Math",
+                    PT:"Matemática",
+                    ZH:"数学",
+                    JA:"算数",
+                    KO:"수학"
+                },
+                { 
+                    id:21,
+                    NAME:"mainMenu21",
+                    ES:"Programación",
+                    EN:"Coding",
+                    PT:"Codificação",
+                    ZH:"编码",
+                    JA:"コーディング",
+                    KO:"소프트웨어"
+                },
+                { 
+                    id:22,
+                    NAME:"mainMenu22",
+                    ES:"Ciencia",
+                    EN:"Science",
+                    PT:"Ciências",
+                    ZH:"科学",
+                    JA:"サイエンス",
+                    KO:"과학"
+                },
+                { 
                     id:23,
-                    NAME:"mainMenu3",
-                    ES:"Libros",
-                    EN:"Books",
-                    PT:"Livros",
-                    ZH:"书籍",
-                    JA:"本",
-                    KO:"도서관"
+                    NAME:"mainMenu23",
+                    ES:"Geografía",
+                    EN:"Geography",
+                    PT:"Geografia",
+                    ZH:"地理",
+                    JA:"地理",
+                    KO:"지리학"
                 },
                 { 
                     id:24,
-                    NAME:"mainMenu4",
-                    ES:"Registro",
-                    EN:"Register",
-                    PT:"Recursos",
-                    ZH:"资源",
-                    JA:"資源",
-                    KO:"가입하기"
+                    NAME:"mainMenu24",
+                    ES:"Creatividad",
+                    EN:"Creativity",
+                    PT:"Criatividade",
+                    ZH:"创造力",
+                    JA:"創造性",
+                    KO:"창의력"
                 },
                 { 
                     id:25,
-                    NAME:"mainMenu5",
-                    ES:"Idiomas",
-                    EN:"Languages",
-                    PT:"Languages",
-                    ZH:"Languages",
-                    JA:"Languages",
-                    KO:"Languages"
+                    NAME:"mainMenu25",
+                    ES:"Idioma",
+                    EN:"Language",
+                    PT:"Idioma",
+                    ZH:"语言",
+                    JA:"言語",
+                    KO:"언어"
                 },
                 { 
                     id:26,
-                    NAME:"mainMenu6",
-                    ES:"Ingresar",
-                    EN:"Log In",
-                    PT:"Log In",
-                    ZH:"Log In",
-                    JA:"Log In",
-                    KO:"Log In"
+                    NAME:"mainMenu26",
+                    ES:"Salud",
+                    EN:"Health",
+                    PT:"Saúde",
+                    ZH:"健康",
+                    JA:"健康",
+                    KO:"건강"
                 },
                 { 
                     id:27,
-                    NAME:"mainMenu7",
-                    ES:"Progreso",
-                    EN:"Progress",
-                    PT:"Progresso",
-                    ZH:"进度",
-                    JA:"進度",
-                    KO:"완성도"
+                    NAME:"mainMenu27",
+                    ES:"Sustentabilidad",
+                    EN:"Sustainability",
+                    PT:"Sustentabilidade",
+                    ZH:"环境可持续发展",
+                    JA:"サステナビリティ",
+                    KO:"지속 가능성!"
                 },
                 { 
                     id:28,
-                    NAME:"mainMenu8",
-                    ES:"Powercoins",
-                    EN:"Powercoins",
-                    PT:"Powercoins",
-                    ZH:"能量币",
-                    JA:"パワーコイン",
-                    KO:"파워 코인"
+                    NAME:"mainMenu28",
+                    ES:"Ver más",
+                    EN:"and more...",
+                    PT:"e muito mais...",
+                    ZH:"以及更多……",
+                    JA:"その他",
+                    KO:"더 보기"
                 },
                 { 
                     id:29,
-                    NAME:"mainMenu9",
-                    ES:"¡Premios!",
-                    EN:"Prizes",
-                    PT:"Prêmios",
-                    ZH:"奖品",
-                    JA:"賞品",
-                    KO:"보상!"
+                    NAME:"mainMenu29",
+                    ES:"Aventura",
+                    EN:"Adventure mode",
+                    PT:"Modo aventura",
+                    ZH:"探险模式",
+                    JA:"アドベンチャーモード",
+                    KO:"어드벤처 모드"
+                },
+                { 
+                    id:30,
+                    NAME:"mainMenu30",
+                    ES:"Mini-juegos",
+                    EN:"Mini-games",
+                    PT:"Minijogos",
+                    ZH:"迷你游戏",
+                    JA:"ミニゲーム",
+                    KO:"미니게임"
+                },
+                { 
+                    id:31,
+                    NAME:"mainMenu31",
+                    ES:"¿Cómo jugar?",
+                    EN:"How to play?",
+                    PT:"Como jogar?",
+                    ZH:"怎么玩？",
+                    JA:"遊び方",
+                    KO:"게임 하는 방법"
+                },
+                { 
+                    id:32,
+                    NAME:"mainMenu32",
+                    ES:"Espacio",
+                    EN:"Space",
+                    PT:"Espaço",
+                    ZH:"空格键",
+                    JA:"宇宙",
+                    KO:"스페이스 바"
+                },
+                { 
+                    id:33,
+                    NAME:"mainMenu33",
+                    ES:"Videos",
+                    EN:"Videos",
+                    PT:"Vídeos",
+                    ZH:"视频",
+                    JA:"ビデオ",
+                    KO:"비디오"
+                },
+                { 
+                    id:34,
+                    NAME:"mainMenu34",
+                    ES:"3 a 5 años",
+                    EN:"3 to 5 years",
+                    PT:"3 a 5 anos",
+                    ZH:"3-5岁",
+                    JA:"3歳～5歳",
+                    KO:"3 - 5세 용"
+                },
+                { 
+                    id:35,
+                    NAME:"mainMenu35",
+                    ES:"Nuestras Apps",
+                    EN:"Our Apps",
+                    PT:"Nossos aplicativos",
+                    ZH:"我们的APP",
+                    JA:"弊社のアプリ",
+                    KO:"요고미 앱"
+                },
+                { 
+                    id:36,
+                    NAME:"mainMenu36",
+                    ES:"Cancelar suscripción",
+                    EN:"Cancel subscription",
+                    PT:"Cancel subscription",
+                    ZH:"Cancel subscription",
+                    JA:"Cancel subscription",
+                    KO:"구독 취소하기"
+                },
+                { 
+                    id:37,
+                    NAME:"mainMenu37",
+                    ES:"El código QR escaneado es inválido",
+                    EN:"The scanned QR code is not valid",
+                    PT:"The scanned QR code is not valid",
+                    ZH:"The scanned QR code is not valid",
+                    JA:"The scanned QR code is not valid",
+                    KO:"스캔한 QR코드가 유효하지 않습니다"
+                },
+                { 
+                    id:38,
+                    NAME:"mainMenu38",
+                    ES:"Yogome",
+                    EN:"Yogome",
+                    PT:"Yogome",
+                    ZH:"Yogome",
+                    JA:"Yogome",
+                    KO:"요고미"
                 }
     
     
@@ -309,11 +419,11 @@ var language = "EN"
 function changeLanguage(){
     for(i=0;i<=languageArrayIndex.length-1;i++){
         if(language == "ES"){
-            $("#text" + i).text(languageArrayIndex[i][language])
+            $(".text" + i).text(languageArrayIndex[i][language])
         }else if(language == "EN"){
-            $("#text" + i).text(languageArrayIndex[i][language])    
+            $(".text" + i).text(languageArrayIndex[i][language])    
         }else{
-            $("#text" + i).text(languageArrayIndex[i].EN)    
+            $(".text" + i).text(languageArrayIndex[i].EN)    
         }
     }   
 }

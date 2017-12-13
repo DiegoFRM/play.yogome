@@ -408,6 +408,16 @@ var languageArrayIndex = [
                     ZH:"Yogome",
                     JA:"Yogome",
                     KO:"요고미"
+                },   
+                { 
+                    id:39,
+                    NAME:"mainMenu39",
+                    ES:"Todas las materias",
+                    EN:"All Subjects",
+                    PT:"All Subjects",
+                    ZH:"All Subjects",
+                    JA:"All Subjects",
+                    KO:"All Subjects"
                 }
     
     

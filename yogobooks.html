@@ -30,7 +30,6 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 });
 		});
         
-        var language = "ES";
 		
 	</script>
     <script>
@@ -45,7 +44,16 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
         
-        var language = getParameterByName("language").toUpperCase();
+        var language;
+        language = getParameterByName("language");
+        
+        if(language == null ){
+            var lengua;
+            lengua = navigator.language || navigator.userLanguage; 
+            language = eval("'" + lengua + "'").toUpperCase();
+        }else{
+            language.toUpperCase();
+        }
     
     </script>
     

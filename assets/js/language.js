@@ -62,12 +62,12 @@ var languageArrayIndex = [
                 { 
                     id:6,
                     NAME:"mainMenu6",
-                    ES:"Ingresar",
+                    ES:"Iniciar sesión",
                     EN:"LogIn",
-                    PT:"LogIn",
-                    ZH:"LogIn",
-                    JA:"LogIn",
-                    KO:"LogIn"
+                    PT:"Login",
+                    ZH:"登录",
+                    JA:"ログイン",
+                    KO:"로그인"
                 },
                 { 
                     id:7,

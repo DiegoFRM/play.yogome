@@ -442,12 +442,12 @@ var languageArrayIndex = [
                 { 
                     id:42,
                     NAME:"mainMenu42",
-                    ES:"¡Únete a nosotros ahora!",
-                    EN:"Join us now!",
-                    PT:"Junte-se a nós agora!",
-                    ZH:"現在就加入我們！",
-                    JA:"今すぐ参加してください！",
-                    KO:"지금 우리와 함께하십시오!"
+                    ES:"Video",
+                    EN:"Video",
+                    PT:"Vídeo",
+                    ZH:"視頻",
+                    JA:"ビデオ",
+                    KO:"비디오"
                 }
     
     

@@ -432,12 +432,12 @@ var languageArrayIndex = [
                 { 
                     id:41,
                     NAME:"mainMenu41",
-                    ES:"Destacado",
-                    EN:"Featured",
-                    PT:"Destaque",
-                    ZH:"精選",
-                    JA:"注目",
-                    KO:"추천"
+                    ES:"Destacado:",
+                    EN:"Featured:",
+                    PT:"Destaque:",
+                    ZH:"精選:",
+                    JA:"注目:",
+                    KO:"추천:"
                 },
                 { 
                     id:42,

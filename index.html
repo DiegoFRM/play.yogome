@@ -71,11 +71,11 @@
                 <ul class="list-unstyled components">
                     <li class="active">
                         <ul class="list-unstyled" id="homeSubmenu">
-                          <li><a class="play-colors-orange webisodesSec" ><div class="text0">Webisodes</div></a></li>
+                          <li><a class="play-colors-orange webisodesSec" ><div class="text0 menu1">Webisodes</div></a></li>
 <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                          <li><a class="play-colors-blue html5Games"><div class="text2">Games</div></a></li>
+                          <li><a class="play-colors-blue html5Games"><div class="text2 menu2">Games</div></a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                            <li><a class="play-colors-green"><div class="text3">Books</div></a></li>
+                            <li><a class="play-colors-green"><div class="text3 menu3">Books</div></a></li>
                           <li class="dropdown">
                        <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang text5" data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
                        <ul class="dropdown-menu">
@@ -124,11 +124,11 @@
 
                         <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a class="play-colors-orange webisodesSec"><div class="text0">Webisodes</div></a></li>
+                                <li><a class="play-colors-orange webisodesSec"><div class="text0 menu1">Webisodes</div></a></li>
 <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                                <li><a class="play-colors-blue html5Games" ><div class="text2">Games</div></a></li>
+                                <li><a class="play-colors-blue html5Games" ><div class="text2 menu2">Games</div></a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                                <li><a class="play-colors-green"><div class="text3">Books</div></a></li>
+                                <li><a class="play-colors-green"><div class="text3 menu3">Books</div></a></li>
                             <li class="dropdown">
                        <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang" data-toggle="dropdown" href="#"><span class="text5">Language</span> <span class="caret"></span></a>
                        <ul class="dropdown-menu">
@@ -198,8 +198,8 @@
                           <div class="embed-responsive embed-responsive-16by9">
                               <!-- Youtube API: The <iframe> (and video player) will replace this <div> tag. Code in mixpanel.js-->
                               <div id="player"></div>
-                              <video id="playVideo1" width="560" height="315" poster="assets/images/previewvideo.jpg">
-                                <source src="epicweb/videoplayer/localvideos/1.mp4" type="video/mp4">
+                              <video id="playVideo1" width="560" height="315" controls poster="assets/images/previewvideo.png">
+                                <source src="epicweb/videoplayer/localvideos/1.mp4"  type="video/mp4">
                               </video>
                               <script>
                               $("#playVideo1").click(function(){
@@ -403,20 +403,19 @@
         window.open("index.html?language=" + language,"_self");
     });        
         
-    $(".text0").click(function(){
+    $(".menu1").click(function(){
         window.open("webisodes.html?language=" + language,"_self");
     });
-    $(".text2").click(function(){
+    $(".menu2").click(function(){
         window.open("letsplay.html?language=" + language,"_self");
     });
-    $(".text3").click(function(){
+    $(".menu3").click(function(){
         window.open("yogobooks.html?language=" + language,"_self");
     });   
         
     $("#gamesButton").click(function(){
         window.open("letsplay.html?language=" + language,"_self");
-    });    
-        
+    });
     $("#booksButton").click(function(){
         window.open("yogobooks.html?language=" + language,"_self");
     });    

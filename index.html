@@ -257,8 +257,8 @@
                           <div class="">
                             <div class="separator2 hidden-xs"></div>
                             <div id="" class="html5Games btn btn-orange text-center center-block">
-                                <a href="http://play.yogome.com/letsplay.html">
-                                    <div class="text15">I want more!</div>
+                                <a>
+                                    <div id="gamesButton" class="text15">I want more!</div>
                                 </a>
                             </div>
                           </div>
@@ -303,8 +303,8 @@
                       </div>
                     </div>
                     <div id="" class="html5Games btn btn-purple text-center center-block">
-                             <a href="http://play.yogome.com/yogobooks.html">
-                                    <div class="text15">I want more!</div>
+                             <a>
+                                    <div id="booksButton" class="text15">I want more!</div>
                                 </a>
                     </div>
                 </section>
@@ -401,6 +401,14 @@
         window.open("letsplay.html?language=" + language,"_self");
     });
     $(".text3").click(function(){
+        window.open("yogobooks.html?language=" + language,"_self");
+    });   
+        
+    $("#gamesButton").click(function(){
+        window.open("letsplay.html?language=" + language,"_self");
+    });    
+        
+    $("#booksButton").click(function(){
         window.open("yogobooks.html?language=" + language,"_self");
     });    
         

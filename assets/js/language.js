@@ -414,10 +414,10 @@ var languageArrayIndex = [
                     NAME:"mainMenu39",
                     ES:"Todas las materias",
                     EN:"All Subjects",
-                    PT:"All Subjects",
-                    ZH:"All Subjects",
-                    JA:"All Subjects",
-                    KO:"All Subjects"
+                    PT:"Todos os assuntos",
+                    ZH:"所有科目",
+                    JA:"すべての科目",
+                    KO:"모든 과목들"
                 },   
                 { 
                     id:40,

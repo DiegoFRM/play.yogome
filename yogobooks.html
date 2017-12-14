@@ -30,7 +30,7 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 });
 		});
         
-        var language = "EN";
+        var language = "ES";
 		
 	</script>
     <script>
@@ -71,15 +71,15 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                 <ul class="list-unstyled components">
                     <li class="active">
                         <ul class="list-unstyled" id="homeSubmenu">
-                          <li><a class="play-colors-orange webisodesSec" href="webisodes.html">
+                          <li><a class="play-colors-orange webisodesSec">
                               <div class="text0">Webisodes</div>
                               </a></li>
 <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                          <li><a class="play-colors-blue html5Games" href="letsplay.html">
+                          <li><a class="play-colors-blue html5Games">
                               <div class="text2">Games</div>
                               </a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                          <li><a class="play-colors-green" href="yogobooks.html">
+                          <li><a class="play-colors-green">
                               <div class="text3">Books</div>
                               </a></li>
                           <li class="dropdown">
@@ -123,7 +123,7 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                             </button>
                           </div>
                           <div class="col-xs-4 col-sm-12 display-inline">
-                            <a class="navbar-logo" href="index.html">
+                            <a class="navbar-logo">
                               <div id="navbar-logo-container">
                                 <img class="img img-responsive" src="assets/images/logo-yogome.png" alt="Logo Yogome">
                               </div>
@@ -134,13 +134,13 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 
                         <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                          <li><a class="play-colors-orange webisodesSec" href="webisodes.html">
+                          <li><a class="play-colors-orange webisodesSec">
                               <div class="text0">Webisodes</div>
                               </a></li>
 <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                          <li><a class="play-colors-blue html5Games text2" href="letsplay.html">Games</a></li>
+                          <li><a class="play-colors-blue html5Games text2" >Games</a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                          <li><a class="play-colors-green" href="yogobooks.html">
+                          <li><a class="play-colors-green" >
                               <div class="text3">Books</div>
                               </a></li>
   
@@ -234,13 +234,22 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
     <script src="assets/js/book.js"></script>
     <script>
-        var magic = document.getElementById("magic");
-    $("#loadBook").click(function(){
-        //$(".bookframe").css("display","block");
-        //$("#bookContainer").css("display","none");
-        magic.play();
-        window.open("http://yogome.com/yogobookDemo/06/","_blank");
+
+    $("#navbar-logo-container").click(function(){
+        window.open("index.html?language=" + language,"_self");
+    });    
+        
+
+    $(".text0").click(function(){
+        window.open("webisodes.html?language=" + language,"_self");
     });
+    $(".text2").click(function(){
+        window.open("letsplay.html?language=" + language,"_self");
+    });
+    $(".text3").click(function(){
+        window.open("yogobooks.html?language=" + language,"_self");
+    });
+        
     </script>
     <script src="assets/js/language.js">
         

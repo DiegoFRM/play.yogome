@@ -166,7 +166,7 @@
                           </div>
                           <div class="video-title-container">
                             <p class="video-title">
-                              <span class="text42">Video</span>
+                              <span class="text43">Video</span>
                             </p>
                           </div>
                       </div>
@@ -182,20 +182,20 @@
                         <div class="col-xs-12">
                             <h2><div class="text41">Featured</div></h2>
                             <div id="wallpaper-slider">
-                                <div class="video-item text-center">
-                                    <img id="button1" name="Webisode 1" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video1.png" alt="Card image cap" number="1">
+                                <div id="button1" class="video-item text-center">
+                                    <img  name="Websidoes 3" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video1.png" alt="Card image cap" number="1">
                                     <p><span class="text43">Invasion on Mathdromeda</span></p>
                                 </div>
-                                <div class="video-item text-center">
-                                    <img id="button2" name="Webisode 2" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video2.png" alt="Card image cap" number="2">
+                                <div id="button2" class="video-item text-center">
+                                    <img name="text43" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video2.png" alt="Card image cap" number="2">
                                     <p><span class="text43">Invasion on Mathdromeda</span> 2</p>
                                 </div>
-                                <div class="video-item text-center">
-                                    <img id="button3" name="Webisode 3" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video3.png" alt="Card image cap" number="3">
+                                <div id="button3" class="video-item text-center">
+                                    <img name="text43" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video3.png" alt="Card image cap" number="3">
                                     <p><span class="text43">Invasion on Mathdromeda</span> 3</p>
                                 </div>
-                                <div class="video-item text-center">
-                                    <img id="button4" name="Entrepreneur" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video4.png" alt="Card image cap" number="1">
+                                <div id="button4" class="video-item text-center">
+                                    <img  name="text45" class="wallpaper-thumb low-padding videoButton" src="epicweb/videoplayer/images/thumb-video4.png" alt="Card image cap" number="1">
                                     <p><span class="text45">How to Become an Entrepreneur</span></p>
                                 </div>
                                 <!--
@@ -255,7 +255,8 @@
                        $("#button" + i).click(function(){
                         $("#playVideo1").attr("src", "epicweb/videoplayer/localvideos/" +  $(this).attr("number") + ".mp4"  )
                         $('#playVideo1').attr('poster', "epicweb/videoplayer/images/poster" +  $(this).attr("number") + ".png" );
-                           $(".video-title").text( $(this).attr("name") )
+                           var textNew = $(this).find("span").text();
+                           $(".video-title").html( textNew );
                     }); 
                     }
 

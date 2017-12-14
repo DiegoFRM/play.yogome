@@ -37,8 +37,9 @@
         
         if(language == null ){
             var lengua;
-            lengua = navigator.language || navigator.userLanguage; 
-            language = eval("'" + lengua + "'").toUpperCase();
+            //lengua = navigator.language || navigator.userLanguage; 
+            //language = eval("'" + lengua + "'").toUpperCase();
+            language= "ES";
         }else{
             language.toUpperCase();
         }

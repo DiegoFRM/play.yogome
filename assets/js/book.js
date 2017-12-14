@@ -41,7 +41,7 @@
                     ES:"Estoy<br> Enojada",
                     url:"http://play.yogome.com/yogomebooks/6",
                     new:false,
-                    lock:true
+                    lock:false
                     
                 },
                 { 
@@ -50,12 +50,14 @@
                     ES:"El espacio <br> ideal",
                     url:"http://play.yogome.com/yogomebooks/13",
                     new:false,
-                    lock:true
+                    lock:false
                     
                 }
           ]
           
           for(i=0;i<=booksArray.length-1;i++){
+              
+              var number = i;
               
               $("#container-books").append('<li id="book'+ i +'"class="responsiveGallery-item"></li>');
               
@@ -80,6 +82,10 @@
                         $("#container-books").find("#book" + i).find("img").addClass("locked");
                     }
               }
+              
+              $("#book" + i).click(function(){
+                        window.open(booksArray[number].url + "?language=" + language , "_blank"); 
+                  });
               
               $("#container-books").find("#book" + i).append('<div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div><div id="textBook' + i +'" class="w-responsivGallery-info2"></div>');
           

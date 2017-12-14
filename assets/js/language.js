@@ -418,6 +418,16 @@ var languageArrayIndex = [
                     ZH:"All Subjects",
                     JA:"All Subjects",
                     KO:"All Subjects"
+                },   
+                { 
+                    id:40,
+                    NAME:"mainMenu40",
+                    ES:"¡Únete a nosotros ahora!",
+                    EN:"Join us now!",
+                    PT:"Junte-se a nós agora!",
+                    ZH:"現在就加入我們！",
+                    JA:"今すぐ参加してください！",
+                    KO:"지금 우리와 함께하십시오!"
                 }
     
     

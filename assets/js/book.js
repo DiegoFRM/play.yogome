@@ -75,6 +75,7 @@
                     }
                   
                   $("#book" + i).click(function(){
+                        magic.play();
                         window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_blank"); 
                   });
                   
@@ -85,6 +86,7 @@
                     }
                   
                   $("#book" + i).click(function(){
+                        flipcard.play();
                         window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_blank"); 
                   });
               }else{
@@ -94,6 +96,7 @@
                     }
                   
                   $("#book" + i).click(function(){
+                        flipcard.play();
                         window.open(booksArray[$(this).attr("number")].url + "?language=ES", "_blank"); 
                   });
               }

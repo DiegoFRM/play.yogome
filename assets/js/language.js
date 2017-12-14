@@ -488,6 +488,46 @@ var languageArrayIndex = [
                     ZH:"視頻",
                     JA:"ビデオ",
                     KO:"비디오"
+                },
+                { 
+                    id:47,
+                    NAME:"mainMenu47",
+                    ES:"Lee nuestra",
+                    EN:"Read our",
+                    PT:"Read our",
+                    ZH:"Read our",
+                    JA:"Read our",
+                    KO:"Read our"
+                },
+                { 
+                    id:48,
+                    NAME:"mainMenu48",
+                    ES:"Política de Privacidad",
+                    EN:"Privacy policy",
+                    PT:"Política de Privacidade",
+                    ZH:"隐私政策",
+                    JA:"プライバシーポリシー",
+                    KO:"개인정보 보호정책"
+                },
+                { 
+                    id:49,
+                    NAME:"mainMenu49",
+                    ES:"y",
+                    EN:"and",
+                    PT:"e",
+                    ZH:"和",
+                    JA:"および",
+                    KO:"및"
+                },
+                { 
+                    id:50,
+                    NAME:"mainMenu50",
+                    ES:"Terminos de servicio",
+                    EN:"Terms of service",
+                    PT:"Terms of service",
+                    ZH:"Terms of service",
+                    JA:"Terms of service",
+                    KO:"Terms of service"
                 }
     
     

@@ -50,6 +50,11 @@
     </script>
 </head>
 <body>
+    
+    <audio preload="auto" id="pop"  src="assets/sounds/pop.mp3"></audio>
+    <audio preload="auto" id="flipcard"  src="assets/sounds/flipcard.mp3"></audio>
+    <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
+    
   <div class="wrapper">
             <!-- MENU WEBPAGE -->
             <nav id="sidebar">
@@ -158,7 +163,7 @@
                           </div>
                           <div class="separator1"></div>
                           <div class="separator1"></div>
-                          <a href="http://yogome.com/epic/minigames/epicSite/"><div class="btn-play text-center"></div></a>
+                          <a href="http://yogome.com/epic/minigames/epicSite/"><div onmouseover="magic.play()" class="btn-play text-center"></div></a>
                           <div class="separator1"></div>
                       </div>
                         
@@ -378,13 +383,17 @@
     <script src="assets/js/language.js"></script>
     <script> 
         
+        var pop = document.getElementById("pop");
+        var flipcard = document.getElementById("flipcard");
+        var magic = document.getElementById("magic");
+        
       var pathGames = "games/nonrefactored/"
   		var games = yogomeGames.getGames();
   		for(var i = 0 ; i <= games.length-1 ;i++){
 
   			var num = i;
   			if(games[i].demo){
-  				$("#container-html5games").append("<div class='col-xs-6 col-sm-4 game-container "+games[i].subject+"'><a href='"+games[i].url+"' rev='"+games[i].name+"' class='gameCatalog' id='gameimg" + num+"' ><img class='growMouse img-responsive' src='" +games[num].url +"/images/fbpost.png" + "'/></a> </div>");
+  				$("#container-html5games").append("<div onmouseover='flipcard.play()' class='col-xs-6 col-sm-4 game-container "+games[i].subject+"'><a href='"+games[i].url+"' rev='"+games[i].name+"' class='gameCatalog' id='gameimg" + num+"' ><img class='growMouse img-responsive' src='" +games[num].url +"/images/fbpost.png" + "'/></a> </div>");
   				$("#gameimg" + num).attr("value",i);
   			}
 

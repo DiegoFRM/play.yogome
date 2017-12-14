@@ -6,11 +6,13 @@ $(document).ready(function () {
   });
 
   $('#dismiss, .overlay').on('click', function () {
+      pop.play()
     $('#sidebar').removeClass('active');
     $('.overlay').fadeOut();
   });
 
   $('#sidebarCollapse').on('click', function () {
+      pop.play()
     $('#sidebar').addClass('active');
     $('.overlay').fadeIn();
     $('.collapse.in').toggleClass('in');

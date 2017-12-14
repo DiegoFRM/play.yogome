@@ -49,6 +49,11 @@
 </head>
 
 <body>
+    
+    <audio preload="auto" id="pop"  src="assets/sounds/pop.mp3"></audio>
+    <audio preload="auto" id="flipcard"  src="assets/sounds/flipcard.mp3"></audio>
+    <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
+    
     <div class="wrapper">
             <!-- MENU WEBPAGE -->
             <nav id="sidebar">
@@ -145,6 +150,8 @@
                         </div>
                     </div>
                 </nav>
+                
+        </div>
                 <!--END MENU WEBPAGE -->
             <section class="container-fluid bg-webisodes-main">
                 <div class="star-zip">
@@ -207,7 +214,7 @@
                                 -->
                             </div>
                         </div>
-                            <div class="buttonsCenter hidden-xs">
+                            <div onclick="flipcard.play()" class="buttonsCenter hidden-xs">
                                 <div class="slick-nav-buttons"></div>
                             </div>
                         
@@ -250,11 +257,21 @@
             </section>
                 
             <script>
+                var pop = document.getElementById("pop");
+                var flipcard = document.getElementById("flipcard");
+                var magic = document.getElementById("magic");
+                
+                
+                
+                
                 for(i=1;i<=4;i++){
                     $("#button" + i).attr("number",i);
                     if(!$("#button" + i).hasClass("lock") ){
+                        
                        $("#button" + i).click(function(){
+                           pop.play();
                         $("#playVideo1").attr("src", "epicweb/videoplayer/localvideos/" +  $(this).attr("number") + ".mp4"  )
+                           
                         $('#playVideo1').attr('poster', "epicweb/videoplayer/images/poster" +  $(this).attr("number") + ".png" );
                            var textNew = $(this).find("span").text();
                            $(".video-title").html( textNew );
@@ -262,6 +279,8 @@
                     }
 
                 }
+                
+               
             </script>
 
             <div class="container-fluid">
@@ -273,35 +292,44 @@
                     <div class="col-xs-12 play-footer">
                         <img class="img img-responsive footer-logo" src="assets/images/logo-yogome.png" alt="Logo Yogome">
                         <img class="img img-responsive footer-logo" src="assets/images/logo-student-safe.png" alt="Logo Student Safe">
-                        <p>Read our
-                            <a href="http://yogome.com/en/privacy/" target="_blank">Privacy policy</a> and
-                            <a href="http://yogome.com/en/privacy/" target="_blank">Terms of service</a>.</p>
+                        <p><span class="text47">Read our</span>
+                            <a href="http://yogome.com/en/privacy/" target="_blank"><div class="text48">Privacy policy</div></a> <span class="text49">and</span>
+                            <a href="http://yogome.com/en/privacy/" target="_blank"><div class="text50">Terms of service.</div></a></p>
                     </div>
                 </div>
             </footer>
         </div>
-    </div>
+      </body>  
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
     <script src="assets/js/yogofun.js"></script>
     <script src="assets/js/language.js"></script>
     <script>
-    
-     $("#navbar-logo-container").click(function(){
+        $(".slick-nav-buttons").find("slick-arrow").addClass("botonSound")
+        
+     $(".slick-prev").click(function(){
+             pop.play()       
+            })
+     $("#navbar-logo-container").mouseup(function(){
+         magic.play()
         window.open("index.html?language=" + language,"_self");
     });        
-        
-        
         $(".text0").click(function(){
-        window.open("webisodes.html?language=" + language,"_self");
+        magic.play();
+        window.open("webisodes.html?language=" + language,"_self");    
     });
     $(".text2").click(function(){
-        window.open("letsplay.html?language=" + language,"_self");
+        magic.play();
+        window.open("letsplay.html?language=" + language,"_self");  
     });
     $(".text3").click(function(){
+        magic.play();
         window.open("yogobooks.html?language=" + language,"_self");
     });
+    $(".navbar-btn").click(function(){
+        magic.play();
+    });
     </script>
-</body>
+
 
 </html>

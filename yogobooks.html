@@ -62,9 +62,9 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 </head>
 
 <body>
-    <audio id="pop" src="assets/sounds/pop.mp3"></audio>
-    <audio id="flipcard" src="assets/sounds/flipcard.mp3"></audio>
-    <audio id="magic" src="assets/sounds/magic.mp3"></audio>
+    <audio preload="auto" id="pop"  src="assets/sounds/pop.mp3"></audio>
+    <audio preload="auto" id="flipcard"  src="assets/sounds/flipcard.mp3"></audio>
+    <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
             <!-- MENU WEBPAGE -->
             <nav id="sidebar">
                 <div id="dismiss">
@@ -197,7 +197,7 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 </div>            
 
                 <div class="row panel-player">
-                    <div id="prevButton" class="responsiveGallery-btn_prev col-xs-1">
+                    <div onclick="flipcard.play()" id="prevButton" class="responsiveGallery-btn_prev col-xs-1">
                         <img class="img-responsive" src="assets/images/books/BotonBooksBack.png">
                         </div>
                         
@@ -205,7 +205,7 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                         <img id="panelBooks" class="img-responsive"> <!-- src="assets/images/books/Panel.png"/> -->
                         </div>
                         
-                        <div id="nextButton" class="responsiveGallery-btn_next col-xs-1">
+                        <div onclick="flipcard.play()" id="nextButton" class="responsiveGallery-btn_next col-xs-1">
                         <img  class="img-responsive" src="assets/images/books/BotonBooksNext.png">
                         </div>
                     </div>                
@@ -229,9 +229,9 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                     <div class="col-xs-12 play-footer">
                         <img class="img img-responsive footer-logo" src="assets/images/logo-yogome.png" alt="Logo Yogome">
                         <img class="img img-responsive footer-logo" src="assets/images/logo-student-safe.png" alt="Logo Student Safe">
-                        <p>Read our
-                            <a href="http://yogome.com/en/privacy/" target="_blank">Privacy policy</a> and
-                            <a href="http://yogome.com/en/privacy/" target="_blank">Terms of service</a>.</p>
+                        <p><span class="text47">Read our</span>
+                            <a href="http://yogome.com/en/privacy/" target="_blank"><div class="text48">Privacy policy</div></a><span class="text49">and</span>
+                            <a href="http://yogome.com/en/privacy/" target="_blank"><div class="text50">Terms of service.</div></a></p>
                     </div>
                 </div>
             </footer>
@@ -246,17 +246,19 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     $("#panelBooks").attr("src","assets/images/books/Panel" + language + ".png");
 
     $("#navbar-logo-container").click(function(){
+        magic.play();
         window.open("index.html?language=" + language,"_self");
     });    
-        
-
     $(".text0").click(function(){
+        magic.play();
         window.open("webisodes.html?language=" + language,"_self");
     });
     $(".text2").click(function(){
+        magic.play();
         window.open("letsplay.html?language=" + language,"_self");
     });
     $(".text3").click(function(){
+        magic.play();
         window.open("yogobooks.html?language=" + language,"_self");
     });
         

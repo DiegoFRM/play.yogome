@@ -49,6 +49,11 @@
     </script>
     
 <body>
+    
+    <audio preload="auto" id="pop"  src="assets/sounds/pop.mp3"></audio>
+    <audio preload="auto" id="flipcard"  src="assets/sounds/flipcard.mp3"></audio>
+    <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
+    
     <div class="wrapper">
             <!-- MENU WEBPAGE -->
             <nav id="sidebar">
@@ -253,7 +258,9 @@
     <script src="assets/js/letsplay.js"></script>
 </body>
 <script>
-    
+                var pop = document.getElementById("pop");
+                var flipcard = document.getElementById("flipcard");
+                var magic = document.getElementById("magic");
     
     var subjectsButtons =     
         [
@@ -356,6 +363,7 @@
         
         $("." + subjectsButtons[i].img).attr("index",i);
         $("." + subjectsButtons[i].img).click(function(){
+            magic.play()
             var index = $(this).attr("index");
            $("#nameSubject").find("p").text(subjectsButtons[index][language]); 
             
@@ -379,7 +387,7 @@ function showGames(){
 
   			var num = i;
   			if(games[i].review){
-  				$("#minigamesContainer").append("<div class='col-xs-6 col-sm-4 "+games[i].subject+"'><a href='"+games[i].url+"' rev='"+games[i].name+"' class='gameCatalog' id='gameimg" + num+"' ><img class='growMouse img-responsive img-minigames' src='" +games[num].url +"/images/fbpost.png" + "'/></a> </div>");
+  				$("#minigamesContainer").append("<div class='col-xs-6 col-sm-4 "+games[i].subject+"'><a href='"+games[i].url+"' rev='"+games[i].name+"' class='gameCatalog' id='gameimg" + num+"' ><img class='growMouse img-responsive img-minigames' onmouseover='flipcard.play()' src='" +games[num].url +"/images/fbpost.png" + "'/></a> </div>");
   				$("#gameimg" + num).attr("value",i);
   			}
 
@@ -390,17 +398,21 @@ function showGames(){
   showGames();  
     
     $("#navbar-logo-container").click(function(){
+        magic.play()
         window.open("index.html?language=" + language,"_self");
     });    
         
 
     $(".text0").click(function(){
+        magic.play()
         window.open("webisodes.html?language=" + language,"_self");
     });
     $(".text2").click(function(){
+        magic.play()
         window.open("letsplay.html?language=" + language,"_self");
     });
     $(".text3").click(function(){
+        magic.play()
         window.open("yogobooks.html?language=" + language,"_self");
     });   
     

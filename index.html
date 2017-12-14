@@ -32,7 +32,20 @@
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
         
-        var language = getParameterByName("language").toUpperCase();
+        var language;
+        language = getParameterByName("language");
+        
+        if(language == null ){
+            var lengua;
+            //lengua = navigator.language || navigator.userLanguage; 
+            //language = eval("'" + lengua + "'").toUpperCase();
+            language= "ES";
+        }else{
+            language.toUpperCase();
+        }
+        
+        
+     
     
     </script>
 </head>
@@ -191,7 +204,7 @@
                           </div>
                           <div class="video-title-container">
                             <p class="video-title">
-                              <span class="text38"> Yogome</span> video
+                              <span class="text38"> Yogome</span> <span class="text33">video</span>
                             </p>
                           </div>
                       </div>

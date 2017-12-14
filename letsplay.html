@@ -25,7 +25,6 @@
 </head>
 
     <script>
-    //AQUI VA PARA SABER EL LENGUAGE
         function getParameterByName(name, url) {
     if (!url) url = window.location.href;
     name = name.replace(/[\[\]]/g, "\\$&");
@@ -36,10 +35,17 @@
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
         
-        var language = getParameterByName("language").toUpperCase();
+        var language;
+        language = getParameterByName("language");
         
-        
-        
+        if(language == null ){
+            var lengua;
+            //lengua = navigator.language || navigator.userLanguage; 
+            //language = eval("'" + lengua + "'").toUpperCase();
+            language= "ES";
+        }else{
+            language.toUpperCase();
+        }
     </script>
     
 <body>
@@ -104,11 +110,11 @@
 
                         <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
                             <ul class="nav navbar-nav navbar-right">
-                          <li><a class="play-colors-orange webisodesSec" href="webisodes.html"><div class="text0">Webisodes</div></a></li>
+                          <li><a class="play-colors-orange webisodesSec"><div class="text0">Webisodes</div></a></li>
 <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                          <li><a class="play-colors-blue html5Games" href="letsplay.html"><div class="text2">Games</div></a></li>
+                          <li><a class="play-colors-blue html5Games"><div class="text2">Games</div></a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                          <li><a class="play-colors-green" href="yogobooks.html"><div class="text3">Books</div></a></li>
+                          <li><a class="play-colors-green"><div class="text3">Books</div></a></li>
   
                    <li class="dropdown">
                        <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang" data-toggle="dropdown" href="#"><div class="text5">Language</div> <span class="caret"></span></a>

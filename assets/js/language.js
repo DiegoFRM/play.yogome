@@ -448,6 +448,46 @@ var languageArrayIndex = [
                     ZH:"視頻",
                     JA:"ビデオ",
                     KO:"비디오"
+                },
+                { 
+                    id:43,
+                    NAME:"mainMenu43",
+                    ES:"Invasión a Mathdrómeda",
+                    EN:"Invasion on Mathdromeda",
+                    PT:"Invasão na Matedrômeda",
+                    ZH:"入侵Mathdromeda",
+                    JA:"マスドロメダへの侵略",
+                    KO:"수학 안드로메다 침략하기"
+                },
+                { 
+                    id:44,
+                    NAME:"mainMenu44",
+                    ES:"Nuevo Cuerpo",
+                    EN:"New Body",
+                    PT:"Novo corpo",
+                    ZH:"新的正文",
+                    JA:"新しい体",
+                    KO:"새로운 몸"
+                },
+                { 
+                    id:45,
+                    NAME:"mainMenu46",
+                    ES:"¿Cómo ser emprendedor?",
+                    EN:"How to Become an Entrepreneur?",
+                    PT:"Como se tornar um empreendedor",
+                    ZH:"如何成为企业家",
+                    JA:"企業家になるには",
+                    KO:"사업가가 되는 방법"
+                },
+                { 
+                    id:46,
+                    NAME:"mainMenu46",
+                    ES:"Video",
+                    EN:"Video",
+                    PT:"Vídeo",
+                    ZH:"視頻",
+                    JA:"ビデオ",
+                    KO:"비디오"
                 }
     
     

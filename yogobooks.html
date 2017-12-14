@@ -30,7 +30,6 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 });
 		});
         
-        var language = "ES";
 		
 	</script>
     <script>
@@ -45,7 +44,17 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
         
-        var language = getParameterByName("language").toUpperCase();
+        var language;
+        language = getParameterByName("language");
+        
+        if(language == null ){
+            var lengua;
+            //lengua = navigator.language || navigator.userLanguage; 
+            //language = eval("'" + lengua + "'").toUpperCase();
+            language= "ES";
+        }else{
+            language.toUpperCase();
+        }
     
     </script>
     
@@ -193,9 +202,8 @@ $('.responsiveGallery-wrapper').responsiveGallery({
                         </div>
                         
                         <div class="col-xs-10">
-                        <img class="img-responsive" src="assets/images/books/Panel.png"/>
+                        <img id="panelBooks" class="img-responsive"> <!-- src="assets/images/books/Panel.png"/> -->
                         </div>
-                        
                         
                         <div id="nextButton" class="responsiveGallery-btn_next col-xs-1">
                         <img  class="img-responsive" src="assets/images/books/BotonBooksNext.png">
@@ -234,6 +242,8 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
     <script src="assets/js/book.js"></script>
     <script>
+        
+    $("#panelBooks").attr("src","assets/images/books/Panel" + language + ".png");
 
     $("#navbar-logo-container").click(function(){
         window.open("index.html?language=" + language,"_self");

@@ -428,6 +428,26 @@ var languageArrayIndex = [
                     ZH:"現在就加入我們！",
                     JA:"今すぐ参加してください！",
                     KO:"지금 우리와 함께하십시오!"
+                },
+                { 
+                    id:41,
+                    NAME:"mainMenu41",
+                    ES:"Destacado",
+                    EN:"Featured",
+                    PT:"Destaque",
+                    ZH:"精選",
+                    JA:"注目",
+                    KO:"추천"
+                },
+                { 
+                    id:42,
+                    NAME:"mainMenu42",
+                    ES:"¡Únete a nosotros ahora!",
+                    EN:"Join us now!",
+                    PT:"Junte-se a nós agora!",
+                    ZH:"現在就加入我們！",
+                    JA:"今すぐ参加してください！",
+                    KO:"지금 우리와 함께하십시오!"
                 }
     
     

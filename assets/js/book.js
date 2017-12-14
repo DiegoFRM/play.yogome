@@ -65,17 +65,18 @@
                   $("#container-books").find("#book" + i).append('<div class="new-ribbon"></div>');
               }
               
-                
+              $("#book" + i).attr("number",i);
               
               if(language == "ES"){
                    $("#container-books").find("#book" + i).append('<img src="'+booksArray[i].url + '/bookpages/1ES.png" height="320" width="320" alt="" class="responsivGallery-pic">');
                     console.log(i +  ": " + booksArray[i].lock);
+                  
                     if(booksArray[i].lock){
                         $("#container-books").find("#book" + i).find("img").addClass("locked");
                     }
                   
                   $("#book" + i).click(function(){
-                        window.open(booksArray[number].url + "?language=" + language , "_blank"); 
+                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_blank"); 
                   });
                   
               }else if(language == "EN"){
@@ -85,9 +86,8 @@
                     }
                   
                   $("#book" + i).click(function(){
-                        window.open(booksArray[number].url + "?language=" + language , "_blank"); 
+                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_blank"); 
                   });
-                  
               }else{
                   $("#container-books").find("#book" + i).append('<img src="'+booksArray[i].url + '/bookpages/1EN.png" height="320" width="320" alt="" class="responsivGallery-pic">');
                    if(booksArray[i].lock){
@@ -95,11 +95,11 @@
                     }
                   
                   $("#book" + i).click(function(){
-                        window.open(booksArray[number].url + "?language=" + language , "_blank"); 
+                        window.open(booksArray[$(this).attr("number")].url + "?language=ES", "_blank"); 
                   });
               }
               
-
+              
               
               $("#container-books").find("#book" + i).append('<div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div><div id="textBook' + i +'" class="w-responsivGallery-info2"></div>');
           

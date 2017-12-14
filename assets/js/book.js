@@ -57,7 +57,6 @@
           
           for(i=0;i<=booksArray.length-1;i++){
               
-              var number = i;
               
               $("#container-books").append('<li id="book'+ i +'"class="responsiveGallery-item"></li>');
               

@@ -228,6 +228,46 @@ var languageArrayIndex = [
                     JA:"テストの最後の問題です！ゲームを続けられるよう、保護者の方にEメールを登録するようお願いしてください。",
                     KO:"이미 시험이 다 끝났어요! 부모님이 이메일 주소를 입력하시면 모험을 계속 이어갈 수 있어요."
                 },
+                { 
+                    id:23,
+                    NAME:"mainMenu23",
+                    ES:"¿Sabías qué...",
+                    EN:"Did you know...?",
+                    PT:"Did you know...?",
+                    ZH:"Did you know...?",
+                    JA:"Did you know...?",
+                    KO:"Did you know...?"
+                },
+                { 
+                    id:24,
+                    NAME:"mainMenu24",
+                    ES:"Al suscribirte tendrás acceso a más de 2000 actividades como juegos, videos y libros interactivos.",
+                    EN:"By subscribing you will have access to more than 2000 activities such as games, videos and interactive books.",
+                    PT:"By subscribing you will have access to more than 2000 activities such as games, videos and interactive books.",
+                    ZH:"By subscribing you will have access to more than 2000 activities such as games, videos and interactive books.",
+                    JA:"By subscribing you will have access to more than 2000 activities such as games, videos and interactive books.",
+                    KO:"By subscribing you will have access to more than 2000 activities such as games, videos and interactive books."
+                },
+                { 
+                    id:25,
+                    NAME:"mainMenu25",
+                    ES:"¡Lo quiero!",
+                    EN:"I want it!",
+                    PT:"I want it!",
+                    ZH:"I want it!",
+                    JA:"I want it!",
+                    KO:"I want it!"
+                },
+                { 
+                    id:26,
+                    NAME:"mainMenu26",
+                    ES:"Jugar",
+                    EN:"Play",
+                    PT:"Play",
+                    ZH:"Play",
+                    JA:"Play",
+                    KO:"Play"
+                },
         ]
 
 function changeLanguage(){

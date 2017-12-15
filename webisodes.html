@@ -258,6 +258,13 @@
                 var magic = document.getElementById("magic");
                 
                 
+                if(language == "ES"){
+                        $("#playVideo1").attr("src", "assets/videos/1"  + "ES" + ".mp4"  )
+                }else if(language == "EN"){
+                        $("#playVideo1").attr("src", "assets/videos/1"  + "EN" + ".mp4"  )
+                }else{
+                    $("#playVideo1").attr("src", "assets/videos/1"  + "EN" + ".mp4"  )
+                }
                 
                 
                 for(i=1;i<=4;i++){
@@ -266,8 +273,15 @@
                         
                        $("#button" + i).click(function(){
                            pop.play();
-                        $("#playVideo1").attr("src", "assets/videos/" +  $(this).attr("number") + language + ".mp4"  )
                            
+                            if(language == "ES"){
+                                    $("#playVideo1").attr("src", "assets/videos/1" +  $(this).attr("number") + "ES" + ".mp4"  )
+                            }else if(language == "EN"){
+                                    $("#playVideo1").attr("src", "assets/videos/1" +  $(this).attr("number") + "EN" + ".mp4"  )
+                            }else{
+                                $("#playVideo1").attr("src", "assets/videos/1" +  $(this).attr("number") + "EN" + ".mp4"  )
+                            }   
+                                                      
                         $('#playVideo1').attr('poster', "assets/videos/poster" +  $(this).attr("number") + ".png" );
                            var textNew = $(this).find("span").text();
                            $(".video-title").html( textNew );

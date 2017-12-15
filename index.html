@@ -141,6 +141,11 @@
                        </ul>
                    </li>
                                 <li>
+                                    
+                                    <button type="button" id="register-btn-sm" class="navbar-btn">
+                              <span><div class="text6">Log In</div></span>
+                        </button>
+                                    
                                   <button type="button" id="register-btn-lg" class="navbar-btn">
                                       <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
                                   </button>
@@ -304,7 +309,7 @@
                     </div>
                     <div class="row">
                       <div class="col-xs-12 col-md-12">
-                        <img style="width:90%; margin-left:5%" src="assets/images/books-main.png"/>
+                        <img id="bookMainImg" style="width:90%; margin-left:5%" src="assets/images/books-mainEN.png"/>
                       </div>
                     </div>
                     <div id="" class="html5Games btn btn-purple text-center center-block">
@@ -381,19 +386,31 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
    <script src="assets/js/play.js"></script>
     <script src="assets/js/language.js"></script>
+    <script src="js/epic.js"></script>
+    <script src="js/languages.js"></script>
+    <script src="js/modal.js"></script>
     <script> 
+        
+        if(language == "ES"){
+            $("#bookMainImg").attr("src","assets/images/books-main" + "ES" + ".png");
+        }else if(language == "EN"){
+             $("#bookMainImg").attr("src","assets/images/books-main" + "EN" + ".png");    
+        }else{
+             $("#bookMainImg").attr("src","assets/images/books-main" + "EN" + ".png");    
+        }
+        
         
         var pop = document.getElementById("pop");
         var flipcard = document.getElementById("flipcard");
         var magic = document.getElementById("magic");
         
       var pathGames = "games/nonrefactored/"
-  		var games = yogomeGames.getGames();
+  		var games = yogomeGames.getGames("absolute");
   		for(var i = 0 ; i <= games.length-1 ;i++){
 
   			var num = i;
   			if(games[i].demo){
-  				$("#container-html5games").append("<div onmouseover='flipcard.play()' class='col-xs-6 col-sm-4 game-container "+games[i].subject+"'><a href='"+games[i].url+"' rev='"+games[i].name+"' class='gameCatalog' id='gameimg" + num+"' ><img class='growMouse img-responsive' src='" +games[num].url +"/images/fbpost.png" + "'/></a> </div>");
+  				$("#container-html5games").append("<div onmouseover='flipcard.play()' class='col-xs-6 col-sm-4 game-container "+games[i].subject+"'><a href='"+games[i].mapUrl+"' rev='"+games[i].name+"' class='gameCatalog' id='gameimg" + num+"' ><img class='growMouse img-responsive' src='" +games[num].url +"images/fbpost.png" + "'/></a> </div>");
   				$("#gameimg" + num).attr("value",i);
   			}
 

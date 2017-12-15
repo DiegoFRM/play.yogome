@@ -76,7 +76,7 @@
                   
                   $("#book" + i).click(function(){
                         magic.play();
-                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_blank"); 
+                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_self"); 
                   });
                   
               }else if(language == "EN"){
@@ -87,7 +87,7 @@
                   
                   $("#book" + i).click(function(){
                         flipcard.play();
-                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_blank"); 
+                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_self"); 
                   });
               }else{
                   $("#container-books").find("#book" + i).append('<img src="'+booksArray[i].url + '/bookpages/1EN.png" height="320" width="320" alt="" class="responsivGallery-pic">');
@@ -97,7 +97,7 @@
                   
                   $("#book" + i).click(function(){
                         flipcard.play();
-                        window.open(booksArray[$(this).attr("number")].url + "?language=ES", "_blank"); 
+                        window.open(booksArray[$(this).attr("number")].url + "?language=ES", "_self"); 
                   });
               }
 
@@ -108,7 +108,7 @@
                }else if(language == "EN"){
                    $("#container-books").find("#textBook" + i).append('<h2 class="responsivGallery-name">'+ booksArray[i].EN +'</h2>');     
                     }else{
-                     $("#container-books").find("#textBook" + i).append('<h2 class="responsivGallery-name">'+ booksArray[i].ES +'</h2>');   
+                     $("#container-books").find("#textBook" + i).append('<h2 class="responsivGallery-name">'+ booksArray[i].EN +'</h2>');   
                 }
           
           }

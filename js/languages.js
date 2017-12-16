@@ -261,12 +261,12 @@ var languageArrayIndex = [
                 { 
                     id:26,
                     NAME:"mainMenu26",
-                    ES:"Jugar",
-                    EN:"Play",
-                    PT:"Play",
-                    ZH:"Play",
-                    JA:"Play",
-                    KO:"Play"
+                    ES:"¡Juega!",
+                    EN:"Play!",
+                    PT:"Jogar!",
+                    ZH:"开始游戏！",
+                    JA:"ゲーム開始！",
+                    KO:"게임 시작!"
                 },
         ]
 

@@ -104,11 +104,11 @@
               $("#container-books").find("#book" + i).append('<div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div><div id="textBook' + i +'" class="w-responsivGallery-info2"></div>');
           
                if(language == "ES"){
-                $("#container-books").find("#textBook" + i).append('<h2 class="responsivGallery-name">'+ booksArray[i].ES +'</h2>');
+                $("#container-books").find("#textBook" + i).append('<h4 class="responsivGallery-name">'+ booksArray[i].ES +'</h4>');
                }else if(language == "EN"){
-                   $("#container-books").find("#textBook" + i).append('<h2 class="responsivGallery-name">'+ booksArray[i].EN +'</h2>');     
+                   $("#container-books").find("#textBook" + i).append('<h4 class="responsivGallery-name">'+ booksArray[i].EN +'</h4>');     
                     }else{
-                     $("#container-books").find("#textBook" + i).append('<h2 class="responsivGallery-name">'+ booksArray[i].EN +'</h2>');   
+                     $("#container-books").find("#textBook" + i).append('<h4 class="responsivGallery-name">'+ booksArray[i].EN +'</h4>');   
                 }
           
           }

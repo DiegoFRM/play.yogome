@@ -4,8 +4,8 @@ var languageArrayIndex = [
                     NAME:"mainMenu0",
                     ES:"Voltea tu teléfono o dispositivo para una mejor experiencia",
                     EN:"Tilt your device for a better experience. ",
-                    PT:"Flip your phone or device for a better experience",
-                    ZH:"Flip your phone or device for a better experience",
+                    PT:"Incline seu dispositivo para uma melhor experiência.",
+                    ZH:"将您的设备倾斜以获得更好的体验。",
                     JA:"Flip your phone or device for a better experience",
                     KO:"더 나은 학습 환경을 위해 기기를 기울여주세요."
                 },
@@ -52,20 +52,20 @@ var languageArrayIndex = [
                 { 
                     id:5,
                     NAME:"mainMenu5",
-                    ES:"Olvide mi contraseña",
+                    ES:"Olvidé mi contraseña",
                     EN:"I Forgot My Password",
-                    PT:"I Forgot My Password",
-                    ZH:"I Forgot My Password",
+                    PT:"Esqueci minha senha",
+                    ZH:"我忘记了密码",
                     JA:"I Forgot My Password",
                     KO:"비밀번호를 잃어버렸어요"
                 },
                 { 
                     id:6,
                     NAME:"mainMenu6",
-                    ES:"¿No tienes cuenta?",
+                    ES:"¿No tienes una cuenta?",
                     EN:"¿Don't have an account?",
-                    PT:"¿Don't have an account?",
-                    ZH:"¿Don't have an account?",
+                    PT:"Não tem uma conta?",
+                    ZH:"还没有帐户？",
                     JA:"¿Don't have an account?",
                     KO:"¿아직 가입하지 않으셨나요?"
                 },
@@ -82,10 +82,10 @@ var languageArrayIndex = [
                 { 
                     id:8,
                     NAME:"mainMenu8",
-                    ES:"-Selecciona un perfil-",
+                    ES:"- Selecciona un perfil -",
                     EN:"- Select a profile -",
-                    PT:"- Select a profile -",
-                    ZH:"- Select a profile -",
+                    PT:"- Selecione um perfil -",
+                    ZH:"- 选择个人资料 -",
                     JA:"- Select a profile -",
                     KO:"- 프로필 선택하기 -"
                 },
@@ -94,8 +94,8 @@ var languageArrayIndex = [
                     NAME:"mainMenu9",
                     ES:"Inicia sesión en Yogome ",
                     EN:"Login to Yogome",
-                    PT:"Login to Yogome",
-                    ZH:"Login to Yogome",
+                    PT:"Fazer login na Yogome",
+                    ZH:"登录Yogome",
                     JA:"Login to Yogome",
                     KO:"요고미 로그인하기"
                 },

@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="assets/css/play.css">
     <link rel="stylesheet" href="assets/css/webisodes.css">
     <!-- Slick Carousel CSS -->
-    
+
     <link rel="stylesheet" type="text/css" href="assets/plugins/slick/slick.css" />
     <!-- Jquery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="application/javascript" ></script>
@@ -20,7 +20,7 @@
     <script type="text/javascript" src="assets/plugins/slick/slick.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="assets/js/bootstrap.min.js" type="application/javascript"></script>
-    
+
     <script>
     //AQUI VA PARA SABER EL LENGUAGE
         function getParameterByName(name, url) {
@@ -32,28 +32,28 @@
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
-        
+
         var language;
         language = getParameterByName("language");
-        
+
         if(language == null ){
             var lengua;
-            //lengua = navigator.language || navigator.userLanguage; 
+            //lengua = navigator.language || navigator.userLanguage;
             //language = eval("'" + lengua + "'").toUpperCase();
             language= "ES";
         }else{
             language.toUpperCase();
         }
-    
+
     </script>
 </head>
 
 <body>
-    
+
     <audio preload="auto" id="pop"  src="assets/sounds/pop.mp3"></audio>
     <audio preload="auto" id="flipcard"  src="assets/sounds/flipcard.mp3"></audio>
     <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
-    
+
     <div class="wrapper">
             <!-- MENU WEBPAGE -->
             <nav id="sidebar">
@@ -75,8 +75,8 @@
                             <li><a class="play-colors-blue html5Games"><div class="text2">Games</div></a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
                             <li><a class="play-colors-green"><div class="text3">Books</div></a></li>
-                          
-                           
+
+
                         </ul>
 <!--
                         <button type="button" id="register-btn-sm" class="navbar-btn hidden">
@@ -90,7 +90,7 @@
                 </ul>
             </nav>
 
-            
+
             <div id="content">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
@@ -120,7 +120,7 @@
                                 <li><a class="play-colors-blue html5Games"><div class="text2">Games</div></a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
                                 <li><a class="play-colors-green"><div class="text3">Books</div></a></li>
-  
+
                    <li class="dropdown">
                        <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang" data-toggle="dropdown" href="#"><span class="text5">Language</span> <span class="caret"></span></a>
                        <ul class="dropdown-menu">
@@ -136,7 +136,7 @@
                         <li>
                        <button type="button" id="register-btn-sm" class="navbar-btn">
                               <span>LogIn</span>
-                        </button> 
+                        </button>
                         </li>
 -->
                                 <li>
@@ -150,7 +150,7 @@
                         </div>
                     </div>
                 </nav>
-                
+
         </div>
                 <!--END MENU WEBPAGE -->
             <section class="container-fluid bg-webisodes-main">
@@ -184,7 +184,7 @@
             </section>
 
             <section>
-                
+
                 <div class="mid-conatiner">
                     <div class="row more-videos">
                         <div class="col-xs-12">
@@ -213,7 +213,7 @@
                             <div onclick="flipcard.play()" class="buttonsCenter hidden-xs">
                                 <div class="slick-nav-buttons"></div>
                             </div>
-                        
+
                     </div>
 <!--
                     <div class="row more-videos">
@@ -245,19 +245,19 @@
                             <div class="buttonsCenter hidden-xs">
                                 <div id="slick-nav-buttons-activities"  class="slick-buttons"></div>
                             </div>
-                        
+
                     </div>
 -->
 
                 </div>
             </section>
-                
+
             <script>
                 var pop = document.getElementById("pop");
                 var flipcard = document.getElementById("flipcard");
                 var magic = document.getElementById("magic");
-                
-                
+
+
                 if(language == "ES"){
                         $("#playVideo1").attr("src", "assets/videos/1"  + "ES" + ".mp4"  )
                 }else if(language == "EN"){
@@ -265,38 +265,38 @@
                 }else{
                     $("#playVideo1").attr("src", "assets/videos/1"  + "EN" + ".mp4"  )
                 }
-                
-                
+
+
                 for(i=1;i<=4;i++){
                     $("#button" + i).attr("number",i);
                     if(!$("#button" + i).hasClass("lock") ){
-                        
+
                        $("#button" + i).click(function(){
                            pop.play();
-                           
+
                             if(language == "ES"){
                                     $("#playVideo1").attr("src", "assets/videos/1" +  $(this).attr("number") + "ES" + ".mp4"  )
                             }else if(language == "EN"){
                                     $("#playVideo1").attr("src", "assets/videos/1" +  $(this).attr("number") + "EN" + ".mp4"  )
                             }else{
                                 $("#playVideo1").attr("src", "assets/videos/1" +  $(this).attr("number") + "EN" + ".mp4"  )
-                            }   
-                                                      
+                            }
+
                         $('#playVideo1').attr('poster', "assets/videos/poster" +  $(this).attr("number") + ".png" );
                            var textNew = $(this).find("span").text();
                            $(".video-title").html( textNew );
-                    }); 
+                    });
                     }
 
                 }
-                
-               
+
+
             </script>
 
             <div class="container-fluid">
                 <div class="col-xs-12"></div>
             </div>
-        
+
             <footer>
                 <div class="container">
                     <div class="col-xs-12 play-footer">
@@ -309,28 +309,34 @@
                 </div>
             </footer>
         </div>
-      </body>  
+      </body>
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
     <script src="assets/js/yogofun.js"></script>
     <script src="assets/js/language.js"></script>
+
+    <!-- Mixpanel -->
+    <script src="js/mixpanel/mixpanel.js"></script>
+    <script src="js/mixpanel/websodies.js"></script>
+    <!-- End Mixpanel -->
+
     <script>
         $(".slick-nav-buttons").find("slick-arrow").addClass("botonSound")
-        
-     $(".slick-prev").click(function(){
-             pop.play()       
-            })
+
+        $(".slick-prev").click(function(){
+             pop.play()
+        })
      $("#navbar-logo-container").mouseup(function(){
          magic.play()
         window.open("index.html?language=" + language,"_self");
-    });        
+    });
         $(".text0").click(function(){
         magic.play();
-        window.open("webisodes.html?language=" + language,"_self");    
+        window.open("webisodes.html?language=" + language,"_self");
     });
     $(".text2").click(function(){
         magic.play();
-        window.open("letsplay.html?language=" + language,"_self");  
+        window.open("letsplay.html?language=" + language,"_self");
     });
     $(".text3").click(function(){
         magic.play();

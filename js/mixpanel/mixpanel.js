@@ -50,3 +50,33 @@
 
 console.log("Mixpanel Initialization...")
 mixpanel.init("ecdf0bd67b86b289ea50817dd80525a0")
+
+mixpanel.identify(getCredentials.email);
+
+/**
+ * getCredentials
+ */
+function getCredentials() {
+    var email = localStorage.getItem("email")
+    email = email === "null" ? null : email
+
+    var token = localStorage.getItem("token")
+    token = token === "null" ? null : token
+
+    var remoteID = localStorage.getItem("remoteID")
+    remoteID = remoteID === "null" ? null : remoteID
+
+    var educationID = localStorage.getItem("educationID")
+    educationID = educationID === "null" ? "none" : educationID
+
+    var gameData = localStorage.getItem("gameData")
+    gameData = gameData === "null" ? null : JSON.parse(gameData)
+
+    return {
+        email: email,
+        token: token,
+        remoteID: remoteID,
+        gameData: gameData,
+        educationID: educationID
+    }
+}

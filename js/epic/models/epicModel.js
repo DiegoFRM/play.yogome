@@ -1,6 +1,6 @@
 var epicModel = function () {
-	var url = "https://13-dot-heroesofknowledge.appspot.com"
-	var DEFAULT_CARD = {id:"yogotarEagle", xp:0, data:epicCharacters["yogotarEagle"]}
+	var url = "https://12-dot-heroesofknowledge.appspot.com"
+	// var DEFAULT_CARD = {id:"yogotarEagle", xp:0, data:epicCharacters["yogotarEagle"]}
 
 	var player = {
 		minigames:[],
@@ -25,6 +25,18 @@ var epicModel = function () {
 	var userRecover = "/users/parent/recover"
 
 	var currentCallback
+	var unlockAccessCall
+	var signInCallback
+
+	function getParameterByName(name, url) {
+		if (!url) url = window.location.href;
+		name = name.replace(/[\[\]]/g, "\\$&");
+		var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		return decodeURIComponent(results[2].replace(/\+/g, " "));
+	}
 
 	function ajaxCall(data, endPoint, onSuccess, onError) {
 
@@ -45,12 +57,14 @@ var epicModel = function () {
 			}else {
 				localStorage.setItem("token", null)
 				if(onError)onError(response)
+				modal.showLogin()
 				// checkLogin()
 			}
 		}).fail(function(response){
 			console.log("error", response);
 			localStorage.setItem("token", null)
 			if(onError)onError(response)
+			modal.showLogin()
 		});
 	}
 
@@ -69,9 +83,27 @@ var epicModel = function () {
 		initializePlayer()
 		var credentials = getCredentials()
 		player = credentials.gameData || player
+		if(credentials.subscribed){
+			if(unlockAccessCall) {
+				unlockAccessCall()
+				unlockAccessCall = null
+			}
+		}
+		else if(signInCallback)
+			modal.showYouKnow()
+
 		if(currentCallback) {
 			currentCallback()
 			currentCallback = null
+		}
+
+		if(signInCallback){
+			signInCallback()
+			signInCallback = null
+		}
+
+		if((mixpanel)&&(credentials.email)){
+			mixpanel.identify(credentials.email);
 		}
 	}
 
@@ -100,6 +132,10 @@ var epicModel = function () {
 				localStorage.setItem("gameData", JSON.stringify(child.gameData))
 			}
 		}
+
+		if((response)&&(response.subscribed)){
+			localStorage.setItem("subscribed", true)
+		}
 	}
 
 	function getCredentials() {
@@ -118,12 +154,16 @@ var epicModel = function () {
 		var gameData = localStorage.getItem("gameData")
 		gameData = gameData === "null" ? null : JSON.parse(gameData)
 
+		var subscribed = localStorage.getItem("subscribed")
+		subscribed = subscribed === "null" ? null : JSON.parse(subscribed)
+
 		return {
 			email:email,
 			token:token,
 			remoteID:remoteID,
 			gameData:gameData,
-			educationID:educationID
+			educationID:educationID,
+			subscribed:subscribed
 		}
 	}
 	
@@ -139,10 +179,13 @@ var epicModel = function () {
 
 	function signIn(data, onSuccess, onError) {
 		console.log(data)
-		currentCallback = onSuccess
+		signInCallback = onSuccess
+
 		function callback(response){
 			checkLogin(response)
 		}
+
+		setCredentials(data)
 		if(data.token)
 			ajaxCall({email: data.email, token: data.token}, loginParent, callback, onError)
 		else
@@ -188,8 +231,9 @@ var epicModel = function () {
 		}
 	}
 
-	function loadPlayer (forceLogin, callback) {
+	function loadPlayer (forceLogin, callback, unlockCall) {
 		// var credentials = getCredentials()
+		unlockAccessCall = unlockCall
 		currentCallback = callback
 		if(forceLogin) {
 			checkLogin()
@@ -222,6 +266,29 @@ var epicModel = function () {
 		ajaxCall({email:email}, userRecover, onSuccess, onError)
 	}
 
+	function checkQuery(callBack){
+		function onSuccess() {
+			modal.showWelcome()
+			if(callBack)callBack()
+		}
+		var token = getParameterByName("token")
+		var email = getParameterByName("email")
+		token = token ? decodeURIComponent(token) : null
+		email = email ? decodeURIComponent(email) : null
+		//pa_%5BB%406d33b036
+		//aaron%2B20171207_2%40yogome.com
+		// var token = null//"pa_[B@15f1b80"
+		// var email = "aaron+20171207_2@yogome.com"
+
+		if((token)&&(email)) {
+			localStorage.setItem("email", email)
+			console.log(token)
+			epicModel.loginParent({token: token, email:email}, onSuccess)
+		}
+		else
+			if(callBack)callBack()
+	}
+
 	return{
 		loadPlayer:loadPlayer,
 		getPlayer:function(){return player},
@@ -229,7 +296,8 @@ var epicModel = function () {
 		getCredentials:getCredentials,
 		loginPlayer:loginPlayer,
 		loginParent:signIn,
-		recoverPass:recoverPass
+		recoverPass:recoverPass,
+		checkQuery:checkQuery
 	}
 }()
 

@@ -10,7 +10,13 @@ $("#devicelogInButton").click(function(){
         
 
 function callBackLogIn(){
+    var credentials = getCredentials()
+    var email = credentials.email
+    
     $(".loginAccess").show();
     $(".accesButtons").hide();
     $(".navbar").addClass("navbar-login");
+    $("#id_user").text(email)
 }
+
+epicModel.checkQuery();

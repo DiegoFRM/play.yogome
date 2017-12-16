@@ -2,10 +2,10 @@ $(document).ready(function () {
     /**
      * * Metodo implementado en mixpanel.js
      */
-    var credentials = epicModal.getCredentials();
+    var credentials = epicModel.getCredentials();
 
     mixpanel.track(
-        "PageLoadWebisodes",
+        "PageLoadBooks",
         {
             "user_id": credentials.educationID,
             "app": "web"

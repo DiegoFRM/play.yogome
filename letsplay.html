@@ -24,6 +24,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="http://yogome.com/epic/shared/minigames/js/helpers/yogomeGames.js" type="text/javascript"></script>
+    <script src="js/epic/data/epicYogomeGames.js" type="text/javascript"></script>
 </head>
 
     <script>
@@ -89,10 +90,10 @@
                        </ul>
                    </li>
                         <li class="accesButtons">
-                    <button type="button" id="devicelogInButton" class="navbar-btn">
+                    <button type="button" id="devicelogInButton" class="navbar-btn ">
                               <span><div class="text6">LogIn</div></span>
                         </button>
-                        <button type="button" id="register-btn-sm" class="navbar-btn hidden">
+                        <button type="button" id="register-btn-sm" class="navbar-btn hidden ">
                               <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
                         </button>
                         </li>    
@@ -149,10 +150,10 @@
                    </li>
                    
                    <li class="accesButtons">   
-                       <button type="button" id="logInButton" class="navbar-btn">
+                       <button type="button" id="logInButton" class="navbar-btn ">
                            <span><div class="text6">Log In</div></span>
                         </button>       
-                        <button type="button" id="register-btn-lg" class="navbar-btn">
+                        <button type="button" id="register-btn-lg" class="navbar-btn ">
                           <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
                         </button>
                    </li>
@@ -284,6 +285,9 @@
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
     <script src="assets/js/letsplay.js"></script>
+    
+    <script src="js/mixpanel/mixpanel.js"></script>
+    <script src="js/mixpanel/minigames.js"></script>
 </body>
 <script>
                 var pop = document.getElementById("pop");
@@ -443,7 +447,7 @@ function showGames(){
         magic.play()
         window.open("yogobooks.html?language=" + language,"_self");
     });   
-    
+    epicModel.loadPlayer(false,null,callBackLogIn);
 </script>
     
     <script src="assets/js/language.js"></script>

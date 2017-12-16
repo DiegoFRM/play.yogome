@@ -49,9 +49,15 @@
 })(document, window.mixpanel || []);
 
 console.log("Mixpanel Initialization...")
-mixpanel.init("ecdf0bd67b86b289ea50817dd80525a0")
 
-mixpanel.identify(getCredentials.email);
+
+mixpanel.init("ecdf0bd67b86b289ea50817dd80525a0", {
+         loaded: function(mixpanel) {
+             distinct_id = mixpanel.get_distinct_id();
+             console.log("distinct_id: " + distinct_id)
+         }
+     });
+
 
 /**
  * getCredentials

@@ -473,7 +473,7 @@ input[type=text]:focus {
     color:deepskyblue;
 }
 
-.container {
+.container-login {
     max-width: 320px !important;
 }
 

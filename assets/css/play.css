@@ -875,7 +875,7 @@ footer{
     background-image: url('../images/bg-main-nubes.png');
     min-height: 485px;
   }
-
+    #devicelogInButton,
   #register-btn-sm{
     display: block!important;
     margin: 10px auto;
@@ -1096,4 +1096,25 @@ footer{
 
 @media (max-width: 700px){
 
+}
+
+/*LOG USER*/
+.loginAccess{
+    background-color: #d01c92;
+    color: #FFF;
+    right: -20%;
+    width: 20%;
+    text-align: center;
+    height: 100%;
+    top: 0%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+}
+
+.navbar-login{
+    width: 85%;
+    margin-left: 0;
+    
 }

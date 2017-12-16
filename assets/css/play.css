@@ -1118,3 +1118,7 @@ footer{
     margin-left: 0;
     
 }
+
+.mixpanel-call{
+    cursor: pointer;
+}

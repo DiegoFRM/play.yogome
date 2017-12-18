@@ -22,32 +22,8 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="assets/js/bootstrap.min.js" type="application/javascript"></script>
     <script src="js/epic/data/epicYogomeGames.js" type="text/javascript"></script>
-
-    <script>
-    //AQUI VA PARA SABER EL LENGUAGE
-        function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-        var language;
-        language = getParameterByName("language");
-
-        if(language == null ){
-            var lengua;
-            //lengua = navigator.language || navigator.userLanguage;
-            //language = eval("'" + lengua + "'").toUpperCase();
-            language= "ES";
-        }else{
-            language.toUpperCase();
-        }
-
-    </script>
+    <!--Detect language-->
+    <script src="assets/js/detectlanguage.js"></script>
 </head>
 
 <body>
@@ -81,7 +57,7 @@
                        <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang text5" data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
                        <ul class="dropdown-menu">
                            <li><a href="index.html?language=ES" id="lang-es" rel="es" class="language-switch">ESPAÑOL</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=EN" id="lang-en" rel="en" class="language-switch">ENGLISH</a></li>
+                           <li>ENGLISH</li>
                            <li><a href="http://play.yogome.com/index.html?language=PT" id="lang-es" rel="pt" class="language-switch">Portugues</a></li>
                            <li><a href="http://play.yogome.com/index.html?language=ZH" id="lang-en" rel="zh" class="language-switch">中國</a></li>
                            <li><a href="http://play.yogome.com/index.html?language=JA" id="lang-en" rel="ja" class="language-switch">日本語</a></li>
@@ -112,57 +88,51 @@
                     <div class="container-fluid">
                       <div class="menu-desktop">
 
-                        <div class="navbar-header col-xs-12 col-sm-2">
-                          <div class="col-xs-4 display-inline">
-                            <button type="button" id="sidebarCollapse" class="btn-burger-menu hidden-sm hidden-md hidden-lg">
-                                  <i class="glyphicon glyphicon-menu-hamburger"></i>
-                                  <span></span>
-                            </button>
-                          </div>
-                          <div class="col-xs-4 col-sm-12 display-inline">
-                            <a class="navbar-logo">
-                              <div id="navbar-logo-container">
-                                <img class="img img-responsive" src="assets/images/logo-yogome.png" alt="Logo Yogome">
+                            <div class="navbar-header col-xs-12 col-sm-2">
+                              <div class="col-xs-4 display-inline">
+                                <button type="button" id="sidebarCollapse" class="btn-burger-menu hidden-sm hidden-md hidden-lg">
+                                      <i class="glyphicon glyphicon-menu-hamburger"></i>
+                                      <span></span>
+                                </button>
                               </div>
-                            </a>
-                          </div>
+                              <div class="col-xs-4 col-sm-12 display-inline">
+                                <a class="navbar-logo">
+                                  <div id="navbar-logo-container">
+                                    <img class="img img-responsive" src="assets/images/logo-yogome.png" alt="Logo Yogome">
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
 
-                        </div>
-
-                        <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a class="play-colors-orange webisodesSec"><div class="text0 menu1">Webisodes</div></a></li>
-<!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                                <li><a class="play-colors-blue html5Games" ><div class="text2 menu2">Games</div></a></li>
-<!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                                <li><a class="play-colors-green"><div class="text3 menu3">Books</div></a></li>
-                            <li class="dropdown">
-                       <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang" data-toggle="dropdown" href="#"><span class="text5">Language</span> <span class="caret"></span></a>
-                       <ul class="dropdown-menu">
-                           <li><a href="http://play.yogome.com/index.html?language=ES" id="lang-es" rel="es" class="language-switch">ESPAÑOL</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=EN" id="lang-en" rel="en" class="language-switch">ENGLISH</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=PT" id="lang-es" rel="es" class="language-switch">Portugues</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=ZH" id="lang-en" rel="en" class="language-switch">中國</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=JA" id="lang-en" rel="en" class="language-switch">日本語</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=KO" id="lang-en" rel="en" class="language-switch">한국어</a></li>
-                       </ul>
-                   </li>
-                   
-                   <li class="accesButtons">   
-                       <button type="button" id="logInButton" class="navbar-btn ">
-                           <span><div class="text6">Log In</div></span>
-                        </button>       
-                        <button type="button" id="register-btn-lg" class="navbar-btn ">
-                          <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
-                        </button>
-                   </li>
-                                
-                            </ul>
-                            
-                        </div>
-
-                        </div>
-                        
+                            <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a class="play-colors-orange webisodesSec"><div class="text0 menu1">Webisodes</div></a></li>
+    <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
+                                    <li><a class="play-colors-blue html5Games" ><div class="text2 menu2">Games</div></a></li>
+    <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
+                                    <li><a class="play-colors-green"><div class="text3 menu3">Books</div></a></li>
+                                    <li class="dropdown">
+                                       <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang" data-toggle="dropdown" href="#"><span class="text5">Language</span> <span class="caret"></span></a>
+                                       <ul id="dropMenudesk" class="dropdown-menu">
+                                           <li><a class="language-switch">ESPAÑOL</a></li>
+                                           <li><a class="language-switch">ENGLISH</a></li>
+                                           <li><a class="language-switch">Portugues</a></li>
+                                           <li><a class="language-switch">中國</a></li>
+                                           <li><a class="language-switch">日本語</a></li>
+                                           <li><a class="language-switch">한국어</a></li>
+                                       </ul>
+                                    </li>
+                                    <li class="accesButtons">   
+                                       <button type="button" id="logInButton" class="navbar-btn ">
+                                           <span><div class="text6">Log In</div></span>
+                                        </button>       
+                                        <button type="button" id="register-btn-lg" class="navbar-btn ">
+                                          <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
+                                        </button>
+                                    </li>    
+                                </ul>
+                            </div>
+                        </div>      
                     </div>
                   
                       <div class="loginAccess">
@@ -178,17 +148,8 @@
                           <div class="videos-new-banner">
                             <img class="img-responsive" src="assets/images/new-banner.png" />
                           </div>
-                          <div class="embed-responsive embed-responsive-16by9">
-                              <!-- Youtube API: The <iframe> (and video player) will replace this <div> tag. Code in mixpanel.js-->
-                              <div id="player"></div>
-                              <video id="playVideo1" controls width="560" height="315" poster="assets/images/previewvideo.png">
-                                <source src="epicweb/videoplayer/localvideos/1.mp4" type="video/mp4">
-                              </video>
-                              <script>
-                              /*$("#playVideo1").click(function(){
-                                  this.paused ? this.play() : this.pause();
-                              })*/
-                              </script>
+                          <div id="videoContainer" class="embed-responsive embed-responsive-16by9">
+                              
                           </div>
                           <div class="video-title-container">
                             <p class="video-title">
@@ -220,114 +181,32 @@
                                     <img  name="text51" class="wallpaper-thumb low-padding videoButton" src="assets/videos/thumb-video3.png" alt="Card image cap" number="1">
                                     <p><span class="text51">Why Girls Should be Engineers</span></p>
                                 </div>
-                                <!--
-                                <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
-                                    <p>Space Adventure</p>
-                                </div>
-                                -->
                             </div>
                         </div>
                             <div onclick="flipcard.play()" class="buttonsCenter hidden-xs">
                                 <div class="slick-nav-buttons"></div>
                             </div>
-
                     </div>
-<!--
-                    <div class="row more-videos">
-                        <div class="col-xs-12">
-                            <h2>Popular webisodes:</h2>
-                            <div id="activities-slider">
-                                <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
-                                    <p>Space Adventure</p>
-                                </div>
-                                <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
-                                    <p>Space Adventure</p>
-                                </div>
-                                <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
-                                    <p>Space Adventure</p>
-                                </div>
-                                <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
-                                    <p>Space Adventure</p>
-                                </div>
-                                <div class="video-item text-center">
-                                    <img class="wallpaper-thumb low-padding" src="assets/images/thumb-video.png" alt="Card image cap">
-                                    <p>Space Adventure</p>
-                                </div>
-                            </div>
-                        </div>
-                            <div class="buttonsCenter hidden-xs">
-                                <div id="slick-nav-buttons-activities"  class="slick-buttons"></div>
-                            </div>
-
-                    </div>
--->
-
                 </div>
             </section>
-
-            <script>
-                var pop = document.getElementById("pop");
-                var flipcard = document.getElementById("flipcard");
-                var magic = document.getElementById("magic");
-
-
-                if(language == "ES"){
-                        $("#playVideo1").attr("src", "assets/videos/1"  + "ES" + ".mp4"  )
-                }else if(language == "EN"){
-                        $("#playVideo1").attr("src", "assets/videos/1"  + "EN" + ".mp4"  )
-                }else{
-                    $("#playVideo1").attr("src", "assets/videos/1"  + "EN" + ".mp4"  )
-                }
-
-
-                for(i=1;i<=4;i++){
-                    $("#button" + i).attr("number",i);
-                    if(!$("#button" + i).hasClass("lock") ){
-
-                       $("#button" + i).click(function(){
-                           pop.play();
-
-                            if(language == "ES"){
-                                    $("#playVideo1").attr("src", "assets/videos/1" +  $(this).attr("number") + "ES" + ".mp4"  )
-                            }else if(language == "EN"){
-                                    $("#playVideo1").attr("src", "assets/videos/1" +  $(this).attr("number") + "EN" + ".mp4"  )
-                            }else{
-                                $("#playVideo1").attr("src", "assets/videos/1" +  $(this).attr("number") + "EN" + ".mp4"  )
-                            }
-
-                        $('#playVideo1').attr('poster', "assets/videos/poster" +  $(this).attr("number") + ".png" );
-                           var textNew = $(this).find("span").text();
-                           $(".video-title").html( textNew );
-                    });
-                    }
-
-                }
-
-
-            </script>
-
             <div class="container-fluid">
                 <div class="col-xs-12"></div>
             </div>
-
-            <footer>
-                <div class="container">
-                    <div class="col-xs-12 play-footer">
-                        <img class="img img-responsive footer-logo" src="assets/images/logo-yogome.png" alt="Logo Yogome">
-                        <img class="img img-responsive footer-logo" src="assets/images/logo-student-safe.png" alt="Logo Student Safe">
-                        <p>Read our
-                            <a href="http://yogome.com/en/privacy/" target="_blank">Privacy policy </a>and
-                            <a href="http://yogome.com/en/privacy/" target="_blank">Terms of service.</a></p>
+                <footer>
+                    <div class="container">
+                        <div class="col-xs-12 play-footer">
+                            <img class="img img-responsive footer-logo" src="assets/images/logo-yogome.png" alt="Logo Yogome">
+                            <img class="img img-responsive footer-logo" src="assets/images/logo-student-safe.png" alt="Logo Student Safe">
+                            <p>Read our
+                                <a href="http://yogome.com/en/privacy/" target="_blank">Privacy policy </a>and
+                                <a href="http://yogome.com/en/privacy/" target="_blank">Terms of service.</a></p>
+                        </div>
                     </div>
-                </div>
-            </footer>
+                </footer>
+            </div>
         </div>
     <div id="myModal"></div>
+    </body> 
 <!--MODAL    -->
     <script src="js/epic.js"></script>
     <script src="js/languages.js"></script>
@@ -336,7 +215,7 @@
     <script src="js/epic/models/epicModel.js"></script>  
     <script src="assets/js/access.js"></script>
     
-      </body>  
+       
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
     <script src="assets/js/yogofun.js"></script>
@@ -346,34 +225,12 @@
     <script src="js/mixpanel/mixpanel.js"></script>
     <script src="js/mixpanel/websodies.js"></script>
     <!-- End Mixpanel -->
-
+    <!--Include videos-->
+    <script src="assets/js/webisodes/videolist.js"></script>
+    <script src="assets/js/webisodes/webisodes.js"></script>
+    <!--menu actions    -->
+    <script src="assets/js/menuButtons.js"></script>
     <script>
-        $(".slick-nav-buttons").find("slick-arrow").addClass("botonSound")
-
-        $(".slick-prev").click(function(){
-             pop.play()
-        })
-     $("#navbar-logo-container").mouseup(function(){
-         magic.play()
-        window.open("index.html?language=" + language,"_self");
-    });
-        $(".text0").click(function(){
-        magic.play();
-        window.open("webisodes.html?language=" + language,"_self");
-    });
-    $(".text2").click(function(){
-        magic.play();
-        window.open("letsplay.html?language=" + language,"_self");
-    });
-    $(".text3").click(function(){
-        magic.play();
-        window.open("yogobooks.html?language=" + language,"_self");
-    });
-    $(".navbar-btn").click(function(){
-        magic.play();
-    });
-        
-        
         epicModel.loadPlayer(false,null,callBackLogIn);
     </script>
 

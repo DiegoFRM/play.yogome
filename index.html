@@ -434,11 +434,8 @@
              $("#bookMainImg").attr("src","assets/images/books-main" + "EN" + ".png");    
         }
         
-        
-        var pop = document.getElementById("pop");
-        var flipcard = document.getElementById("flipcard");
+
         var magic = document.getElementById("magic");
-      var pathGames = "games/nonrefactored/"
   		var games = yogomeGames.getGames("absolute");
   		for(var i = 0 ; i <= games.length-1 ;i++){
   			var num = i;
@@ -470,7 +467,7 @@
         window.open("yogobooks.html?language=" + language,"_self");
     });
     $("#btn-play").click(function(){
-		window.open("http://yogome.com/epic/minigames/epicSite/?language=" + language,"_self");
+		window.open("http://play.yogome.com/epicweb/minigames/epicSite/?language=" + language,"_self");
     });
         
         epicModel.loadPlayer(false,null,callBackLogIn);

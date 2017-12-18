@@ -17,7 +17,7 @@ $(document).ready(function () {
   $(".btn-mixpanel-payments").click(function(e) {
       e.preventDefault();
       var buttonId = $(this).attr("id");
-      var gotoPayments = $(this).attr("href") +"?distinct_id="+ distinct_id;
+      var gotoPayments = $(this).attr("href") +"?distinct_id="+ distinct_id + "&ref=yogomePLAY";
       console.log(gotoPayments);
       mixpanel.track("buttonClick", {
         "Url": window.location.href.split("?")[0].split("#")[0].split("&")[0],

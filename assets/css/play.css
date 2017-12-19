@@ -262,7 +262,7 @@ a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
     position: absolute;
     right: 20px;
     font-family: 'Glyphicons Halflings';
-    font-size: 0.6em;
+    font-size: 0em;
 }
 a[aria-expanded="true"]::before {
     content: '\e260';
@@ -271,7 +271,6 @@ a[aria-expanded="true"]::before {
 
 ul ul a {
     font-size: 0.9em !important;
-    background: rgba(255,255,255 ,1);
 }
 
 ul.CTAs {
@@ -684,7 +683,6 @@ a.article, a.article:hover {
   z-index: 1;
 }
 #play-webgames-footer img:nth-child(1){
-position:relative;
 left:30px;
 }
 #play-webgames-footer img:nth-child(2){
@@ -866,6 +864,10 @@ footer{
     margin-right: 0;
     margin-left: 0;
   }
+    
+    .dropdown-menu{
+           top:-210%
+    }    
 
   #play-section-main {
     min-height: 485px;

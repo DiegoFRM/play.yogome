@@ -7,8 +7,7 @@
   <title>Play Yogome!</title>
   <!-- Bootstrap CSS CDN -->
    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-       <link rel="stylesheet" href="assets/css/modal.css">
-
+   <link rel="stylesheet" href="assets/css/modal.css">
    <!-- Our Custom CSS -->
    <link rel="stylesheet" href="assets/css/play.css">
    <!-- Slick Carousel CSS -->
@@ -21,37 +20,8 @@
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="http://yogome.com/epic/shared/minigames/js/helpers/yogomeGames.js" type="text/javascript"></script>
     <script src="js/epic/data/epicYogomeGames.js" type="text/javascript"></script>
-   
-    <script>
-    //AQUI VA PARA SABER EL LENGUAGE
-        
-        
-        function getParameterByName(name, url) {
-    if (!url) url = window.location.href;
-    name = name.replace(/[\[\]]/g, "\\$&");
-    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-        results = regex.exec(url);
-    if (!results) return null;
-    if (!results[2]) return '';
-    return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-        
-        var language;
-        language = getParameterByName("language");
-        
-        if(language == null ){
-            var lengua;
-            //lengua = navigator.language || navigator.userLanguage; 
-            //language = eval("'" + lengua + "'").toUpperCase();
-            language= "ES";
-        }else{
-            language.toUpperCase();
-        }
-        
-        
-     
-    
-    </script>
+        <!--Detect language-->
+    <script src="assets/js/detectlanguage.js"></script>
 </head>
 <body>
     
@@ -60,7 +30,7 @@
     <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
     
   <div class="wrapper">
-            <!-- MENU WEBPAGE -->
+ <!-- MENU WEBPAGE -->
             <nav id="sidebar">
                 <div id="dismiss">
                     <i class="glyphicon glyphicon-arrow-left"></i>
@@ -75,28 +45,28 @@
                 <ul class="list-unstyled components">
                     <li class="active">
                         <ul class="list-unstyled" id="homeSubmenu">
-                          <li><a class="play-colors-orange webisodesSec mixpanel-call" ><div class="text0 menu1">Webisodes</div></a></li>
+                          <li><a class="play-colors-orange webisodesSec" ><div class="text0 menu1">Webisodes</div></a></li>
 <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                          <li><a class="play-colors-blue html5Games mixpanel-call"><div class="text2 menu2">Games</div></a></li>
+                          <li><a class="play-colors-blue html5Games"><div class="text2 menu2">Games</div></a></li>
 <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                            <li><a class="play-colors-green mixpanel-call"><div class="text3 menu3">Books</div></a></li>
+                            <li><a class="play-colors-green"><div class="text3 menu3">Books</div></a></li>
                           <li class="dropdown">
                        <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang text5" data-toggle="dropdown" href="#">Language <span class="caret"></span></a>
-                       <ul class="dropdown-menu">
-                           <li><a href="index.html?language=ES" id="lang-es" rel="es" class="language-switch mixpanel-call">ESPAÑOL</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=EN" id="lang-en" rel="en" class="language-switch mixpanel-call">ENGLISH</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=PT" id="lang-es" rel="pt" class="language-switch mixpanel-call">Portugues</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=ZH" id="lang-en" rel="zh" class="language-switch mixpanel-call">中國</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=JA" id="lang-en" rel="ja" class="language-switch mixpanel-call">日本語</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=KO" id="lang-en" rel="en" class="language-switch mixpanel-call">한국어</a></li>
-                       </ul>
+                      <ul class="dropdown-menu">
+                                           <li class="botonLang0"><a class="language-switch">ESPAÑOL</a></li>
+                                           <li class="botonLang1"><a class="language-switch">ENGLISH</a></li>
+                                           <li class="botonLang2"><a class="language-switch">Portugues</a></li>
+                                           <li class="botonLang3"><a class="language-switch">中國</a></li>
+                                           <li class="botonLang4"><a class="language-switch">日本語</a></li>
+                                           <li class="botonLang5"><a class="language-switch">한국어</a></li>
+                        </ul>
                    </li>
                         <li class="accesButtons">
-                    <button type="button" id="devicelogInButton" class="navbar-btn mixpanel-call">
-                              <span><div id="logInButtonDevice" class="text6">LogIn</div></span>
+                    <button type="button" id="devicelogInButton" class="navbar-btn ">
+                              <span><div class="text6">LogIn</div></span>
                         </button>
-                        <button type="button" id="register-btn-sm" class="navbar-btn mixpanel-call">
-                              <span><a href="https://yogomepayments.com/" class="btn-mixpanel-payments" ><div class="text4 hidden">Registrer</div></a></span>
+                        <button type="button" id="register-btn-sm" class="navbar-btn hidden ">
+                              <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
                         </button>
                         </li>    
                            
@@ -109,63 +79,57 @@
                 </ul>
             </nav>
 
-            
+
             <div id="content">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
                       <div class="menu-desktop">
 
-                        <div class="navbar-header col-xs-12 col-sm-2">
-                          <div class="col-xs-4 display-inline">
-                            <button type="button" id="sidebarCollapse" class="btn-burger-menu hidden-sm hidden-md hidden-lg">
-                                  <i class="glyphicon glyphicon-menu-hamburger"></i>
-                                  <span></span>
-                            </button>
-                          </div>
-                          <div class="col-xs-4 col-sm-12 display-inline">
-                            <a class="navbar-logo">
-                              <div id="navbar-logo-container">
-                                <img class="img img-responsive" src="assets/images/logo-yogome.png" alt="Logo Yogome">
+                            <div class="navbar-header col-xs-12 col-sm-2">
+                              <div class="col-xs-4 display-inline">
+                                <button type="button" id="sidebarCollapse" class="btn-burger-menu hidden-sm hidden-md hidden-lg">
+                                      <i class="glyphicon glyphicon-menu-hamburger"></i>
+                                      <span></span>
+                                </button>
                               </div>
-                            </a>
-                          </div>
+                              <div class="col-xs-4 col-sm-12 display-inline">
+                                <a class="navbar-logo">
+                                  <div id="navbar-logo-container">
+                                    <img class="img img-responsive" src="assets/images/logo-yogome.png" alt="Logo Yogome">
+                                  </div>
+                                </a>
+                              </div>
+                            </div>
 
-                        </div>
-
-                        <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a class="play-colors-orange webisodesSec mixpanel-call"><div class="text0 menu1 mixpanel-call">Webisodes</div></a></li>
-<!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
-                                <li><a class="play-colors-blue html5Games mixpanel-call" ><div class="text2 menu2 mixpanel-call">Games</div></a></li>
-<!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
-                                <li><a class="play-colors-green"><div class="text3 menu3 mixpanel-call">Books</div></a></li>
-                            <li class="dropdown">
-                       <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang" data-toggle="dropdown" href="#"><span class="text5">Language</span> <span class="caret"></span></a>
-                       <ul class="dropdown-menu">
-                           <li><a href="http://play.yogome.com/index.html?language=ES" id="lang-es" rel="es" class="language-switch mixpanel-call">ESPAÑOL</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=EN" id="lang-en" rel="en" class="language-switch mixpanel-call">ENGLISH</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=PT" id="lang-es" rel="es" class="language-switch mixpanel-call">Portugues</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=ZH" id="lang-en" rel="en" class="language-switch mixpanel-call">中國</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=JA" id="lang-en" rel="en" class="language-switch mixpanel-call">日本語</a></li>
-                           <li><a href="http://play.yogome.com/index.html?language=KO" id="lang-en" rel="en" class="language-switch mixpanel-call">한국어</a></li>
-                       </ul>
-                   </li>
-                   
-                   <li class="accesButtons">   
-                       <button type="button" id="logInButton" class="navbar-btn mixpanel-call">
-                           <span><div  id="loginRegistrerDesk" class="text6">Log In</div></span>
-                        </button>       
-                        <button type="button" id="register-btn-lg" class="navbar-btn">
-                            <span id="buttonRegisterDesk"><a href="https://yogomepayments.com/" class="btn-mixpanel-payments" ><div class="text4" >Register</div></a></span>
-                        </button>
-                   </li>
-                                
-                            </ul>
-                            
-                        </div>
-
-                        </div>
-                        
+                            <div class="collapse navbar-collapse col-sm-6" id="bs-navbar-collapse-1">
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li><a class="play-colors-orange webisodesSec"><div class="text0 menu1">Webisodes</div></a></li>
+    <!--                          <li><a class="play-colors-bluesea yogodexSec" href="yogodex.html">Yogodex</a></li>-->
+                                    <li><a class="play-colors-blue html5Games" ><div class="text2 menu2">Games</div></a></li>
+    <!--                          <li><a class="play-colors-purple resourcesSec" href="yogofun.html">Resources</a></li>-->
+                                    <li><a class="play-colors-green"><div class="text3 menu3">Books</div></a></li>
+                                    <li class="dropdown">
+                                       <a id="navbarLanguage" class="dropdown-toggle dropdown-memberships-lang" data-toggle="dropdown" href="#"><span class="text5">Language</span> <span class="caret"></span></a>
+                                       <ul class="dropdown-menu">
+                                           <li class="botonLang0"><a class="language-switch">ESPAÑOL</a></li>
+                                           <li class="botonLang1"><a class="language-switch">ENGLISH</a></li>
+                                           <li class="botonLang2"><a class="language-switch">Portugues</a></li>
+                                           <li class="botonLang3"><a class="language-switch">中國</a></li>
+                                           <li class="botonLang4"><a class="language-switch">日本語</a></li>
+                                           <li class="botonLang5"><a class="language-switch">한국어</a></li>
+                                       </ul>
+                                    </li>
+                                    <li class="accesButtons">   
+                                       <button type="button" id="logInButton" class="navbar-btn ">
+                                           <span><div class="text6">Log In</div></span>
+                                        </button>       
+                                        <button type="button" id="register-btn-lg" class="navbar-btn ">
+                                          <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
+                                        </button>
+                                    </li>    
+                                </ul>
+                            </div>
+                        </div>      
                     </div>
                   
                       <div class="loginAccess">
@@ -192,12 +156,12 @@
                     </div>
                 </section>
                 
-                <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 text-center" style="padding:12vh;">
+                <section id="joinusSecction" class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 text-center" style="padding:12vh;">
                     <p class="text-center" ><span class="text16"><b>Boost your child's education with Yogome Fun Learning only for 5.99 per month.<br> Join us now! Boost your child's learning only for 5.99 per month. </b></span></p>
                     <a href="https://yogomepayments.com/" class="mixpanel-call"><div id="" class="html5Games btn btn-orange text-center center-block">
                      <div class="text40">Join us now!</div>
                             </div></a>
-                </div>
+                </section>
 
                 <section id="play-section-videos">
                   <div class="container">
@@ -385,7 +349,6 @@
                   </div>
                 </section>-->
 
-
                 <footer>
                   <div class="container">
                     <div class="col-xs-12 play-footer">
@@ -406,13 +369,16 @@
     <script src="js/modal.js"></script>
     <script src="js/epic/data/epicCharacters.js"></script> 
     <script src="js/epic/models/epicModel.js"></script>  
-    <script src="assets/js/access.js"></script>
    <!-- jQuery Nicescroll CDN -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
    <script src="assets/js/play.js"></script>
     <script src="assets/js/language.js"></script>
         <script src="js/mixpanel/mixpanel.js"></script>
     <script src="js/mixpanel/main.js"></script>
+    <!--menu actions    -->
+    <script src="assets/js/menuButtons.js"></script>
+    <!--Main JS-->
+    <script src="assets/js/main/mainPage.js"></script>
 
     <script>
 
@@ -472,5 +438,6 @@
         
         epicModel.loadPlayer(false,null,callBackLogIn);
     </script>
+>>>>>>> origin/master
 </body>
 </html>

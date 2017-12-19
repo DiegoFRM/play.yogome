@@ -11,17 +11,15 @@ $(".slick-prev").click(function(){
 })
 
 var languagesPage = ["ES","EN","PT","ZH","JA","KO"];
-var numberLang = 1;
 for(i=0;i<=5;i++){
-$("ul li:nth-child("+ []+")").click(function(){
+    $(".botonLang" + i ).attr("number",i);
+    $(".botonLang" + i ).click(function(){
         var str = window.location.search
-        str = replaceQueryParam('language', "ES", str)
+        str = replaceQueryParam('language', languagesPage[$(this).attr("number")], str)
         window.location = window.location.pathname + str;
 })    
     
 }
-
-
 
 $("#navbar-logo-container").mouseup(function(){
     magic.play()

@@ -183,15 +183,7 @@
                           </div>
                           <div class="embed-responsive embed-responsive-16by9">
                               <!-- Youtube API: The <iframe> (and video player) will replace this <div> tag. Code in mixpanel.js-->
-                              <div id="player"></div>
-                              <video id="playVideo1" class="mixpanel-call" width="560" height="315" controls poster="assets/images/previewvideo.png">
-                                <source src="epicweb/videoplayer/localvideos/1.mp4"  type="video/mp4">
-                              </video>
-                              <script>
-                              $("#playVideo1").click(function(){
-                                  this.paused ? this.play() : this.pause();
-                              })
-                              </script>
+                             <iframe width="560" height="315" src="https://www.youtube.com/embed/UsnSbq1_IQg" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
                           </div>
                           <div class="video-title-container">
                             <p class="video-title">
@@ -248,9 +240,8 @@
                           <div class="">
                             <div class="separator2 hidden-xs"></div>
                             <div id="" class="html5Games btn btn-orange text-center center-block">
-                                <a>
-                                    <div id="gamesButton" class="text15 mixpanel-call">I want more!</div>
-                                </a>
+                            <div id="gamesButton" class="text15 mixpanel-call"></div>
+<!--                            <div id="gamesButtonLog" class="text15 mixpanel-call"></div>    -->
                             </div>
                           </div>
                         </div>

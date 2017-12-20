@@ -68,7 +68,7 @@ var result = function(){
 
 	var sceneGroup
 
-	var totalScore, totalTime, totalGoal
+	var totalScore, totalTime
 	var shareButton, shareText, tryAgainText
     var win
 	var lastRecord
@@ -91,6 +91,7 @@ var result = function(){
 	var coinsContainer
 	var yogotar
 	var iconImage
+	var playerData
 
 	var timeGoal = null
 
@@ -101,14 +102,24 @@ var result = function(){
 		currentPlayer = null
         gameIndex = index
 		totalScore = score
-		totalGoal = 50
-		totalTime = 0
+		goalScore = gamesList[gameIndex].objective
+		win = totalScore >= goalScore
+		if(parent.epicModel){
+			currentPlayer = parent.epicModel.getPlayer()
+			mixpanel.people.set({ "minigamesPlayed": currentPlayer.minigamesPlayed+1 });
+		}
+		
+		playerData = yogomeGames.returnData()
+		playerData.hasMap = false
+		
+		// console.log(playerData.timeReady + ' gameTime')
+		if(currentPlayer && currentPlayer.isMap){
+			playerData.hasMap = true
+			currentPlayer.minigamesPlayed++
+		}
         
         scaleToUse = scale || 0.9
-        mixpanel.track(
-            "finishGame",
-            {"gameName": gamesList[gameIndex].name, "win":didWin, "numberOfObjects":score}
-        );
+        setMixpanel("MinigameAnswer")
 	}
     
     function changeImage(index,group){
@@ -160,14 +171,19 @@ var result = function(){
 
 		return containerGroup
 	}
-
+	
+	function setMixpanel(callName){
+		
+		mixpanel.track(
+            callName,
+            {"minigame": gamesList[gameIndex].name, "correct":win, "score":totalScore,"incorrectAnswers":playerData.lives,
+			 "answerTime":playerData.timeReady,"subject":gamesList[gameIndex].subject,"isMap":playerData.hasMap,"app":"epicWeb"}
+        );
+	}
 
 	function shareEvent(){
         
-        mixpanel.track(
-            "pressFacebook",
-            {"gameName": gamesList[gameIndex].name}
-        );
+        setMixpanel("shareFacebook")
         
 		FB.ui({
 		    method: 'share',
@@ -204,14 +220,16 @@ var result = function(){
             if(parent.tag == 'share'){
                 shareEvent()
             }else if(parent.tag == 'retry'){
+				setMixpanel("onRetry")
                 var alphaTween = game.add.tween(sceneGroup).to({alpha:0},400, Phaser.Easing.Cubic.Out, true,200)
                     alphaTween.onComplete.add(function(){
                         sceneloader.show(gamesList[gameIndex].sceneName)
                     })
             }else if(parent.tag == 'map'){
+				setMixpanel("onMap")
 				var alphaTween = game.add.tween(sceneGroup).to({alpha:0},400, Phaser.Easing.Cubic.Out, true,200)
                     alphaTween.onComplete.add(function(){
-                        window.open("http://yogome.com/epic/minigames/epicMap/", "_self")
+                        window.open("../epicMap/", "_self")
                     })
 			}
         })
@@ -263,7 +281,7 @@ var result = function(){
             pivotX += 250
         }
 		
-		if(parent.epicModel){
+		if(currentPlayer && currentPlayer.isMap){
 			var homeBtn = buttonsGroup.create(game.world.centerX - 200,game.world.centerY - 350,'atlas.resultScreen','home')
 			homeBtn.anchor.setTo(0.5,0.5)
 			homeBtn.alpha = 0
@@ -337,10 +355,12 @@ var result = function(){
 		
 		if(win){
 			
-			if(parent.epicModel){
-				
-				currentPlayer = parent.epicModel.getPlayer()
+			if(currentPlayer && currentPlayer.isMap){
+				// console.log(currentPlayer.currentMinigame)
 				currentPlayer.minigames[currentPlayer.currentMinigame].completed = true
+
+				currentPlayer.powerCoins += totalScore
+				parent.epicModel.savePlayer(currentPlayer)
 			}
 		}
 		
@@ -515,6 +535,10 @@ var result = function(){
 			
 		}
 		
+		if(totalScore > 99){
+			coinsContainer.text.setScale(0.8,0.8)
+		}
+		
 		game.time.events.add(delay,function(){
 			
 			var animName = "LOSE"
@@ -618,63 +642,12 @@ var result = function(){
             game.add.tween(obj).from({alpha:0},250,Phaser.Easing.linear,true)
         },this)
     }
-	
-    function inputBanner(obj){
-        
-        if(!obj.active){
-            return
-        }
-        
-        obj.active = false
-        
-        game.time.events.add(1000,function(){
-            obj.active = true
-        },this)
-        
-        var url = "https://play.google.com/store/apps/details?id=com.yogome.EpicKnowledge"
-        
-        if(!game.device.android){
-            url = "https://itunes.apple.com/mx/app/epic-heroes-of-knowledge/id904827467?mt=8"
-        }
-        
-		mixpanel.track(
-            "epicLinkPressed",
-            {"gameName": gamesList[gameIndex].name}
-        );
-		
-        window.open(url,'_blank')
-        
-    }
-    
-    function createBanner(){
-        
-        var banner = game.add.group()
-        banner.x = game.world.centerX
-        banner.y = game.world.centerY + 375
-		banner.scale.setTo(0.9,0.9)
-        sceneGroup.add(banner)
-        
-        var bannerImage = banner.create(0,0,'atlas.resultScreen','banner')
-        bannerImage.anchor.setTo(0.5,1)
-        bannerImage.inputEnabled = true
-		bannerImage.input.useHandCursor = true
-        bannerImage.active = true
-        bannerImage.events.onInputDown.add(inputBanner)
-        
-        var fontStyle = {font: "26px VAGRounded", fontWeight: "bold", fill: "#ffffff", align: "center"}
-        
-		var trackerText = new Phaser.Text(sceneGroup.game, -100,-40, localization.getString(localizationData,"download"), fontStyle)
-		trackerText.anchor.setTo(0.5, 0.5)
-        banner.add(trackerText)
-        
-    }
 
 	function initialize(){
         
 		buttonsActive = false
 		totalScore = totalScore || 0
 		totalTime = totalTime || 99.99
-		totalGoal = 50
         haveCoupon = false
         game.stage.backgroundColor = "#ffffff"
 	}
@@ -733,7 +706,6 @@ var result = function(){
 		}
 		
 		var iconName = gamesList[gameIndex].sceneName
-		goalScore = gamesList[gameIndex].objective
 		game.load.image('gameIcon', imagesPath + "icons/" + iconName + ".png")
 		
         

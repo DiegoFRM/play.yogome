@@ -1,69 +1,130 @@
 var epicModel = function () {
-	var url = "https://13-dot-heroesofknowledge.appspot.com"
+	var url = "https://12-dot-heroesofknowledge.appspot.com"
+	// var DEFAULT_CARD = {id:"yogotarEagle", xp:0, data:epicCharacters["yogotarEagle"]}
 
 	var player = {
-		minigames:[],
+		minigames:{},
 		battles:[],
 		cards:[],
 		yogotar:null,
+		minigamesPlayed:0,
 		currentPosition:0,
 		currentMinigame:0,
-		paidUser:true,
-		version: 0.1
+		paidUser:false,
+		powerCoins:0,
+		level:1,
+		version: 0.2
 	}
 
 	var GAME = "play.yogome"
 
-	var loginParent = "/login/parent"
-	var accessChild = "/login/access_child"
-	var changeChild = "/login/change_childs"
-	var updateChild = "/login/child/update"
-	var getChild = "/login/child/get"
+	var LOGIN_PARENT = "/login/parent"
+	var ACCESS_CHILD = "/login/access_childs"
+	var CHANGE_CHILD = "/login/change_childs"
+	var UPDATE_CHILD = "/login/child/update"
+	var GET_CHILD = "/login/child/get"
+	var USER_RECOVERY = "/users/parent/recover"
 
-	function beginGame(response) {
-		var child = response.child
-		initializePlayer()
-		if(child){
-			player = child.gameData
-		}
-		epicSiteMain.checkPlayer()
+	var currentCallback
+	var unlockAccessCall
+	var signInCallback
+
+	function getParameterByName(name, url) {
+		if (!url) url = window.location.href;
+		name = name.replace(/[\[\]]/g, "\\$&");
+		var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+			results = regex.exec(url);
+		if (!results) return null;
+		if (!results[2]) return '';
+		return decodeURIComponent(results[2].replace(/\+/g, " "));
 	}
 
-	function ajaxCall(data, endPoint, callback) {
+	function ajaxCall(data, endPoint, onSuccess, onError) {
 
 		$.ajax({
 			contentType: 'application/json',
 			data: JSON.stringify(data),
 			dataType: 'json',
-			success: function(data){
-				console.log("success", data);
-				if((data)&&(data.status === "success")){
-					setCredentials(data)
-					if(callback)
-						callback(data)
-				}else {
-					localStorage.setItem("token", null)
-					// checkLogin()
-				}
-			},
-			error: function(){
-				console.log("error");
-				localStorage.setItem("token", null)
-				// checkLogin()
-			},
 			type: 'POST',
-			url: url + endPoint
+			url: url + endPoint,
+			async:true,
+			processData:false
+		}).done(function(response){
+			// console.log("success", response);
+			if((response)&&(response.status === "success")){
+				setCredentials(response)
+				if(onSuccess)
+					onSuccess(response)
+			}else {
+				localStorage.setItem("token", null)
+				if(onError)onError(response)
+				if(!signInCallback) modal.showLogin()
+				// checkLogin()
+			}
+		}).fail(function(response){
+			// console.log("error", response);
+			localStorage.setItem("token", null)
+			if(onError)onError(response)
+			if(!signInCallback) modal.showLogin()
+			// modal.showLogin()
 		});
 	}
 
 	function initializePlayer() {
-		var minigames = epicYogomeGames.getGames()
+		var minigames = yogomeGames.getObjectGames()
 
-		for(var mgIndex = 0; mgIndex < minigames.length; mgIndex++){
-			var minigame = minigames[mgIndex]
-			minigame.completed = false
-			minigame.record = 0
-			player.minigames.push(minigame)
+		for(var key in minigames){
+			if(!player.minigames[key]){
+				player.minigames[key] = minigames[key]
+				player.minigames[key].completed = false
+				player.minigames[key].record = 0
+			}
+		}
+
+	}
+
+	function callMixpanelLogin(subscribed){
+		var credentials = epicModel.getCredentials()
+		mixpanel.track(
+			"onLoginSuccess",
+			{"user_id": credentials.educationID,
+				"subscribed":subscribed}
+		);
+		mixpanel.people.increment("loginCount");
+		// console.log("loginMixpanel", subscribed)
+	}
+	
+	function updateData() {
+		var credentials = getCredentials()
+		player = credentials.gameData || player
+		initializePlayer()
+		if(credentials.subscribed){
+			if(unlockAccessCall) {
+				unlockAccessCall()
+				unlockAccessCall = null
+			}
+			if(signInCallback){
+				signInCallback = false
+				callMixpanelLogin(true)
+			}
+		}
+		else if(signInCallback) {
+			signInCallback = false
+			callMixpanelLogin(false)
+			modal.showYouKnow()
+		}
+
+		if(currentCallback) {
+			currentCallback()
+			currentCallback = null
+		}
+
+		if((mixpanel)&&(credentials.email)){
+			mixpanel.identify(credentials.email);
+		}
+
+		if((typeof epicSiteMain !== "undefined") && (typeof epicSiteMain.updatePlayerInfo === "function")){
+			epicSiteMain.updatePlayerInfo()
 		}
 	}
 
@@ -80,7 +141,41 @@ var epicModel = function () {
 		if ((response)&&(response.children) && (response.children.length === 1)) {
 			var children = response.children[0]
 			localStorage.setItem("remoteID", children.remoteID)
+			localStorage.setItem("educationID", children.educationID)
+			localStorage.setItem("name", children.name)
 		}
+
+		if ((response)&&(response.child)) {
+			var child = response.child
+			localStorage.setItem("remoteID", child.remoteID)
+			localStorage.setItem("educationID", child.educationID)
+			localStorage.setItem("name", child.name)
+			if(child.gameData) {
+				var gameData = child.gameData
+				gameData = JSON.stringify(child.gameData)
+				if(gameData.version === player.version)
+					localStorage.setItem("gameData", gameData)
+				else{
+					gameData.minigames = {}
+					localStorage.setItem("gameData", gameData)
+				}
+			}
+		}
+
+		if((response)&&(response.subscribed)){
+			localStorage.setItem("subscribed", true)
+		}
+	}
+
+	function getJson(stringData) {
+		var jsonData
+		try{
+			jsonData = JSON.parse(stringData)
+		}catch (e){
+			jsonData = null
+		}
+
+		return jsonData
 	}
 
 	function getCredentials() {
@@ -93,7 +188,57 @@ var epicModel = function () {
 		var remoteID = localStorage.getItem("remoteID")
 		remoteID = remoteID === "null" ? null : remoteID
 
-		return {email:email, token:token, remoteID:remoteID}
+		var educationID = localStorage.getItem("educationID")
+		educationID = educationID === "null" ? "none" : educationID
+
+		var gameData = localStorage.getItem("gameData")
+		gameData = gameData === "null" ? null : getJson(gameData)
+		if((gameData) && (gameData.version !== player.version)){
+			gameData.minigames = {}
+		}
+
+		var subscribed = localStorage.getItem("subscribed")
+		// subscribed = typeof subscribed === "boolean" ? subscribed : false
+		// console.log(subscribed)
+
+		var name = localStorage.getItem("name")
+		name = (name === "null" || !name) ? null : name
+
+		return {
+			email:email,
+			token:token,
+			remoteID:remoteID,
+			gameData:gameData,
+			educationID:educationID,
+			subscribed:subscribed,
+			name:name
+		}
+	}
+	
+	function checkPlayers(response) {
+		// console.log(response)
+		modal.showPlayers(response.children)
+	}
+
+	function loginPlayer(remoteID, callback) {
+		var credentials = getCredentials()
+		ajaxCall({email:credentials.email, token: credentials.token, remoteID: remoteID}, ACCESS_CHILD, checkLogin)
+	}
+
+	function signIn(data, onSuccess, onError) {
+		// console.log(data)
+		signInCallback = true
+
+		function callback(response){
+			onSuccess()
+			checkLogin(response)
+		}
+
+		setCredentials(data)
+		if(data.token)
+			ajaxCall({email: data.email, token: data.token}, LOGIN_PARENT, callback, onError)
+		else
+			ajaxCall({email:data.email, password: data.password}, LOGIN_PARENT, callback, onError)
 	}
 	
 	function checkLogin(response){
@@ -103,37 +248,54 @@ var epicModel = function () {
 		var email = credentials.email
 		var remoteID = credentials.remoteID
 
-		if((token)&&(email)&&(remoteID)){
-			localStorage.setItem("token", token)
+		// console.log(token, email, remoteID, "credentials")
+		if((token)&&(email)){
 
 			var tokenType = token.substr(0, 2)
-			console.log(tokenType)
-			if (tokenType === "pl"){
-				console.log("login player")
-				ajaxCall({email:email, token: token, remoteID: remoteID, game:GAME}, getChild, beginGame)
+			// console.log(tokenType)
+			if ((tokenType === "pl")&&(remoteID)){
+				// console.log("login player")
+				ajaxCall({email:email, token: token, remoteID: remoteID, game:GAME}, GET_CHILD, updateData)
+
 			}else if(tokenType === "pa"){
-				console.log("call select player")
-				ajaxCall({email:email, token: token, remoteID: remoteID}, accessChild, checkLogin)
+				// console.log("call select player")
+				if(response)
+					checkPlayers(response)
+				else {
+					localStorage.setItem("token", null)
+					checkLogin()
+				}
+			}else{
+				modal.showLogin()
 			}
 
 		}
 		else {
-			console.log("callLogin")
-			var data = {
-				"email": "aaron+20171207_3@yogome.com",
-				"password": "explore-endless-adventure"
-			}
-			localStorage.setItem("email", data.email)
-			ajaxCall(data, loginParent, checkLogin)
+			// var data = {
+			// 	"email": "aaron+20171207_2@yogome.com",
+			// 	"password" : "yogome-children-fun"
+			// }
+			// localStorage.setItem("email", data.email)
+			// ajaxCall(data, loginParent, checkLogin)
+			modal.showLogin()
 		}
 	}
 
-	function loadPlayer () {
-		checkLogin()
+	function loadPlayer (forceLogin, callback, unlockCall) {
+		// var credentials = getCredentials()
+		unlockAccessCall = unlockCall
+		currentCallback = callback
+		if(forceLogin) {
+			checkLogin()
+		}
+		else {
+			updateData()
+		}
 	}
 
-	function savePlayer(currentPlayer) {
+	function savePlayer(currentPlayer, forceLogin, loginTag) {
 		player = currentPlayer
+		localStorage.setItem("gameData", JSON.stringify(player))
 
 		var credentials = getCredentials()
 		var token = credentials.token
@@ -141,18 +303,55 @@ var epicModel = function () {
 		var remoteID = credentials.remoteID
 
 		if((token)&&(email)&&(remoteID)){
-			ajaxCall({email:email, token: token, remoteID: remoteID, game:GAME, player:player}, updateChild, function () {
+			ajaxCall({email:email, token: token, remoteID: remoteID, game:GAME, player:player}, UPDATE_CHILD, function () {
 				console.log("playerSaved")
 			})
-		}else{
-			console.log("You need to login to save")
+		}else if(forceLogin){
+			// console.log("You need to login to save")
+			modal.showSave(loginTag)
 		}
+
+		if((typeof epicSiteMain !== "undefined") && (typeof epicSiteMain.updatePlayerInfo === "function")){
+			epicSiteMain.updatePlayerInfo()
+		}
+	}
+	
+	function recoverPass(email, onSuccess, onError) {
+		ajaxCall({email:email}, USER_RECOVERY, onSuccess, onError)
+	}
+
+	function checkQuery(callBack){
+		function onSuccess() {
+			modal.showWelcome()
+			if(callBack)callBack()
+		}
+		var token = getParameterByName("token")
+		var email = getParameterByName("email")
+		token = token ? decodeURIComponent(token) : null
+		email = email ? decodeURIComponent(email) : null
+		//pa_%5BB%406d33b036
+		//aaron%2B20171207_2%40yogome.com
+		// var token = null//"pa_[B@15f1b80"
+		// var email = "aaron+20171207_2@yogome.com"
+
+		if((token)&&(email)) {
+			localStorage.setItem("email", email)
+			// console.log(token)
+			epicModel.loginParent({token: token, email:email}, onSuccess)
+		}
+		else
+			if(callBack)callBack()
 	}
 
 	return{
 		loadPlayer:loadPlayer,
 		getPlayer:function(){return player},
-		savePlayer:savePlayer
+		savePlayer:savePlayer,
+		getCredentials:getCredentials,
+		loginPlayer:loginPlayer,
+		loginParent:signIn,
+		recoverPass:recoverPass,
+		checkQuery:checkQuery
 	}
 }()
 

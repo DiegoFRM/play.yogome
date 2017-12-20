@@ -42,30 +42,30 @@ $("#devicelogInButton").click(function(){
     modal.showLogin();
 });
 
-$("#gamesButton").click(function(){
+$("#gamesButtonLog").click(function(){
        magic.play();
-    window.location.href = "letsplay.html?language=" + language;
+      window.location.href = "letsplay.html?language=" + language;
+});
+
+$("#gamesButtonLog").click(function(){
+       magic.play();
+      window.location.href = "letsplay.html?language=" + language;
 });
         
 
-function callBackLogIn(){
-    var credentials = getCredentials()
-    var email = credentials.email
-    $("#joinusSecction").hide();
-    $(".loginAccess").show();
-    $(".accesButtons").hide();
-    $(".navbar").addClass("navbar-login");
-    $("#id_user").text(email)
+function callBackLogIn(subscribed){
+    if(subscribed){
+        var credentials = getCredentials()
+        var email = credentials.email
+        $("#joinusSecction").hide();
+        $(".loginAccess").show();
+        $(".accesButtons").hide();
+        $(".navbar").addClass("navbar-login");
+        $("#id_user").text(email)        
+    }
+
 }
 
-function checkLog(){
-    var credentials = getCredentials()
-    var email = credentials.email
-    $(".loginAccess").show();
-    $(".accesButtons").hide();    
-    $(".navbar").addClass("navbar-login");
-    $("#id_user").text(email)
-}
 
 epicModel.checkQuery();
-epicModel.loadPlayer(false,null,callBackLogIn);
+epicModel.loadPlayer(false,callBackLogIn);

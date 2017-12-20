@@ -120,35 +120,52 @@
     }
         
     
+
+
 function showGames(){
         var pathGames = "games/nonrefactored/"
   		var games = yogomeGames.getGames("absolute");
   		for(var i = 0 ; i<= games.length-1 ;i++){
   			var num = i;
   			if(games[i].review){
-  				$("#minigamesContainer").append("<a href='"+games[i].mapUrl+"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
+                var minigameHref;
+                if(language != "ES" ){
+                    minigameHref = games[i].mapUrl + "?language=EN";
+
+                }else{
+                    minigameHref = games[i].mapUrl + "?language=" + language;
+                }
+                
+  				$("#minigamesContainer").append("<a href='"+ minigameHref +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
                 
                 $("#btnMinigame" + num).css("background-image","url('" + games[num].url + "images/fbpost.png')");
   				$("#gameimg" + num).attr("value",i);
   			}
-  		}    
+  		}   
 }    
 
-function showDemo(){
-         var pathGames = "games/nonrefactored/"
+
+function showDemoGames(){
+        var pathGames = "games/nonrefactored/"
   		var games = yogomeGames.getGames("absolute");
-  		for(var i = 0 ; i <= games.length-1 ;i++){
+  		for(var i = 0 ; i<= games.length-1 ;i++){
   			var num = i;
   			if(games[i].demo){
-  				$("#minigamesContainer").append("<a href='"+games[i].mapUrl+"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
+                var minigameHref;
+                if(language != "ES" ){
+                    minigameHref = games[i].mapUrl + "?language=EN";
+
+                }else{
+                    minigameHref = games[i].mapUrl + "?language=" + language;
+                }
+                
+  				$("#minigamesContainer").append("<a href='"+ minigameHref +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
                 
                 $("#btnMinigame" + num).css("background-image","url('" + games[num].url + "images/fbpost.png')");
   				$("#gameimg" + num).attr("value",i);
   			}
-
   		}   
 }
-
    
 
 function callBackLogIn(){
@@ -158,19 +175,20 @@ function callBackLogIn(){
     $(".loginAccess").show();
     $(".accesButtons").hide();
     $(".navbar").addClass("navbar-login");
-    $("#id_user").text(email)
+    $("#id_user").text(email);
+    showGames();
 }
 
-function checkLog(){
-    var credentials = getCredentials()
-    var email = credentials.email
-    $(".loginAccess").show();
-    $(".accesButtons").hide();    
-    $(".navbar").addClass("navbar-login");
-    $("#id_user").text(email)
-}
 
-callBackLogIn()
+function checkSubscribed(subscribed){
+    if(subscribed){
+        callBackLogIn();
+    }else{
+        showDemoGames();   
+    }
+}
+    
 epicModel.checkQuery();
-epicModel.loadPlayer(false,null,callBackLogIn);
+epicModel.loadPlayer(false,checkSubscribed);
+
 

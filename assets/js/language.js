@@ -2,8 +2,8 @@ var languageArrayIndex = [
                 { 
                     id:0,
                     NAME:"mainMenu0",
-                    ES:"Episodios",
-                    EN:"Webisodes",
+                    ES:"Videos",
+                    EN:"Videos",
                     PT:"Episódios",
                     ZH:"网络视频短片",
                     JA:"ウェブエピソード",

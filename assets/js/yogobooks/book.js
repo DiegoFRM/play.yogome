@@ -56,14 +56,10 @@
           ]
           
           for(i=0;i<=booksArray.length-1;i++){
-              
-              
               $("#container-books").append('<li id="book'+ i +'"class="responsiveGallery-item"></li>');
-              
               if(booksArray[i].new){
                   $("#container-books").find("#book" + i).append('<div class="new-ribbon"></div>');
               }
-              
               $("#book" + i).attr("number",i);
               
               if(language == "ES"){
@@ -114,3 +110,23 @@
           }
           
     
+function callBackLogIn(){
+    var credentials = getCredentials()
+    var email = credentials.email
+    $(".loginAccess").show();
+    $(".accesButtons").hide();
+    $(".navbar").addClass("navbar-login");
+    $("#id_user").text(email)
+}
+
+function checkLog(){
+    var credentials = getCredentials()
+    var email = credentials.email
+    $(".loginAccess").show();
+    $(".accesButtons").hide();    
+    $(".navbar").addClass("navbar-login");
+    $("#id_user").text(email)
+}
+
+epicModel.checkQuery();
+epicModel.loadPlayer(false,null,callBackLogIn);

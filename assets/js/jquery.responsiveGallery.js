@@ -22,11 +22,11 @@
 
 		function getTransform3dCSS(tx,ty,ry,zIndex,opacity,visibility){
 			return {
-				'-webkit-transform'	: 'translateX('+tx+') translateZ('+ty+'px)',
-				'-moz-transform'	: 'translateX('+tx+') translateZ('+ty+'px)',
-				'-o-transform'		: 'translateX('+tx+') translateZ('+ty+'px)',
-				'-ms-transform'		: 'translateX('+tx+') translateZ('+ty+'px)',
-				'transform'			: 'translateX('+tx+') translateZ('+ty+'px)',
+				'-webkit-transform'	: 'translateX('+tx+') translateZ('+ty+'px) translateY('+ry+'px)',
+				'-moz-transform'	: 'translateX('+tx+') translateZ('+ty+'px) translateY('+ry+'px)',
+				'-o-transform'		: 'translateX('+tx+') translateZ('+ty+'px) translateY('+ry+'px)',
+				'-ms-transform'		: 'translateX('+tx+') translateZ('+ty+'px) translateY('+ry+'px)',
+				'transform'			: 'translateX('+tx+') translateZ('+ty+'px) translateY('+ry+'px)',
 				'z-index'			: zIndex,
 				'opacity'			: opacity,
 				'visibility'		: visibility
@@ -105,13 +105,13 @@
 				cssArray = [
 					getTransform3dCSS('-100%',	-400, 	45,		-1,	0,	'hidden'),
 
-					getTransform3dCSS('0', 		-300, 	45,		0,	0.3,	'visible'),
-					getTransform3dCSS('100%', 	-200, 	45,		1,	0.5,	'visible'),
+					getTransform3dCSS('-60%', 		-400, 	85,		-1,	0.5,	'visible'),
+					getTransform3dCSS('80%', 	-200, 	45,		1,	0.9,	'visible'),
 					getTransform3dCSS('200%', 	0, 		0,		2,	1,	'visible'),
-					getTransform3dCSS('300%', 	-200, 	-45,	1,	0.5,	'visible'),
-					getTransform3dCSS('400%', 	-300, 	-45,	0,	0.3,	'visible'),
+					getTransform3dCSS('320%', 	-200, 	45,	1,	0.9,	'visible'),
+					getTransform3dCSS('450%', 	-400, 	85,	0,	0.5,	'visible'),
 
-					getTransform3dCSS('500%', 	-400, 	-45,	-1,	0,	'hidden')
+					getTransform3dCSS('500%', 	-600, 	100,	-1,	0,	'hidden')
 				];
 			} else if(support2d){
 				cssArray = [
@@ -135,23 +135,21 @@
 
 			if(support3d){
 				cssArray = [
-					getTransform3dCSS('-100%',	-400, 	45,		0,	0,	'hidden'),
-
+					getTransform3dCSS('-100%',	-500, 	85,		1,	0.5,	'hidden'),
 					getTransform3dCSS('0', 		-300, 	45,		1,	1,	'visible'),
 					getTransform3dCSS('100%', 	0, 		0,		2,	1,	'visible'),
-					getTransform3dCSS('200%', 	-300, 	-45,	1,	1,	'visible'),
-
-					getTransform3dCSS('300%', 	-400, 	-45,	0,	0,	'hidden')
+					getTransform3dCSS('200%', 	-300, 	45,	1,	1,	'visible'),
+					getTransform3dCSS('300%', 	-500, 	85,	0,	0.5,	'hidden'),
+                    
 				];
 			} else if(support2d){
 				cssArray = [
-					getTransform2dCSS('-100%',	0.65,	'100%',		'50%',	0,	'hidden'),
+					getTransform2dCSS('-100%',	0.65,	'100%',		'50%',	1,	'visible'),
 
 					getTransform2dCSS('0', 		0.8,	'50%',		'50%',	1,	'visible'),
 					getTransform2dCSS('100%', 	1,		'50%',		'50%',	1,	'visible'),
 					getTransform2dCSS('200%', 	0.8,	'50%',		'50%',	1,	'visible'),
-
-					getTransform2dCSS('300%', 	0.65,	'0%',		'50%',	0,	'hidden')
+					getTransform2dCSS('300%', 	0.65,	'0%',		'50%',	1,	'visible')
 				];
 			}
 

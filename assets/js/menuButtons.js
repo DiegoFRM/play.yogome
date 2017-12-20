@@ -21,21 +21,26 @@ for(i=0;i<=5;i++){
     
 }
 
+$(".register-btn").click(function(){
+    magic.play()
+    window.location.href = "https://yogomepayments.com/";
+});
+
 $("#navbar-logo-container").mouseup(function(){
     magic.play()
-    window.open("index.html?language=" + language,"_self");
+    window.location.href = "index.html?language=" + language;
 });
 $(".text0").click(function(){
     magic.play();
-    window.open("webisodes.html?language=" + language,"_self");
+    window.location.href = "webisodes.html?language=" + language;
 });
 $(".text2").click(function(){
     magic.play();
-    window.open("letsplay.html?language=" + language,"_self");
+    window.location.href = "letsplay.html?language=" + language;
 });
 $(".text3").click(function(){
     magic.play();
-    window.open("yogobooks.html?language=" + language,"_self");
+    window.location.href = "yogobooks.html?language=" + language;
 });
 $(".navbar-btn").click(function(){
     magic.play();

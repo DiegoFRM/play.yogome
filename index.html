@@ -18,7 +18,7 @@
    <script type="text/javascript" src="assets/plugins/slick/slick.min.js"></script>
    <!-- Latest compiled and minified JavaScript -->
    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="http://yogome.com/epic/shared/minigames/js/helpers/yogomeGames.js" type="text/javascript"></script>
+    <script src="epicweb/shared/minigames/js/helpers/yogomeGames.js" type="text/javascript"></script>
     <script src="js/epic/data/epicYogomeGames.js" type="text/javascript"></script>
         <!--Detect language-->
     <script src="assets/js/detectlanguage.js"></script>
@@ -65,8 +65,8 @@
                     <button type="button" id="devicelogInButton" class="navbar-btn ">
                               <span><div class="text6">LogIn</div></span>
                         </button>
-                        <button type="button" id="register-btn-sm" class="navbar-btn hidden ">
-                              <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
+                        <button type="button" id="register-btn-sm" class="navbar-btn hidden btn-mixpanel-payments mixpanel-call">
+                              <span><div class="text4">Registrer</div></span>
                         </button>
                         </li>    
                            
@@ -123,8 +123,8 @@
                                        <button type="button" id="logInButton" class="navbar-btn ">
                                            <span><div class="text6">Log In</div></span>
                                         </button>       
-                                        <button type="button" id="register-btn-lg" class="navbar-btn ">
-                                          <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
+                                        <button type="button" id="register-btn-lg" class="navbar-btn btn-mixpanel-payments mixpanel-call">
+                                          <span><div class="text4">Registrer</div></span>
                                         </button>
                                     </li>    
                                 </ul>
@@ -158,9 +158,9 @@
                 
                 <section id="joinusSecction" class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-8 col-md-offset-2 text-center" style="padding:12vh;">
                     <p class="text-center" ><span class="text16"><b>Boost your child's education with Yogome Fun Learning only for 5.99 per month.<br> Join us now! Boost your child's learning only for 5.99 per month. </b></span></p>
-                    <a href="https://yogomepayments.com/" class="mixpanel-call"><div id="" class="html5Games btn btn-orange text-center center-block">
+                    <div id="JoinUs" class="html5Games btn btn-orange text-center center-block btn-mixpanel-payments">
                      <div class="text40">Join us now!</div>
-                            </div></a>
+                            </div>
                 </section>
 
                 <section id="play-section-videos">
@@ -394,7 +394,7 @@
         
 
     $("#btn-play").click(function(){
-		window.open("http://play.yogome.com/epicweb/minigames/epicSite/?language=" + language,"_self");
+		window.location.href = "http://play.yogome.com/epicweb/minigames/epicSite/?language=" + language;
     });
         
     </script>

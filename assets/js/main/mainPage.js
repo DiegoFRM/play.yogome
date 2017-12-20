@@ -41,6 +41,11 @@ $("#logInButton").click(function(){
 $("#devicelogInButton").click(function(){
     modal.showLogin();
 });
+
+$("#gamesButton").click(function(){
+       magic.play();
+    window.location.href = "letsplay.html?language=" + language;
+});
         
 
 function callBackLogIn(){

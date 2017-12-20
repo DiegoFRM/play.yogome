@@ -131,9 +131,46 @@ function showGames(){
                 $("#btnMinigame" + num).css("background-image","url('" + games[num].url + "images/fbpost.png')");
   				$("#gameimg" + num).attr("value",i);
   			}
-
   		}    
-    
 }    
 
-  showGames();  
+function showDemo(){
+         var pathGames = "games/nonrefactored/"
+  		var games = yogomeGames.getGames("absolute");
+  		for(var i = 0 ; i <= games.length-1 ;i++){
+  			var num = i;
+  			if(games[i].demo){
+  				$("#minigamesContainer").append("<a href='"+games[i].mapUrl+"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
+                
+                $("#btnMinigame" + num).css("background-image","url('" + games[num].url + "images/fbpost.png')");
+  				$("#gameimg" + num).attr("value",i);
+  			}
+
+  		}   
+}
+
+   
+
+function callBackLogIn(){
+    var credentials = getCredentials()
+    var email = credentials.email
+    showGames(); 
+    $(".loginAccess").show();
+    $(".accesButtons").hide();
+    $(".navbar").addClass("navbar-login");
+    $("#id_user").text(email)
+}
+
+function checkLog(){
+    var credentials = getCredentials()
+    var email = credentials.email
+    $(".loginAccess").show();
+    $(".accesButtons").hide();    
+    $(".navbar").addClass("navbar-login");
+    $("#id_user").text(email)
+}
+
+callBackLogIn()
+epicModel.checkQuery();
+epicModel.loadPlayer(false,null,callBackLogIn);
+

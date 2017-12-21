@@ -169,26 +169,26 @@ function showDemoGames(){
    
 
 function callBackLogIn(){
-    var credentials = getCredentials()
-    var email = credentials.email
-    showGames(); 
-    $(".loginAccess").show();
-    $(".accesButtons").hide();
-    $(".navbar").addClass("navbar-login");
-    $("#id_user").text(email);
-    showGames();
-}
-
-
-function checkSubscribed(subscribed){
-    if(subscribed){
-        callBackLogIn();
+        var credentials = getCredentials()
+        var email = credentials.email
+            if(email){
+                $(".loginAccess").show();
+                $(".accesButtons").hide();
+                $(".navbar").addClass("navbar-login");
+                $("#id_user").text(email)               
+               }
+ 
+    if(credentials.subscribed){
+            showGames();
     }else{
-        showDemoGames();   
+        showDemoGames();
     }
 }
+
+
+
     
 epicModel.checkQuery();
-epicModel.loadPlayer(false,checkSubscribed);
+epicModel.loadPlayer(false,callBackLogIn);
 
 

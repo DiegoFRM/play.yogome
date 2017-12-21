@@ -29,3 +29,20 @@ loadVideos(0);
 
                     }
                 }
+
+
+
+function callBackLogIn(){
+         var credentials = getCredentials()
+        var email = credentials.email
+            if(email){
+                $(".loginAccess").show();
+                $(".accesButtons").hide();
+                $(".navbar").addClass("navbar-login");
+                $("#id_user").text(email)               
+               }
+
+}
+    
+epicModel.checkQuery();
+epicModel.loadPlayer(false,callBackLogIn);

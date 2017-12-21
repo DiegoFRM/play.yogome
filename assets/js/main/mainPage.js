@@ -53,15 +53,19 @@ $("#gamesButtonLog").click(function(){
 });
         
 
-function callBackLogIn(subscribed){
-    if(subscribed){
+function callBackLogIn(){
+        
         var credentials = getCredentials()
         var email = credentials.email
-        $("#joinusSecction").hide();
-        $(".loginAccess").show();
-        $(".accesButtons").hide();
-        $(".navbar").addClass("navbar-login");
-        $("#id_user").text(email)        
+            if(email){
+                $(".loginAccess").show();
+                $(".accesButtons").hide();
+                $(".navbar").addClass("navbar-login");
+                $("#id_user").text(email)               
+               }
+ 
+    if(credentials.subscribed){
+                $("#joinusSecction").hide();
     }
 
 }

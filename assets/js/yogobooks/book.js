@@ -109,24 +109,19 @@
           
           }
           
-    
+
+
 function callBackLogIn(){
-    var credentials = getCredentials()
-    var email = credentials.email
-    $(".loginAccess").show();
-    $(".accesButtons").hide();
-    $(".navbar").addClass("navbar-login");
-    $("#id_user").text(email)
-}
+         var credentials = getCredentials()
+        var email = credentials.email
+            if(email){
+                $(".loginAccess").show();
+                $(".accesButtons").hide();
+                $(".navbar").addClass("navbar-login");
+                $("#id_user").text(email)               
+               }
 
-function checkLog(){
-    var credentials = getCredentials()
-    var email = credentials.email
-    $(".loginAccess").show();
-    $(".accesButtons").hide();    
-    $(".navbar").addClass("navbar-login");
-    $("#id_user").text(email)
 }
-
+    
 epicModel.checkQuery();
-epicModel.loadPlayer(false,null,callBackLogIn);
+epicModel.loadPlayer(false,callBackLogIn);

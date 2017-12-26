@@ -37,15 +37,9 @@
                         <div class="col-xs-6 col-xs-offset-3 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 text-center">
                             <div class="embed-responsive embed-responsive-16by9" >
                               <!-- Youtube API: The <iframe> (and video player) will replace this <div> tag. Code in mixpanel.js-->
-                              <video id="playVideo1" controls width="560" height="400" poster="images/poster4.png">
-                                <source src="localvideos/4.mp4" type="video/mp4">
-                              </video>
-                                
-                              <script>
-                              $("#playVideo1").click(function(){
-                                  this.paused ? this.play() : this.pause();
-                              })
-                              </script>
+                              <div id="videoContainer" class="embed-responsive embed-responsive-16by9">
+                              
+                            </div>
                           </div>
                         <div class="video-title-container">
                             <p class="video-title">
@@ -57,15 +51,15 @@
                         <div class="col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3 text-center">
                             <div class="text-center title-text">Featured</div>
                             <div class="videolist">
-                                
+                               
                             <div>
-                                <img id="button4" name="Entrepreneur" class="videoButton" src="images/thumb-video4.png">
+                                <img id="button1" name="Entrepreneur" class="videoButton" src="images/thumb-video1.png">
                                 Entrepreneur
                             </div> 
                             <div>
-                                <img id="button1" name="Webisode 1" class="videoButton" src="images/thumb-video1.png">
+                                <img id="button2" name="Webisode 1" class="videoButton" src="images/thumb-video4.png">
                                 webisode 1
-                            </div> 
+                            </div>  
                                 </div>
                         </div>
                         
@@ -81,17 +75,60 @@
     
 </body>
 <script>
-    for(i=1;i<=4;i++){
-        $("#button" + i).attr("number",i);
-        if(!$("#button" + i).hasClass("lock") ){
-           $("#button" + i).click(function(){
-            $("#playVideo1").attr("src", "localvideos/" +  $(this).attr("number") + ".mp4"  )
-            $('#playVideo1').attr('poster', "images/poster" +  $(this).attr("number") + ".png" );
-               $(".video-title").text( $(this).attr("name") )
-        }); 
-        }
-        
+var videolist = 
+    [
+
+    {
+        video:1,
+        NAME_ES:"Invasión a Mathdrómeda",
+        NAME_EN:"Invasion on Mathdromeda",
+        url_ES:'<iframe width="560" height="315" src="https://www.youtube.com/embed/TzOynq0Q4yQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>',
+        url_EN:'<iframe width="560" height="315" src="https://www.youtube.com/embed/JEIaVR13JE8" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
+    },        
+    {
+        video:2,
+        NAME_ES:"¿Qué es un emprendedor?",
+        NAME_EN:"What is an Entrepreneur?",
+        url_ES:'<iframe width="560" height="315" src="https://www.youtube.com/embed/VqOi-R1DuGc" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>',
+        url_EN:'<iframe width="560" height="315" src="https://www.youtube.com/embed/pKpuyMuMLCQ" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
+    },
+    {
+        video:3,
+        NAME_ES:"¿Por qué las niñas deberían ser ingenieras?",
+        NAME_EN:"Why Girls Should Be Engineers",
+        url_ES:'<iframe width="560" height="315" src="https://www.youtube.com/embed/hGZfPRUOQ7I" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>',
+        url_EN:'<iframe width="560" height="315" src="https://www.youtube.com/embed/OqiV7KrtL-M" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>'
     }
+    ]    
+    
+language = "ES";
+
+function loadVideos(index){  
+    if(language == "ES"){
+                    $("#videoContainer").html(videolist[index].url_ES);
+                    $(".video-title").text(videolist[index].NAME_ES);
+                }else if(language == "EN"){
+                    $("#videoContainer").html(videolist[index].url_EN);
+                    $(".video-title").text(videolist[index].NAME_EN);
+                }else{
+                    $("#videoContainer").html(videolist[index].url_EN);
+                    $(".video-title").text(videolist[index].NAME_EN);    
+                }
+}
+
+loadVideos(0);            
+
+
+                for(i=1;i<=2;i++){
+                    $("#button" + i).attr("number",i-1);
+                    if(!$("#button" + i).hasClass("lock") ){
+                       $("#button" + i).click(function(){
+                           console.log(parseInt($(this).attr("number")) );
+                           loadVideos(parseInt($(this).attr("number")));
+                        });
+
+                    }
+                }
 </script>
 
 </html>

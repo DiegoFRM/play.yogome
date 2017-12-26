@@ -172,10 +172,12 @@ function callBackLogIn(){
         var credentials = getCredentials()
         var email = credentials.email
             if(email){
-                $(".loginAccess").show();
+                $("#menuUserMovil").css("display","block");
+                $("#menuUser").css("display","flex");
                 $(".accesButtons").hide();
+                $(".accesButtonsMovil").hide();
                 $(".navbar").addClass("navbar-login");
-                $("#id_user").text(email)               
+                $("#id_user").text(email)    
                }
  
     if(credentials.subscribed){
@@ -183,12 +185,14 @@ function callBackLogIn(){
     }else{
         showDemoGames();
     }
+
 }
 
-
-
-    
 epicModel.checkQuery();
 epicModel.loadPlayer(false,callBackLogIn);
-
-
+                $("#menuUserMovil").css("display","block");
+                $("#menuUser").css("display","flex");
+                $(".accesButtons").hide();
+                $(".accesButtonsMovil").hide();
+                $(".navbar").addClass("navbar-login");
+                $("#id_user").text(email)   

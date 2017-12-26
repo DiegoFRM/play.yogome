@@ -21,6 +21,11 @@ for(i=0;i<=5;i++){
     
 }
 
+$("#navbar-logo-container").css("cursor","pointer");
+$(".text0").css("cursor","pointer");
+$(".text2").css("cursor","pointer");
+$(".text3").css("cursor","pointer");
+
 $(".register-btn").click(function(){
     magic.play()
     window.location.href = "https://yogomepayments.com/";
@@ -30,6 +35,10 @@ $("#navbar-logo-container").mouseup(function(){
     magic.play()
     window.location.href = "index.html?language=" + language;
 });
+
+
+
+
 $(".text0").click(function(){
     magic.play();
     window.location.href = "webisodes.html?language=" + language;
@@ -44,4 +53,9 @@ $(".text3").click(function(){
 });
 $(".navbar-btn").click(function(){
     magic.play();
+});
+
+$("#buttonLogOut").click(function(){
+    localStorage.clear();
+    window.location.reload();
 });

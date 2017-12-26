@@ -35,7 +35,7 @@
     <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
     
     <div class="wrapper">
-             <!-- MENU WEBPAGE -->
+ <!-- MENU WEBPAGE -->
             <nav id="sidebar">
                 <div id="dismiss">
                     <i class="glyphicon glyphicon-arrow-left"></i>
@@ -66,13 +66,24 @@
                                            <li class="botonLang5"><a class="language-switch">한국어</a></li>
                         </ul>
                    </li>
-                        <li class="accesButtons">
+                        <li class="accesButtonsMovil">
                     <button type="button" id="devicelogInButton" class="navbar-btn ">
                               <span><div class="text6">LogIn</div></span>
                         </button>
-                        <button type="button" id="register-btn-sm" class="navbar-btn hidden ">
-                              <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
+                        <button type="button" id="register-btn-sm" class="navbar-btn hidden btn-mixpanel-payments mixpanel-call">
+                              <span><div class="text4">Registrer</div></span>
                         </button>
+                        </li>  
+                            
+                         <li id="menuUserMovil">
+                                           
+                            <div class="loginAccessMovil">
+                                <span id="id_user">ID_USER</span>
+                            </div> 
+                            <button id="buttonLogOutMovil" class="logoutMovil">
+                                <img src="assets/images/logouticon.png" />
+                                <p>Log Out</p>
+                            </button> 
                         </li>    
                            
                         </ul>
@@ -128,22 +139,31 @@
                                        <button type="button" id="logInButton" class="navbar-btn ">
                                            <span><div class="text6">Log In</div></span>
                                         </button>       
-                                        <button type="button" id="register-btn-lg" class="navbar-btn ">
-                                          <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
-                                        </button>
-                                    </li>    
+                                        <button type="button" id="register-btn-lg" class="navbar-btn btn-mixpanel-payments mixpanel-call">
+                                          <span><div class="text4">Registrer</div></span>
+                                        </button>       
+                                        
+                                    </li>  
+                                    <li id="menuUser">
+                                           
+                                              <div class="loginAccess">
+                                                  <span id="id_user">ID_USER</span>
+                                              </div> 
+                                        <div id="buttonLogOut" class="logout">
+                                                <img src="assets/images/logouticon.png" />
+                                                <p>Log Out</p>
+                                            </div> 
+                                    </li>
                                 </ul>
                             </div>
                         </div>      
                     </div>
                   
-                      <div class="loginAccess">
-                          <span id="id_user">ID_USER</span>
-                      </div>
+                    
+                    
                 </nav>
                 
                 <!--END MENU WEBPAGE -->
-
             <section class="section-one">
                 <div class="container-fluid bottom-clouds">
                     <div class="row">
@@ -198,7 +218,6 @@
     <script src="js/modal.js"></script>
     <script src="js/epic/data/epicCharacters.js"></script> 
     <script src="js/epic/models/epicModel.js"></script>
-    <script src="assets/js/access.js"></script>
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
     <script src="assets/js/letsplay.js"></script>

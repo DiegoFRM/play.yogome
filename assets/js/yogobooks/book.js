@@ -111,8 +111,8 @@
           
 
 function callBackLogIn(){
-        var credentials = getCredentials()
-        var email = credentials.email
+        var credentials = getCredentials();
+        var email = credentials.email;
             if(email){
                 $("#menuUserMovil").css("display","block");
                 $("#menuUser").css("display","flex");
@@ -120,10 +120,11 @@ function callBackLogIn(){
                 $(".accesButtonsMovil").hide();
                 $(".navbar").addClass("navbar-login");
                 $("#id_user").text(email)    
+                $("#id_userMovil").text(email)    
                }
-
+ 
 
 }
 
 epicModel.checkQuery();
-epicModel.loadPlayer(false,callBackLogIn);
+epicModel.loadPlayer(false,callBackLogIn); 

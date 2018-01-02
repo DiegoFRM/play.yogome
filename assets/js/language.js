@@ -546,7 +546,9 @@ var languageArrayIndex = [
 
 
 function changeLanguage(){
+    console.log(language)
     for(i=0;i<=languageArrayIndex.length-1;i++){
+        
         if(language == "ES"){
             $(".text" + i).text(languageArrayIndex[i][language])
         }else if(language == "EN"){

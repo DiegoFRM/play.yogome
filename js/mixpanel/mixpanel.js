@@ -59,6 +59,14 @@ mixpanel.init("ecdf0bd67b86b289ea50817dd80525a0", {
      });
 
 
+//mixpanel.init("5c73c11b0ad0168159fbabbf1519071f", {
+//         loaded: function(mixpanel) {
+//             distinct_id = mixpanel.get_distinct_id();
+//             console.log("distinct_id: " + distinct_id)
+//         }
+//     });
+
+
 /**
  * getCredentials
  */

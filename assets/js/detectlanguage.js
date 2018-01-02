@@ -11,12 +11,15 @@
 
         var language;
         language = getParameterByName("language");
-
         if(language == null ){
-            var lengua;
-            //lengua = navigator.language || navigator.userLanguage;
-            //language = eval("'" + lengua + "'").toUpperCase();
-            language= "ES";
+            var ln = x=window.navigator.language||navigator.browserLanguage;
+
+                if(ln.substring(0,2).toUpperCase() == 'ES'){
+                    language= "ES";
+                }else{
+                    language= "EN";
+                }
         }else{
             language.toUpperCase();
         }
+

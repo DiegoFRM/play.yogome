@@ -182,8 +182,8 @@ var languageArrayIndex = [
                 { 
                     id:16,
                     NAME:"mainMenu16",
-                    ES:"Impulsa el desarrollo de tus hijos por 5.99 al mes. Únete y descubre cómo Aprender es Divertido con Yogome.",
-                    EN:"Boost your child's development for only $5.99 per month. Join over 500,000 families and discover how learning is fun with Yogome.",
+                    ES:"Impulsa el desarrollo de tus hijos por $ 99.00 MXN al mes. Únete y descubre cómo Aprender es Divertido con Yogome.",
+                    EN:"Boost your child's development for only US$ 5.99 per month. Join over 500,000 families and discover how learning is fun with Yogome.",
                     PT:"Impulsione o desenvolvimento de seu filho por apenas US$ 5,99 por mês. Junte-se a mais de 500 mil famílias e descubra como é divertido aprender com a Yogome.",
                     ZH:"每月仅需5.99美元，帮助孩子更好地成长。全球已有超过500,000个家庭加入我们的平台，您也快来加入吧，看看Yogome如何做到寓教于乐。",
                     JA:"月々わずか$5.99でお子様の能力を向上。50万以上の家族に利用されているYogomeで、学ぶことの楽しさを発見しましょう。",

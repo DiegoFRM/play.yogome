@@ -56,10 +56,14 @@
           ]
           
           for(i=0;i<=booksArray.length-1;i++){
+              
+              
               $("#container-books").append('<li id="book'+ i +'"class="responsiveGallery-item"></li>');
+              
               if(booksArray[i].new){
                   $("#container-books").find("#book" + i).append('<div class="new-ribbon"></div>');
               }
+              
               $("#book" + i).attr("number",i);
               
               if(language == "ES"){
@@ -71,8 +75,7 @@
                     }
                   
                   $("#book" + i).click(function(){
-                        magic.play();
-                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_self"); 
+                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_blank"); 
                   });
                   
               }else if(language == "EN"){
@@ -82,8 +85,7 @@
                     }
                   
                   $("#book" + i).click(function(){
-                        flipcard.play();
-                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_self"); 
+                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_blank"); 
                   });
               }else{
                   $("#container-books").find("#book" + i).append('<img src="'+booksArray[i].url + '/bookpages/1EN.png" height="320" width="320" alt="" class="responsivGallery-pic">');
@@ -92,39 +94,20 @@
                     }
                   
                   $("#book" + i).click(function(){
-                        flipcard.play();
-                        window.open(booksArray[$(this).attr("number")].url + "?language=ES", "_self"); 
+                        window.open(booksArray[$(this).attr("number")].url + "?language=ES", "_blank"); 
                   });
               }
 
               $("#container-books").find("#book" + i).append('<div class="bookStar"><img src="assets/images/books/EstrellaEmpty.png"/></div><div id="textBook' + i +'" class="w-responsivGallery-info2"></div>');
           
                if(language == "ES"){
-                $("#container-books").find("#textBook" + i).append('<h4 class="responsivGallery-name">'+ booksArray[i].ES +'</h4>');
+                $("#container-books").find("#textBook" + i).append('<h2 class="responsivGallery-name">'+ booksArray[i].ES +'</h2>');
                }else if(language == "EN"){
-                   $("#container-books").find("#textBook" + i).append('<h4 class="responsivGallery-name">'+ booksArray[i].EN +'</h4>');     
+                   $("#container-books").find("#textBook" + i).append('<h2 class="responsivGallery-name">'+ booksArray[i].EN +'</h2>');     
                     }else{
-                     $("#container-books").find("#textBook" + i).append('<h4 class="responsivGallery-name">'+ booksArray[i].EN +'</h4>');   
+                     $("#container-books").find("#textBook" + i).append('<h2 class="responsivGallery-name">'+ booksArray[i].ES +'</h2>');   
                 }
           
           }
           
-
-function callBackLogIn(){
-        var credentials = getCredentials();
-        var email = credentials.email;
-            if(email){
-                $("#menuUserMovil").css("display","block");
-                $("#menuUser").css("display","flex");
-                $(".accesButtons").hide();
-                $(".accesButtonsMovil").hide();
-                $(".navbar").addClass("navbar-login");
-                $("#id_user").text(email)    
-                $("#id_userMovil").text(email)    
-               }
- 
-
-}
-
-epicModel.checkQuery();
-epicModel.loadPlayer(false,callBackLogIn); 
+    

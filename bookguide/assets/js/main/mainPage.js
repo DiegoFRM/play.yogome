@@ -46,9 +46,19 @@ $("#gamesButtonLog").click(function(){
       window.location.href = "letsplay.html?language=" + language;
 });
 
-$("#gamesButtonLog").click(function(){
+$("#gamesButton").click(function(){
        magic.play();
       window.location.href = "letsplay.html?language=" + language;
+});
+
+$("#booksButton").click(function(){
+       magic.play();
+      window.location.href = "yogomebooks.html?language=" + language;
+});
+
+$("#booksButton").click(function(){
+       magic.play();
+      window.location.href = "yogobooks.html?language=" + language;
 });
         
 

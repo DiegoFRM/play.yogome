@@ -22,6 +22,9 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="assets/js/bootstrap.min.js" type="application/javascript"></script>
     <script src="js/epic/data/epicYogomeGames.js" type="text/javascript"></script>
+    <script src="epicweb/shared/minigames/js/helpers/yogomeGames.js" type="text/javascript"></script>
+    <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js" async=""></script>
+<script src="https://www.youtube.com/iframe_api"></script>
     <!--Detect language-->
     <script src="assets/js/detectlanguage.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -42,7 +45,7 @@
     <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
 
     <div class="wrapper">
-            <!-- MENU WEBPAGE -->
+ <!-- MENU WEBPAGE -->
             <nav id="sidebar">
                 <div id="dismiss">
                     <i class="glyphicon glyphicon-arrow-left"></i>
@@ -73,13 +76,24 @@
                                            <li class="botonLang5"><a class="language-switch">한국어</a></li>
                         </ul>
                    </li>
-                        <li class="accesButtons">
+                        <li class="accesButtonsMovil">
                     <button type="button" id="devicelogInButton" class="navbar-btn ">
                               <span><div class="text6">LogIn</div></span>
                         </button>
-                        <button type="button" id="register-btn-sm" class="navbar-btn hidden ">
-                              <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
+                        <button type="button" id="register-btn-sm" class="navbar-btn hidden btn-mixpanel-payments mixpanel-call">
+                              <span><div class="text4">Registrer</div></span>
                         </button>
+                        </li>  
+                            
+                         <li id="menuUserMovil">
+                                           
+                            <div class="loginAccessMovil">
+                                <span id="id_userMovil">ID_USER</span>
+                            </div> 
+                            <button id="buttonLogOutMovil" class="logoutMovil">
+                                <img src="assets/images/logouticon.png" />
+                                <p>Log Out</p>
+                            </button> 
                         </li>    
                            
                         </ul>
@@ -135,18 +149,28 @@
                                        <button type="button" id="logInButton" class="navbar-btn ">
                                            <span><div class="text6">Log In</div></span>
                                         </button>       
-                                        <button type="button" id="register-btn-lg" class="navbar-btn ">
-                                          <span><a href="https://yogomepayments.com/"><div class="text4">Registrer</div></a></span>
-                                        </button>
-                                    </li>    
+                                        <button type="button" id="register-btn-lg" class="navbar-btn btn-mixpanel-payments mixpanel-call">
+                                          <span><div class="text4">Registrer</div></span>
+                                        </button>       
+                                        
+                                    </li>  
+                                    <li id="menuUser">
+                                           
+                                              <div class="loginAccess">
+                                                  <span id="id_user">ID_USER</span>
+                                              </div> 
+                                        <div id="buttonLogOut" class="logout">
+                                                <img src="assets/images/logouticon.png" />
+                                                <p>Log Out</p>
+                                            </div> 
+                                    </li>
                                 </ul>
                             </div>
                         </div>      
                     </div>
                   
-                      <div class="loginAccess">
-                          <span id="id_user">ID_USER</span>
-                      </div>
+                    
+                    
                 </nav>
                 
                 <!--END MENU WEBPAGE -->
@@ -158,7 +182,10 @@
                             <img class="img-responsive" src="assets/images/new-banner.png" />
                           </div>
                           <div id="videoContainer" class="embed-responsive embed-responsive-16by9">
+                                <div id="player"></div>
                               
+                              <!--                              <iframe id="player" frameborder="0" allowfullscreen="1" gesture="media" allow="encrypted-media" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/qF-viFa0Njk?rel=0&amp;modestbranding=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fyogome.com&amp;widgetid=1"></iframe>-->
+                            
                           </div>
                           <div class="video-title-container">
                             <p class="video-title">
@@ -189,6 +216,14 @@
                                 <div id="button3" class="video-item text-center">
                                     <img  name="text51" class="wallpaper-thumb low-padding videoButton" src="assets/videos/thumb-video3.png" alt="Card image cap" number="1">
                                     <p><span class="text51">Why Girls Should be Engineers</span></p>
+                                </div>
+                                <div id="button4" class="video-item text-center">
+                                    <img  name="text51" class="wallpaper-thumb low-padding videoButton" src="assets/videos/thumb-video4.jpg" alt="Card image cap" number="1">
+                                    <p><span id="textVideo4"></span></p>
+                                </div>
+                                <div id="button5" class="video-item text-center">
+                                    <img  name="text51" class="wallpaper-thumb low-padding videoButton" src="assets/videos/thumb-video5.jpg" alt="Card image cap" number="1">
+                                    <p><span id="textVideo4"></span></p>
                                 </div>
                             </div>
                         </div>
@@ -222,7 +257,6 @@
     <script src="js/modal.js"></script>
     <script src="js/epic/data/epicCharacters.js"></script> 
     <script src="js/epic/models/epicModel.js"></script>  
-    <script src="assets/js/access.js"></script>
     
        
     <!-- jQuery Nicescroll CDN -->
@@ -232,7 +266,7 @@
 
     <!-- Mixpanel -->
     <script src="js/mixpanel/mixpanel.js"></script>
-    <script src="js/mixpanel/websodies.js"></script>
+    <script src="js/mixpanel/webisodes.js"></script>
     <!-- End Mixpanel -->
     <!--Include videos-->
     <script src="assets/js/webisodes/videolist.js"></script>

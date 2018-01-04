@@ -1,8 +1,10 @@
-$(document).ready(function () {
     /**
      * * Metodo implementado en mixpanel.js
      */
-    var credentials = epicModal.getCredentials();
+    var credentials = epicModel.getCredentials();
+
+$(document).ready(function () {
+
 
     mixpanel.track(
         "PageLoadWebisodes",
@@ -27,3 +29,5 @@ $(document).ready(function () {
       window.location.href = gotoPayments;
      
   });
+
+

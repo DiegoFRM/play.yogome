@@ -29,7 +29,7 @@ $(document).ready(function () {
     responsive: [{
       breakpoint: 599,
       settings: {
-        arrows: false,
+        arrows: true,
         centerMode: true,
         centerPadding: '0px',
         slidesToShow: 2

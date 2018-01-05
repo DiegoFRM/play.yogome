@@ -5,6 +5,20 @@ var videoLanguage;
 var videoId;
 var credentials = epicModel.getCredentials();
 
+
+for(i=1;i<=5;i++){
+    console.log(i);
+    if(language == "ES"){
+        
+        var video_thumbnail = $('<img class="wallpaper-thumb low-padding videoButton" src="//img.youtube.com/vi/'+videolist[i-1].url_ES+'/0.jpg">');
+        $("#button"+ i).append(video_thumbnail);
+    }else{
+        var video_thumbnail = $('<img class="wallpaper-thumb low-padding videoButton" src="//img.youtube.com/vi/'+videolist[i-1].url_EN+'/0.jpg">');
+        $("#button"+ i).append(video_thumbnail);
+    }
+}
+
+
 function loadVideos(index){  
     
     if(language == "ES"){
@@ -25,9 +39,9 @@ function loadVideos(index){
 
 }
 
-loadVideos(0);  
-          
 
+
+loadVideos(0);  
 
                 for(i=1;i<=5;i++){
                     if(language == "ES"){

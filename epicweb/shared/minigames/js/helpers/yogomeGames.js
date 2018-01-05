@@ -2,7 +2,7 @@ var yogomeGames = function () {
 	var gameLives = 0
 	var timeCount = 0
 	var addingTime = true
-	var yogoUrl = 'http://play.yogome.com/epicweb/minigames/'
+	var yogoUrl = 'epicweb/minigames/'
 	var urlMap = yogoUrl + 'epicSite/#/minigames/'
 	var relativeUrl = "../"
 

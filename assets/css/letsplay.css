@@ -82,6 +82,13 @@ body{
     height: 20%;
 }
 
+#backGround{
+    
+  background-image: url(../images/patter_site.png);
+  background-size: 10%;
+    
+}
+
 #nameSubject p{
     position: relative;
     background-color: #C81C8A;

@@ -19,6 +19,15 @@ function callBackLogIn(){
 
 epicModel.loadPlayer(false,callBackLogIn); 
 
+$("#logInButton").click(function(){
+    modal.showLogin();
+ });
+        
+$("#devicelogInButton").click(function(){
+    modal.showLogin();
+});
+
+
 var booksArray = [
                 { 
                     id:22,

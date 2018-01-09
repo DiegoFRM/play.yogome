@@ -6,6 +6,15 @@ $(document).ready(function () {
     cursorwidth: 4,
     cursorborder: 'none'
   });
+    
+$("#logInButton").click(function(){
+    modal.showLogin();
+ });
+        
+$("#devicelogInButton").click(function(){
+    modal.showLogin();
+});
+    
 
   $('#dismiss, .overlay').on('click', function () {
       pop.play()

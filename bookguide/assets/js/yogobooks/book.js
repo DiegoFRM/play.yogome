@@ -59,6 +59,7 @@
               $("#container-books").append('<li id="book'+ i +'"class="responsiveGallery-item"></li>');
               if(booksArray[i].new){
                   $("#container-books").find("#book" + i).append('<div class="new-ribbon"></div>');
+                  $("#container-books").find("#book" + i).append('<div class="new-flag"></div>');
               }
               $("#book" + i).attr("number",i);
               

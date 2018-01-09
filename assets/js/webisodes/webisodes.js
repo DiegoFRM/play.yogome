@@ -5,6 +5,14 @@ var videoLanguage;
 var videoId;
 var credentials = epicModel.getCredentials();
 
+$("#logInButton").click(function(){
+    modal.showLogin();
+ });
+        
+$("#devicelogInButton").click(function(){
+    modal.showLogin();
+});
+
 
 for(i=1;i<=5;i++){
     $("#wallpaper-slider").append('<div id="button'+i+'" class="video-item text-center"></div>')

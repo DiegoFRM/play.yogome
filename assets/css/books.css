@@ -24,13 +24,22 @@ body{
     height: 40%;
 }
 
+.new-text{
+    color: white;
+    font-weight: bold;
+    font-size: 2vh;
+    text-align: left;
+    padding-top: 1.5vh;
+    padding-right: 1vh;
+    padding-bottom: 3vh;
+    transform: rotate(-45deg);
+}
 
 #content {
     width: 100%;
     min-height: auto;
     transition: all 0.3s;
     position: relative;
-
     background-image: url(../images/books/floor.png);
     background-repeat: no-repeat;
     background-size: cover;

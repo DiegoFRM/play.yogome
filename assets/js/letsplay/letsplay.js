@@ -98,9 +98,9 @@ var pop = document.getElementById("pop");
         [
         {
         name:"All subjects",
-        ES:"TODAS LAS MATERIAS",
-        EN:"ALL SUBJECTS",
-        PT:"TODOS OS ASSUNTOS",
+        ES:"Todas las Materias",
+        EN:"All Subjects",
+        PT:"Todos os Assuntos",
         ZH:"所有科目",
         JA:"すべての科目",
         KO:"모든 과목들",
@@ -108,9 +108,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Math",
-        ES:"MATEMATICAS",
-        EN:"MATH",
-        PT:"MATEMATICA",
+        ES:"Matematicas",
+        EN:"Math",
+        PT:"Matematica",
         ZH:"数学",
         JA:"算数",
         KO:"수학",
@@ -118,9 +118,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Coding",
-        ES:"PROGRAMACION",
-        EN:"CODING",
-        PT:"CODIFICAÇÃO",
+        ES:"Programación",
+        EN:"Coding",
+        PT:"Codificação",
         ZH:"编码",
         JA:"コーディング",
         KO:"소프트웨어",
@@ -128,9 +128,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Science",
-        ES:"CIENCIA",
-        EN:"SCIENCE",
-        PT:"CIÊNCIAS",
+        ES:"Ciencia",
+        EN:"Science",
+        PT:"Ciências",
         ZH:"科学",
         JA:"サイエンス",
         KO:"과학",
@@ -138,9 +138,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Geography",
-        ES:"GEOGRAFIA",
-        EN:"GEOGRAPHY",
-        PT:"GEOGRAFIA",
+        ES:"Geografía",
+        EN:"Geography",
+        PT:"Geografia",
         ZH:"地理",
         JA:"地理",
         KO:"지리학",       
@@ -148,9 +148,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Creativity",
-        ES:"CREATIVIDAD",
-        EN:"CREATIVITY",
-        PT:"CRIATIVIDADE",
+        ES:"Creatividad",
+        EN:"Creativity",
+        PT:"Criatividade",
         ZH:"创造力",
         JA:"創造性",
         KO:"창의력",
@@ -158,9 +158,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Language",
-        ES:"IDIOMA",
-        EN:"LANGUAGE",
-        PT:"IDIOMA",
+        ES:"Idioma",
+        EN:"Language",
+        PT:"Idioma",
         ZH:"语言",
         JA:"言語",
         KO:"언어",
@@ -168,9 +168,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Health",
-        ES:"SALUD",
-        EN:"HEALTH",
-        PT:"SAÚDE",
+        ES:"Salud",
+        EN:"Health",
+        PT:"Saúde",
         ZH:"健康",
         JA:"健康",
         KO:"건강",   
@@ -178,9 +178,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Sustainability",
-        ES:"SUSTENTABILIDAD",
-        EN:"SUSTAINABILITY",
-        PT:"SUSTENTABILIDADE",
+        ES:"Sustentabilidad",
+        EN:"Sustainability",
+        PT:"Sustentabilidade",
         ZH:"环境可持续发展",
         JA:"サステナビリティ",
         KO:"지속 가능성!",
@@ -191,7 +191,7 @@ var pop = document.getElementById("pop");
   		var games = yogomeGames.getGames();
     
     for(var i= 0;i<=subjectsButtons.length-1;i++){
-        $("#subject-slider").append('<b><div class="subject-select-btns" style="color:#FFF;" font_size=12px><div class="subject-btn '+subjectsButtons[i].img+'"></div><div class="subject-name text-center" style="color:#FFF;">'+subjectsButtons[i][language]+'</div></div></b>');
+        $("#subject-slider").append('<b><div class="subject-select-btns" style="color:#FFF;"><div class="subject-btn '+subjectsButtons[i].img+'"></div><div class="subject-name text-center" style="color:#FFF; font-size:11pt">'+subjectsButtons[i][language]+'</div></div></b>');
         
         $("." + subjectsButtons[i].img).attr("index",i);
         $("." + subjectsButtons[i].img).click(function(){

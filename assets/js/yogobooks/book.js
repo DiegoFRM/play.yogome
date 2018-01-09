@@ -1,4 +1,25 @@
-          var booksArray = [
+epicModel.checkQuery();
+var credentials = getCredentials();
+var email = credentials.email;
+
+function callBackLogIn(){
+            if(email){
+                $("#menuUserMovil").css("display","block");
+                $("#menuUser").css("display","flex");
+                $(".accesButtons").hide();
+                $(".accesButtonsMovil").hide();
+                $(".navbar").addClass("navbar-login");
+                $("#id_user").text(email)    
+                $("#id_userMovil").text(email)    
+               }
+ 
+
+}
+
+
+epicModel.loadPlayer(false,callBackLogIn); 
+
+var booksArray = [
                 { 
                     id:22,
                     EN:"The Monster",
@@ -72,7 +93,12 @@
                   
                   $("#book" + i).click(function(){
                         magic.play();
-                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_self"); 
+                      if(email){
+                          window.open(booksArray[$(this).attr("number")].url + "?language=" + language  + "&name=" + epicModel.getCredentials().name, "_self"); 
+                      }else{
+                          window.open(booksArray[$(this).attr("number")].url + "?language=" + language  + "&name=Yogome", "_self"); 
+                      }
+                        
                   });
                   
               }else if(language == "EN"){
@@ -83,7 +109,11 @@
                   
                   $("#book" + i).click(function(){
                         flipcard.play();
-                        window.open(booksArray[$(this).attr("number")].url + "?language=" + language , "_self"); 
+                        if(email){
+                          window.open(booksArray[$(this).attr("number")].url + "?language=" + language  + "&name=" + epicModel.getCredentials().name, "_self"); 
+                      }else{
+                          window.open(booksArray[$(this).attr("number")].url + "?language=" + language  + "&name=Yogome", "_self"); 
+                      }
                   });
               }else{
                   $("#container-books").find("#book" + i).append('<img src="'+booksArray[i].url + '/bookpages/1EN.png" height="320" width="320" alt="" class="responsivGallery-pic">');
@@ -93,7 +123,11 @@
                   
                   $("#book" + i).click(function(){
                         flipcard.play();
-                        window.open(booksArray[$(this).attr("number")].url + "?language=ES", "_self"); 
+                        if(email){
+                          window.open(booksArray[$(this).attr("number")].url + "?language=ES"  + "&name=" + epicModel.getCredentials().name, "_self"); 
+                      }else{
+                          window.open(booksArray[$(this).attr("number")].url + "?language=ES"  + "&name=Yogome", "_self"); 
+                      } 
                   });
               }
 
@@ -110,21 +144,3 @@
           }
           
 
-function callBackLogIn(){
-        var credentials = getCredentials();
-        var email = credentials.email;
-            if(email){
-                $("#menuUserMovil").css("display","block");
-                $("#menuUser").css("display","flex");
-                $(".accesButtons").hide();
-                $(".accesButtonsMovil").hide();
-                $(".navbar").addClass("navbar-login");
-                $("#id_user").text(email)    
-                $("#id_userMovil").text(email)    
-               }
- 
-
-}
-
-epicModel.checkQuery();
-epicModel.loadPlayer(false,callBackLogIn); 

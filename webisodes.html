@@ -12,6 +12,7 @@
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="assets/css/play.css">
     <link rel="stylesheet" href="assets/css/webisodes.css">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <!-- Slick Carousel CSS -->
 
     <link rel="stylesheet" type="text/css" href="assets/plugins/slick/slick.css" />
@@ -19,6 +20,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" type="application/javascript" ></script>
     <!-- Slick Carousel JS -->
     <script type="text/javascript" src="assets/plugins/slick/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="assets/js/bootstrap.min.js" type="application/javascript"></script>
     <script src="js/epic/data/epicYogomeGames.js" type="text/javascript"></script>
@@ -44,7 +46,7 @@
     <audio preload="auto" id="flipcard"  src="assets/sounds/flipcard.mp3"></audio>
     <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
 
-    <div class="wrapper">
+    <div class="wrapper ">
  <!-- MENU WEBPAGE -->
             <nav id="sidebar">
                 <div id="dismiss">
@@ -174,69 +176,50 @@
                 </nav>
                 
                 <!--END MENU WEBPAGE -->
-            <section class="container-fluid bg-webisodes-main">
-                <div class="star-zip">
+<!--
+                <div id="bg-webisodies">
+                    <img src="assets/images/container_full.png">
+                </div>
+-->
+            <div class="bg-zip">
+                <div id="title-videos">
+                    <img src="assets/images/title_videos.png"/>
+                </div>
+            <section  class="container-fluid bg-webisodes-main webPageSection">
                     <div class="row">
                       <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2"  style="margin-top:5%;">
-                          <div class="videos-new-banner">
-                            <img class="img-responsive" src="assets/images/new-banner.png" />
-                          </div>
+                          
                           <div id="videoContainer" class="embed-responsive embed-responsive-16by9">
-                                <div id="player"></div>
-                              
-                              <!--                              <iframe id="player" frameborder="0" allowfullscreen="1" gesture="media" allow="encrypted-media" title="YouTube video player" width="640" height="360" src="https://www.youtube.com/embed/qF-viFa0Njk?rel=0&amp;modestbranding=1&amp;enablejsapi=1&amp;origin=http%3A%2F%2Fyogome.com&amp;widgetid=1"></iframe>-->
-                            
+                              <div class="videos-new-banner">
+                            <img class="img-responsive" src="assets/images/newflag.png" />
+                                  <div class="textNew">Nuevo</div>
                           </div>
-                          <div class="video-title-container">
-                            <p class="video-title">
+                                <div id="player"></div>
+                          </div>
+                          <div class="title-name-video">
                               <span class="text43">Video</span>
-                            </p>
                           </div>
                       </div>
                     </div>
-                    </div>
-                <div><img src="assets/images/bg-main-nubes.png" style="width: 100%" /></div>
             </section>
 
-            <section>
+            <section >
 
-                <div class="mid-conatiner">
-                    <div class="row more-videos">
+                <div class="mid-conatiner col-xs-6 col-xs-offset-3 col-sm-8 col-sm-offset-2">
+                    <div class="slick-nav-buttons"></div>
                         <div class="col-xs-12">
-                            <h2><div class="text41">Featured</div></h2>
                             <div id="wallpaper-slider">
-                                <div id="button1" class="video-item text-center">
-                                    <img  name="Websidoes 3" class="wallpaper-thumb low-padding videoButton" src="assets/videos/thumb-video1.png" alt="Card image cap" number="1">
-                                    <p><span class="text43">Invasion on Mathdromeda</span></p>
-                                </div>
-                                <div id="button2" class="video-item text-center">
-                                    <img  name="text45" class="wallpaper-thumb low-padding videoButton" src="assets/videos/thumb-video2.png" alt="Card image cap" number="1">
-                                    <p><span class="text45">How to Become an Entrepreneur</span></p>
-                                </div>
-                                <div id="button3" class="video-item text-center">
-                                    <img  name="text51" class="wallpaper-thumb low-padding videoButton" src="assets/videos/thumb-video3.png" alt="Card image cap" number="1">
-                                    <p><span class="text51">Why Girls Should be Engineers</span></p>
-                                </div>
-                                <div id="button4" class="video-item text-center">
-                                    <img  name="text51" class="wallpaper-thumb low-padding videoButton" src="assets/videos/thumb-video4.jpg" alt="Card image cap" number="1">
-                                    <p><span id="textVideo4"></span></p>
-                                </div>
-                                <div id="button5" class="video-item text-center">
-                                    <img  name="text51" class="wallpaper-thumb low-padding videoButton" src="assets/videos/thumb-video5.jpg" alt="Card image cap" number="1">
-                                    <p><span id="textVideo4"></span></p>
-                                </div>
                             </div>
                         </div>
-                            <div onclick="flipcard.play()" class="buttonsCenter hidden-xs">
-                                <div class="slick-nav-buttons"></div>
-                            </div>
-                    </div>
+
                 </div>
+                        <div class="container-fluid">
+                        <div class="col-xs-12"></div>
+                    </div>
             </section>
-            <div class="container-fluid">
-                <div class="col-xs-12"></div>
-            </div>
-                <footer>
+                </div>
+            
+                <footer class="webPageSection">
                     <div class="container">
                         <div class="col-xs-12 play-footer">
                             <img class="img img-responsive footer-logo" src="assets/images/logo-yogome.png" alt="Logo Yogome">
@@ -274,6 +257,26 @@
     <!--menu actions    -->
     <script src="assets/js/menuButtons.js"></script>
     <script>
+/*SCRIPT APP or PLAY YOGOME*/
+var detectOrigins;    
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+        detectOrigins = getParameterByName("app");
+        
+        if(detectOrigins){
+            $(".webPageSection").hide();
+            $("nav").hide();
+            $(".bg-zip").addClass("newBg-zip");
+        }
+        
     </script>
 
 

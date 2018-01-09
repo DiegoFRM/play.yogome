@@ -1,6 +1,97 @@
 body {
     overflow-x: hidden;
+    background:#64e2d6;
+
 }
+
+footer{
+    width: 100%;
+    bottom: 0;
+}
+
+#title-videos{
+    margin: 0 auto;
+    text-align: center;
+}
+#title-videos img{
+    width: 40%;
+    max-width: 540px
+}
+
+
+#bg-webisodies{
+    position: absolute;
+    width: 90%;
+    height: 84.3%;
+    top:8%;
+    margin-left: 5%;
+}
+
+#bg-webisodies img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#videoContainer{
+}
+
+#player{
+    border-radius: 5vh;
+}
+
+.textNew{
+    font-size: 2.4vw;
+    font-family: 'Luckiest Guy';
+    color: #FFF;
+    transform: rotate(-40deg);
+    position: absolute;
+    top:30%;
+    z-index: 1;
+}
+
+.title-name-video{
+    text-align: center;
+    font-size: 3vw;
+    font-family: 'Luckiest Guy';
+    color:#000 ;
+    padding: 2vh;
+}
+
+
+.wallpaper-thumb{
+    
+    border-radius: 4vh;
+    border:1vh solid #0ba3f7;
+    background-color: #0ba3f7;
+    
+}
+
+.video-icon{
+    position: relative;
+    transform: translate(230%,-130%);
+}
+
+#wallpaper-slider{
+    width: 100%
+}
+
+.slick-nav-buttons{
+    position: absolute;
+    width: 110%;
+    transform: translate(-5%,80%);
+}
+
+.slick-next, .slick-prev {
+background-image: url("../images/books/BotonBooksNext.png");
+    width: 100px;
+    height: 100px;
+}
+
+.slick-next:hover ,.slick-prev:hover {
+background-image: url("../images/books/BotonBooksNext.png");
+}
+
 
 h1{
     color: white;
@@ -12,8 +103,7 @@ h2{
 }
 
 .bg-webisodes-main {
-    background:#B72BD6;
-    background-image: url("../images/bg-webisodes-main.png");
+    
     background-position: left;
    
 }
@@ -119,32 +209,27 @@ h2{
     font-weight: 500;
 }
 
-.video-item {
-    padding: 10px;
-    width: auto;
-    height: auto;
-    float: left;
-    color: #2B9AD6;
-}
 
-.video-item p {
-    color: #2B9AD6;
-}
 
 .pattern-ray{
      background-image: url("../../assets/images/pattern-downloads.png");
 }
 
-.planet-zip {
-    background-image: url("../images/yogofun-planet.png");
-    background-size: contain;
+.bg-zip {
+    background-image: url("../images/container_full.png");
     background-repeat: no-repeat;
-    background-position: top center;
+    background-size: 80% 90%;
+    background-position: 50% 100%;
 }
 
-.star-zip {
-    background-image: url("../images/star.png");
+.newBg-zip {
+background-image: url(../images/container_full.png);
     background-repeat: no-repeat;
+    background-size: 90%;
+    background-position: bottom;
+    width: 100%;
+    position: absolute;
+    height: 100%;
 }
 
 .equal {
@@ -172,10 +257,6 @@ h2{
     margin: 0!important;
 }
 
-.low-padding {
-    padding-bottom: 10px;
-}
-
 .more-videos {
     margin-top: -10%;
 }
@@ -200,9 +281,21 @@ h2{
         margin: auto;
     }
     .wallpaper-thumb {
-        width: 60%;
-        margin: auto;
+    width: 85%;
+    margin: 20px;
     }
+    
+    .video-icon{
+        width: 40%;
+        transform: translate(-110%,-110%);
+    }
+
+    .slick-nav-buttons{
+        position: absolute;
+        width: 120%;
+        transform: translate(-10%,40%);
+    }    
+    
 }
 
 @media only screen and (min-width: 1151px) {
@@ -212,8 +305,8 @@ h2{
         margin: auto;
     }
     .wallpaper-thumb {
-        width: 330px;
-        margin: auto;
+        width: 200px;
+        margin: 35px;
     }
 }
 

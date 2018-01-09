@@ -1,4 +1,96 @@
-  var pop = document.getElementById("pop");
+var epicsite;
+
+$(document).ready(function () {
+  $("#sidebar").niceScroll({
+    cursorcolor: '#53619d',
+    cursorwidth: 4,
+    cursorborder: 'none'
+  });
+
+  $('#dismiss, .overlay').on('click', function () {
+      pop.play()
+    $('#sidebar').removeClass('active');
+    $('.overlay').fadeOut();
+  });
+
+  $('#sidebarCollapse').on('click', function () {
+      pop.play()
+    $('#sidebar').addClass('active');
+    $('.overlay').fadeIn();
+    $('.collapse.in').toggleClass('in');
+    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+  });
+  /*  Slick carousel   */
+
+  $('#subject-slider').slick({
+    infinite: true,
+    slidesToShow: 5,
+    slidesToScroll: 3,
+    arrows: true,
+    appendArrows: $(".slick-nav-buttons"),
+    responsive: [{
+      breakpoint: 599,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 2
+      }
+    },{
+      breakpoint: 769,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3
+      }
+    } ]
+  });
+
+  hideTabs();
+
+});
+
+function hideTabs() {
+  $('#tab-science').css('display', 'none');
+  $('#tab-coding').css('display', 'none');
+  $('#tab-creativity').css('display', 'none');
+  $('#tab-health').css('display', 'none');
+  $('#tab-geography').css('display', 'none');
+  $('#tab-language').css('display', 'none');
+  $('#tab-sustainability').css('display', 'none');
+}
+
+function showtab(tab) {
+  //hide the first active element
+  $('#tab-math').css('display', 'none');
+  hideTabs();
+  var name = 'tab-' + tab;
+  $('#' + name).css('display', 'inline');
+}
+
+
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+        
+        epicsite = getParameterByName("epicsite");
+        if(epicsite){
+                $(".navbar").css("display","none");
+        }else{
+        
+        }
+       
+
+var pop = document.getElementById("pop");
                 var flipcard = document.getElementById("flipcard");
                 var magic = document.getElementById("magic");
     
@@ -106,6 +198,7 @@
             magic.play()
             var index = $(this).attr("index");
            $("#nameSubject").find("p").text(subjectsButtons[index][language]); 
+            $("#nameSubject").find("p").css("font-size","6vh");
             
                 for(var p = 0 ; p<= games.length-1 ;p++){
                     if(subjectsButtons[index].name == "All subjects"){
@@ -136,13 +229,27 @@ function showGames(){
                     minigameHref = games[i].mapUrl + "?language=" + language;
                 }
                 
-  				$("#minigamesContainer").append("<a href='"+ minigameHref +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
+
+                
+                if(epicsite){
+                   $("#minigamesContainer").append("<div id='minigameNumber" +num +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></div>");
+                    $("#minigameNumber" + num).attr("data-url",minigameHref)
+                    $("#minigameNumber" + num).click(function(){
+                       parent.location.href =  $(this).attr("data-url");
+                    });
+                }else{
+                   $("#minigamesContainer").append("<a href='"+ minigameHref +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
+                }
                 
                 $("#btnMinigame" + num).css("background-image","url('" + games[num].url + "images/fbpost.png')");
   				$("#gameimg" + num).attr("value",i);
   			}
   		}   
 }    
+
+                function minigamesEpicsite(url){
+                    parent.location.href = url;
+                }
 
 
 function showDemoGames(){
@@ -159,7 +266,18 @@ function showDemoGames(){
                     minigameHref = games[i].mapUrl + "?language=" + language;
                 }
                 
-  				$("#minigamesContainer").append("<a href='"+ minigameHref +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
+
+                
+                if(epicsite){
+                   $("#minigamesContainer").append("<div id='minigameNumber" +num +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></div>");
+                    $("#minigameNumber" + num).attr("data-url",minigameHref)
+                    $("#minigameNumber" + num).click(function(){
+                       parent.location.href =  $(this).attr("data-url");
+                    });
+                }else{
+                   $("#minigamesContainer").append("<a href='"+ minigameHref +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
+                }
+  				
                 
                 $("#btnMinigame" + num).css("background-image","url('" + games[num].url + "images/fbpost.png')");
   				$("#gameimg" + num).attr("value",i);
@@ -191,3 +309,5 @@ function callBackLogIn(){
 
 epicModel.checkQuery();
 epicModel.loadPlayer(false,callBackLogIn); 
+
+

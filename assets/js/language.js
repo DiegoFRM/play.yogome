@@ -540,9 +540,9 @@ var languageArrayIndex = [
                 { 
                     id:52,
                     NAME:"mainMenu52",
-                    ES:"NUEVO!",
+                    ES:"¡NUEVO!",
                     EN:"NEW!",
-                    PT:"NOVO!",
+                    PT:"¡NOVO!",
                     ZH:"新增",
                     JA:"新しい",
                     KO:"신작"

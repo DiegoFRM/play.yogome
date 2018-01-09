@@ -471,7 +471,7 @@ var languageArrayIndex = [
                 },
                 { 
                     id:45,
-                    NAME:"mainMenu46",
+                    NAME:"mainMenu45",
                     ES:"¿Cómo ser emprendedor?",
                     EN:"How to Become an Entrepreneur?",
                     PT:"Como se tornar um empreendedor",
@@ -540,8 +540,8 @@ var languageArrayIndex = [
                     KO:"여성이 엔지니어가 되어야 하는 이유"
                 },
                 { 
-                    id:52,
-                    NAME:"mainMenu52",
+                    id:57,
+                    NAME:"mainMenu57",
                     ES:"VIDEOS",
                     EN:"VIDEOS",
                     PT:"VÍDEOS",
@@ -550,8 +550,8 @@ var languageArrayIndex = [
                     KO:"웹피소드"
                 },
                 { 
-                    id:53,
-                    NAME:"mainMenu53",
+                    id:58,
+                    NAME:"mainMenu58",
                     ES:"JUEGOS",
                     EN:"GAMES",
                     PT:"JOGOS",
@@ -560,8 +560,8 @@ var languageArrayIndex = [
                     KO:"게임"
                 },
                 { 
-                    id:54,
-                    NAME:"mainMenu54",
+                    id:59,
+                    NAME:"mainMenu59",
                     ES:"LIBROS",
                     EN:"BOOKS",
                     PT:"LIVROS",

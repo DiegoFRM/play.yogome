@@ -19,6 +19,15 @@ function callBackLogIn(){
 
 epicModel.loadPlayer(false,callBackLogIn); 
 
+$("#logInButton").click(function(){
+    modal.showLogin();
+ });
+        
+$("#devicelogInButton").click(function(){
+    modal.showLogin();
+});
+
+
 var booksArray = [
                 { 
                     id:22,
@@ -79,7 +88,7 @@ var booksArray = [
           for(i=0;i<=booksArray.length-1;i++){
               $("#container-books").append('<li id="book'+ i +'"class="responsiveGallery-item"></li>');
               if(booksArray[i].new){
-                  $("#container-books").find("#book" + i).append('<div class="new-ribbon "> <div class="new-text text52">NEW!</div></div>');
+                  $("#container-books").find("#book" + i).append('<div class="new-ribbon "></div>');
               }
               $("#book" + i).attr("number",i);
               

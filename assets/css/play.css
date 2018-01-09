@@ -481,6 +481,16 @@ a.article, a.article:hover {
   top: -12px;
   left: -1px;
 }
+.img-planeta{
+    
+    position:relative;
+    top: -100px;
+    left: 500px;
+    width:30%;
+    height:30%;
+}
+
+
 #NewText{
     
     font-size: 25px;

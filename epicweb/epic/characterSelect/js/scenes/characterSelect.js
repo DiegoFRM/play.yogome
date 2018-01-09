@@ -275,6 +275,8 @@ var characterSelect = function(){
 		
 		continuar.events.onInputDown.add(function(){
 			//Aqui ira el redireccionamiento
+            
+            
 			if(continuar.alpha==1){
 				selectedCharacter = selectedCharacter.replace("yogotar", "")
 				console.log(selectedCharacter)

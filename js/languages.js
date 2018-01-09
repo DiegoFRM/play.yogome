@@ -268,6 +268,16 @@ var languageArrayIndex = [
                     JA:"ゲーム開始！",
                     KO:"게임 시작!"
                 },
+                { 
+                    id:27,
+                    NAME:"mainMenu27",
+                    ES:"NUEVO",
+                    EN:"NEW",
+                    PT:"Jogar!",
+                    ZH:"开始游戏！",
+                    JA:"ゲーム開始！",
+                    KO:"게임 시작!"
+                },
         ]
 
 function changeLanguage(){

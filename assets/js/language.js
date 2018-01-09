@@ -202,9 +202,9 @@ var languageArrayIndex = [
                 { 
                     id:18,
                     NAME:"mainMenu18",
-                    ES:"¡Vamos a jugar!",
-                    EN:"Let's play!",
-                    PT:"Vamos jogar!",
+                    ES:"¡VAMOS A JUGAR!",
+                    EN:"LET'S PLAY!",
+                    PT:"VAMOS JOGAR!",
                     ZH:"让我们开始游戏吧！",
                     JA:"レッツプレイ！",
                     KO:"지금 시작해요!"
@@ -352,9 +352,9 @@ var languageArrayIndex = [
                 { 
                     id:33,
                     NAME:"mainMenu33",
-                    ES:"Videos",
-                    EN:"Videos",
-                    PT:"Vídeos",
+                    ES:"VIDEOS",
+                    EN:"VIDEOS",
+                    PT:"VIDEOS",
                     ZH:"视频",
                     JA:"ビデオ",
                     KO:"비디오"
@@ -402,19 +402,19 @@ var languageArrayIndex = [
                 { 
                     id:38,
                     NAME:"mainMenu38",
-                    ES:"Yogome",
-                    EN:"Yogome",
-                    PT:"Yogome",
-                    ZH:"Yogome",
-                    JA:"Yogome",
+                    ES:"YOGOME",
+                    EN:"YOGOME",
+                    PT:"YOGOME",
+                    ZH:"YOGOME",
+                    JA:"YOGOME",
                     KO:"요고미"
                 },   
                 { 
                     id:39,
                     NAME:"mainMenu39",
-                    ES:"Todas las materias",
-                    EN:"All Subjects",
-                    PT:"Todos os assuntos",
+                    ES:"TODAS LAS MATERIAS",
+                    EN:"ALL SUBJECTS",
+                    PT:"TODOS OS ASSUNTOS",
                     ZH:"所有科目",
                     JA:"すべての科目",
                     KO:"모든 과목들"

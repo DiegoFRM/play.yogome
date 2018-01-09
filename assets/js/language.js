@@ -541,7 +541,7 @@ var languageArrayIndex = [
                     id:52,
                     NAME:"mainMenu52",
                     ES:"¡NUEVO!",
-                    EN:"NEW!",
+                    EN:"¡NEW!",
                     PT:"¡NOVO!",
                     ZH:"新增",
                     JA:"新しい",

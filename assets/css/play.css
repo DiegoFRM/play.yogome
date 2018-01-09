@@ -19,9 +19,13 @@ p {
 
 .container, .container-fluid{
   padding: 0;
+}
+
+#backGround{
+    
   background-image: url(../images/patter_site.png);
-  
   background-size: 10%;
+    
 }
 
 .separator1{
@@ -483,9 +487,10 @@ a.article, a.article:hover {
     font-weight: bold;
     font:"Quicksand_medium";
     color:#fff;
+    text-align: center;
     position: relative;
-    margin-top:-92%;
-    margin-left:1%;
+    margin-top:-80%;
+    margin-left:-30%;
     -ms-transform: rotate(-45deg); /* IE 9 */
     -webkit-transform: rotate(-45deg); /* Safari 3-8 */
     transform: rotate(-45deg);

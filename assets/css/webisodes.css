@@ -1,6 +1,9 @@
 body {
     overflow-x: hidden;
-    background:#64e2d6;
+    background-image: url(../images/books/sky.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;    
+    background-color: #96caf4;
 
 }
 

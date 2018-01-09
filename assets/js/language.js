@@ -492,12 +492,12 @@ var languageArrayIndex = [
                 { 
                     id:47,
                     NAME:"mainMenu47",
-                    ES:"Lee nuestra",
-                    EN:"Read our",
-                    PT:"Read our",
-                    ZH:"Read our",
-                    JA:"Read our",
-                    KO:"Read our"
+                    ES:"Lee nuestra ",
+                    EN:"Read our ",
+                    PT:"Leia nossa ",
+                    ZH:"Read our ",
+                    JA:"Read our ",
+                    KO:"Read our "
                 },
                 { 
                     id:48,
@@ -512,22 +512,22 @@ var languageArrayIndex = [
                 { 
                     id:49,
                     NAME:"mainMenu49",
-                    ES:"y",
-                    EN:"and",
-                    PT:"e",
-                    ZH:"和",
-                    JA:"および",
-                    KO:"및"
+                    ES:" y ",
+                    EN:" and ",
+                    PT:" e ",
+                    ZH:" 和 ",
+                    JA:" および ",
+                    KO:" 및 "
                 },
                 { 
                     id:50,
                     NAME:"mainMenu50",
-                    ES:"Terminos de servicio",
-                    EN:"Terms of service",
-                    PT:"Terms of service",
-                    ZH:"Terms of service",
-                    JA:"Terms of service",
-                    KO:"Terms of service"
+                    ES:" Terminos de servicio.",
+                    EN:" Terms of service.",
+                    PT:" TERMOS DE SERVIÇO.",
+                    ZH:" Terms of service",
+                    JA:" Terms of service",
+                    KO:" Terms of service"
                 },
                 { 
                     id:51,
@@ -538,9 +538,37 @@ var languageArrayIndex = [
                     ZH:"为什么女孩应该当工程师",
                     JA:"女の子がエンジニアに向いている理由",
                     KO:"여성이 엔지니어가 되어야 하는 이유"
-                }
-    
-    
+                },
+                { 
+                    id:52,
+                    NAME:"mainMenu52",
+                    ES:"VIDEOS",
+                    EN:"VIDEOS",
+                    PT:"VÍDEOS",
+                    ZH:"网络视频短片",
+                    JA:"ウェブエピソード",
+                    KO:"웹피소드"
+                },
+                { 
+                    id:53,
+                    NAME:"mainMenu53",
+                    ES:"JUEGOS",
+                    EN:"GAMES",
+                    PT:"JOGOS",
+                    ZH:"游戏",
+                    JA:"ゲーム",
+                    KO:"게임"
+                },
+                { 
+                    id:54,
+                    NAME:"mainMenu54",
+                    ES:"LIBROS",
+                    EN:"BOOKS",
+                    PT:"LIVROS",
+                    ZH:"书籍",
+                    JA:"本",
+                    KO:"도서관"
+                },
           ]
           
 

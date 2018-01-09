@@ -41,14 +41,19 @@ $("#devicelogInButton").click(function(){
     modal.showLogin();
 });
 
-$("#gamesButtonLog").click(function(){
+$("#videosButton").click(function(){
+       magic.play();
+      window.location.href = "webisodes.html?language=" + language;
+});
+
+$("#gamesButton").click(function(){
        magic.play();
       window.location.href = "letsplay.html?language=" + language;
 });
 
-$("#gamesButtonLog").click(function(){
+$("#booksButton").click(function(){
        magic.play();
-      window.location.href = "letsplay.html?language=" + language;
+      window.location.href = "yogobooks.html?language=" + language;
 });
         
 

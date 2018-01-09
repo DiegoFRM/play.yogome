@@ -191,7 +191,7 @@ var pop = document.getElementById("pop");
   		var games = yogomeGames.getGames();
     
     for(var i= 0;i<=subjectsButtons.length-1;i++){
-        $("#subject-slider").append('<b><div class="subject-select-btns" style="color:#FFF;"><div class="subject-btn '+subjectsButtons[i].img+'"></div><div class="subject-name text-center" style="color:#FFF; font-size:11pt">'+subjectsButtons[i][language]+'</div></div></b>');
+        $("#subject-slider").append('<b><div class="subject-select-btns" style="color:#FFF;"><div class="subject-btn '+subjectsButtons[i].img+'"></div><div class="subject-name text-center" style="color:#ecd06c; font-size:11pt">'+subjectsButtons[i][language]+'</div></div></b>');
         
         $("." + subjectsButtons[i].img).attr("index",i);
         $("." + subjectsButtons[i].img).click(function(){

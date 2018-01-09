@@ -353,14 +353,14 @@ a.article, a.article:hover {
 }
 
 .btn-purple{
-  background-color: rgba(208,28,146,1);
+  background-color: rgba(225,39,160,1);
   -webkit-box-shadow: 0px 5px 0px 0px rgba(130,23,99,1);
   -moz-box-shadow: 0px 5px 0px 0px rgba(130,23,99,1);
   box-shadow: 0px 5px 0px 0px rgba(130,23,99,1);
 }
 
 .btn-purple:hover{
-  background-color: rgba(193,30,143,1);
+  background-color: rgba(181,22,125,1);
   color: white;
 }
 
@@ -377,6 +377,30 @@ a.article, a.article:hover {
   transform: translateY(5px);
 }
 
+.btn-blue{
+  background-color: rgba(58,189,221,1);
+  -webkit-box-shadow: 0px 5px 0px 0px rgba(25,127,152,1);
+  -moz-box-shadow: 0px 5px 0px 0px rgba(25,127,152,1);
+  box-shadow: 0px 5px 0px 0px rgba(25,127,152,1);
+}
+
+.btn-blue:hover{
+  background-color: rgba(33,163,196,1);
+  color: white;
+}
+
+
+.btn-blue:focus,
+.btn-blue:active{
+  color: white;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-box-shadow: 0 0 0 0;
+  -moz-box-shadow:0 0 0 0;
+  box-shadow: 0 0 0 0;
+  transform: translateY(5px);
+}
 
 /* ---------------------------------------------------
     CONTENT STYLE
@@ -447,21 +471,25 @@ a.article, a.article:hover {
 }
 
 .videos-new-banner{
-  position: relative;
+  position: absolute;
   z-index: 1;
-  display: block;
   max-width: 150px;
   top: -12px;
   left: -1px;
 }
 #NewText{
     
-    font-size: 25pt;
+    font-size: 25px;
+    font-weight: bold;
+    font:"Quicksand_medium";
     color:#fff;
     position: relative;
+    margin-top:-95%;
+    margin-left:10%;
+    -ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Safari 3-8 */
     transform: rotate(-45deg);
-    top:-100px;
-    left: 10px;
+    
 }
 
 .video-title-container{
@@ -1090,12 +1118,17 @@ footer{
     position: relative;
     text-align: center;
     font-size: 1.7em;
-    width: 40%;
+    width: 45%;
     margin: 2% auto;
     color:white !important;
-    padding: 1vh;
-    background-color:#8012FF; 
+    padding: 2vh;
+    background-image: url("../images/purpleTitle.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-bottom: 3vh;
+    margin-top: 3vh;
+    font-weight:bold;
     
 }
 
@@ -1104,12 +1137,17 @@ footer{
     text-align: center;
     font-size: 1.7em;
     width:45%;
-    margin: 0 auto;
+    margin: 2% auto;
     color:white !important;
     padding: 2vh;
-    background-color:#3F97E8; 
+    background-image: url("../images/blueTitle.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     margin-bottom: 3vh;
     margin-top: 3vh;
+    font-weight:bold;
+   
 }
 
 .shadow-ray{

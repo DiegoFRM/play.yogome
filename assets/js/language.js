@@ -490,12 +490,12 @@ var languageArrayIndex = [
                 { 
                     id:47,
                     NAME:"mainMenu47",
-                    ES:"Lee nuestra",
-                    EN:"Read our",
-                    PT:"Read our",
-                    ZH:"Read our",
-                    JA:"Read our",
-                    KO:"Read our"
+                    ES:"Lee nuestra ",
+                    EN:"Read our ",
+                    PT:"Leia nossa ",
+                    ZH:"Read our ",
+                    JA:"Read our ",
+                    KO:"Read our "
                 },
                 { 
                     id:48,
@@ -510,22 +510,22 @@ var languageArrayIndex = [
                 { 
                     id:49,
                     NAME:"mainMenu49",
-                    ES:"y",
-                    EN:"and",
-                    PT:"e",
-                    ZH:"和",
-                    JA:"および",
-                    KO:"및"
+                    ES:" y ",
+                    EN:" and ",
+                    PT:" e ",
+                    ZH:" 和 ",
+                    JA:" および ",
+                    KO:" 및 "
                 },
                 { 
                     id:50,
                     NAME:"mainMenu50",
-                    ES:"Terminos de servicio",
-                    EN:"Terms of service",
-                    PT:"Terms of service",
-                    ZH:"Terms of service",
-                    JA:"Terms of service",
-                    KO:"Terms of service"
+                    ES:" Terminos de servicio.",
+                    EN:" Terms of service.",
+                    PT:" TERMOS DE SERVIÇO.",
+                    ZH:" Terms of service",
+                    JA:" Terms of service",
+                    KO:" Terms of service"
                 },
                 { 
                     id:51,
@@ -540,9 +540,9 @@ var languageArrayIndex = [
                 { 
                     id:52,
                     NAME:"mainMenu52",
-                    ES:"NUEVO",
-                    EN:"NEW",
-                    PT:"NOVO",
+                    ES:"NUEVO!",
+                    EN:"NEW!",
+                    PT:"NOVO!",
                     ZH:"新增",
                     JA:"新しい",
                     KO:"신작"
@@ -554,25 +554,53 @@ var languageArrayIndex = [
                     EN:"Boost your child's development for only "
                 },
                 { 
-                    id:53,
+                    id:54,
                     NAME:"mainMenu52",
-                    ES:"5.99 al mes.",
+                    ES:"$59.99 al mes.",
                     EN:" $5.99 per month.",
                 },
                 { 
-                    id:53,
+                    id:55,
                     NAME:"mainMenu52",
                     ES:"Únete y descubre cómo ",
                     EN:"Join over 500,000 families and discover how "
                 },
                 { 
-                    id:53,
+                    id:56,
                     NAME:"mainMenu52",
                     ES:"Aprender es Divertido con Yogome.",
                     EN:"learning is fun with Yogome."
-                }
-    
-                  
+                },
+                { 
+                    id:57,
+                    NAME:"mainMenu57",
+                    ES:"VIDEOS",
+                    EN:"VIDEOS",
+                    PT:"VÍDEOS",
+                    ZH:"网络视频短片",
+                    JA:"ウェブエピソード",
+                    KO:"웹피소드"
+                },
+                { 
+                    id:58,
+                    NAME:"mainMenu58",
+                    ES:"JUEGOS",
+                    EN:"GAMES",
+                    PT:"JOGOS",
+                    ZH:"游戏",
+                    JA:"ゲーム",
+                    KO:"게임"
+                },
+                { 
+                    id:59,
+                    NAME:"mainMenu59",
+                    ES:"LIBROS",
+                    EN:"BOOKS",
+                    PT:"LIVROS",
+                    ZH:"书籍",
+                    JA:"本",
+                    KO:"도서관"
+                },
           ]
           
 

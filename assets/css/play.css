@@ -484,8 +484,8 @@ a.article, a.article:hover {
     font:"Quicksand_medium";
     color:#fff;
     position: relative;
-    margin-top:-95%;
-    margin-left:10%;
+    margin-top:-92%;
+    margin-left:1%;
     -ms-transform: rotate(-45deg); /* IE 9 */
     -webkit-transform: rotate(-45deg); /* Safari 3-8 */
     transform: rotate(-45deg);

@@ -88,7 +88,7 @@ var booksArray = [
           for(i=0;i<=booksArray.length-1;i++){
               $("#container-books").append('<li id="book'+ i +'"class="responsiveGallery-item"></li>');
               if(booksArray[i].new){
-                  $("#container-books").find("#book" + i).append('<div class="new-ribbon "></div>');
+                  $("#container-books").find("#book" + i).append('<div class="new-ribbon "> <div class="new-text text52">NEW!</div></div>');
               }
               $("#book" + i).attr("number",i);
               

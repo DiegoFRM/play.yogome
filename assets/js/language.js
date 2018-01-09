@@ -182,8 +182,6 @@ var languageArrayIndex = [
                 { 
                     id:16,
                     NAME:"mainMenu16",
-                    ES:"Impulsa el desarrollo de tus hijos por 5.99 al mes. Únete y descubre cómo Aprender es Divertido con Yogome.",
-                    EN:"Boost your child's development for only $5.99 per month. Join over 500,000 families and discover how learning is fun with Yogome.",
                     PT:"Impulsione o desenvolvimento de seu filho por apenas US$ 5,99 por mês. Junte-se a mais de 500 mil famílias e descubra como é divertido aprender com a Yogome.",
                     ZH:"每月仅需5.99美元，帮助孩子更好地成长。全球已有超过500,000个家庭加入我们的平台，您也快来加入吧，看看Yogome如何做到寓教于乐。",
                     JA:"月々わずか$5.99でお子様の能力を向上。50万以上の家族に利用されているYogomeで、学ぶことの楽しさを発見しましょう。",
@@ -538,9 +536,43 @@ var languageArrayIndex = [
                     ZH:"为什么女孩应该当工程师",
                     JA:"女の子がエンジニアに向いている理由",
                     KO:"여성이 엔지니어가 되어야 하는 이유"
+                },
+                { 
+                    id:52,
+                    NAME:"mainMenu52",
+                    ES:"NUEVO",
+                    EN:"NEW",
+                    PT:"NOVO",
+                    ZH:"新增",
+                    JA:"新しい",
+                    KO:"신작"
+                },
+                { 
+                    id:53,
+                    NAME:"mainMenu52",
+                    ES:"Impulsa el desarrollo de tus hijos por",
+                    EN:"Boost your child's development for only "
+                },
+                { 
+                    id:53,
+                    NAME:"mainMenu52",
+                    ES:"5.99 al mes.",
+                    EN:" $5.99 per month.",
+                },
+                { 
+                    id:53,
+                    NAME:"mainMenu52",
+                    ES:"Únete y descubre cómo ",
+                    EN:"Join over 500,000 families and discover how "
+                },
+                { 
+                    id:53,
+                    NAME:"mainMenu52",
+                    ES:"Aprender es Divertido con Yogome.",
+                    EN:"learning is fun with Yogome."
                 }
     
-    
+                  
           ]
           
 

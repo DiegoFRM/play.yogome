@@ -107,19 +107,19 @@ var pop = document.getElementById("pop");
         [
         {
         name:"All subjects",
-        ES:"Todas las Materias",
-        EN:"All Subjects",
-        PT:"Todos os Assuntos",
+        ES:"TODAS LAS MATERIAS",
+        EN:"ALL SUBJECTS",
+        PT:"TODOS OS ASSUNTOS",
         ZH:"所有科目",
         JA:"すべての科目",
         KO:"모든 과목들",
         img:"allsubjects"
         },
         {
-        name:"Math",
-        ES:"Matematicas",
-        EN:"Math",
-        PT:"Matematica",
+        name:"MATH",
+        ES:"MATEMATICAS",
+        EN:"MATH",
+        PT:"MATEMATICA",
         ZH:"数学",
         JA:"算数",
         KO:"수학",
@@ -127,9 +127,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Coding",
-        ES:"Programación",
-        EN:"Coding",
-        PT:"Codificação",
+        ES:"PROGRAMACIÓN",
+        EN:"CODING",
+        PT:"CODIFICAÇÃO",
         ZH:"编码",
         JA:"コーディング",
         KO:"소프트웨어",
@@ -137,9 +137,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Science",
-        ES:"Ciencia",
-        EN:"Science",
-        PT:"Ciências",
+        ES:"CIENCIA",
+        EN:"SCIENCE",
+        PT:"CIÊNCIAS",
         ZH:"科学",
         JA:"サイエンス",
         KO:"과학",
@@ -147,9 +147,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Geography",
-        ES:"Geografía",
-        EN:"Geography",
-        PT:"Geografia",
+        ES:"GEOGRAFÍA",
+        EN:"GEOGRAPHY",
+        PT:"GEOGRAFIA",
         ZH:"地理",
         JA:"地理",
         KO:"지리학",       
@@ -157,9 +157,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Creativity",
-        ES:"Creatividad",
-        EN:"Creativity",
-        PT:"Criatividade",
+        ES:"CREATIVIDAD",
+        EN:"CREATIVITY",
+        PT:"CREATIVIDADE",
         ZH:"创造力",
         JA:"創造性",
         KO:"창의력",
@@ -167,9 +167,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Language",
-        ES:"Idioma",
-        EN:"Language",
-        PT:"Idioma",
+        ES:"IDIOMA",
+        EN:"LANGUAGE",
+        PT:"IDIOMA",
         ZH:"语言",
         JA:"言語",
         KO:"언어",
@@ -177,9 +177,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Health",
-        ES:"Salud",
-        EN:"Health",
-        PT:"Saúde",
+        ES:"SALUD",
+        EN:"HEALTH",
+        PT:"SAÚDE",
         ZH:"健康",
         JA:"健康",
         KO:"건강",   
@@ -187,9 +187,9 @@ var pop = document.getElementById("pop");
         },
         {
         name:"Sustainability",
-        ES:"Sustentabilidad",
-        EN:"Sustainability",
-        PT:"Sustentabilidade",
+        ES:"SUSTENTABILIDAD",
+        EN:"SUSTENTABILITY",
+        PT:"SUSTENTABILIDADE",
         ZH:"环境可持续发展",
         JA:"サステナビリティ",
         KO:"지속 가능성!",
@@ -207,7 +207,7 @@ var pop = document.getElementById("pop");
             magic.play()
             var index = $(this).attr("index");
            $("#nameSubject").find("p").text(subjectsButtons[index][language]); 
-            $("#nameSubject").find("p").css("font-size","6vh");
+            $("#nameSubject").find("p").css("font-size","1.7em");
             
                 for(var p = 0 ; p<= games.length-1 ;p++){
                     if(subjectsButtons[index].name == "All subjects"){

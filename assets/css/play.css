@@ -483,11 +483,11 @@ a.article, a.article:hover {
 }
 .img-planeta{
     
-    position:relative;
-    top: -100px;
-    left: 500px;
-    width:30%;
-    height:30%;
+    position:absolute;
+    top: 76%;
+    left: 78% ;
+    width: 35%;
+    height: 50%;
 }
 
 

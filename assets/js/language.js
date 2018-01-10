@@ -556,8 +556,8 @@ var languageArrayIndex = [
                 { 
                     id:54,
                     NAME:"mainMenu52",
-                    ES:"$59.99 al mes.",
-                    EN:" $5.99 per month.",
+                    ES:"$59.99MXN al mes.",
+                    EN:" $5.99USD per month.",
                 },
                 { 
                     id:55,

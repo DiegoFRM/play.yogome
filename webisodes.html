@@ -183,7 +183,14 @@
 -->
             <div class="bg-zip">
                 <div id="title-videos">
-                    <img src="assets/images/title_videos.png"/>
+                  <div style=" position: absolute; display: block; width: 100%; padding-top: 2%">
+                    <img src="assets/images/title_videos.png" relativestyle="" / >
+                  </div>
+                    
+                    <div class="title-image" style="position:relative; left: 37%; width:25%; padding-top:3.5% " >
+                        <img src="assets/images/logo-yogome.png" style="display: inline-block; width:60%"/>
+                        <img id="videoName" src="assets/images/videos_ES.png" style="display: inline-block; top:16%; width:40%"/>
+                    </div>
                 </div>
             <section  class="container-fluid bg-webisodes-main webPageSection">
                     <div class="row">
@@ -277,6 +284,15 @@ function getParameterByName(name, url) {
             $("nav").hide();
             $(".bg-zip").addClass("newBg-zip");
         }
+
+
+  function setVideoImage(){
+      var name = "assets/images/videos_"+language+".png";
+      $("#videoName").attr("src",name);
+
+    }
+
+    setVideoImage();
         
     </script>
 

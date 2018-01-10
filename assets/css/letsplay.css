@@ -90,17 +90,7 @@ body{
 }
 
 #nameSubject p{
-    position: relative;
-    background-color: #C81C8A;
-    color: #FFF;
-    width: 70%;
-    padding: 1vw;
-    margin: 2vw;
-    left: 45%;
-    transform: translate(-50%,0%);
-    max-width: 500px;
-    box-shadow: 10px 10px 0px #3B91FF;
-    font-size: 4vh !important;
+   
 }
 
     .minigameBg{

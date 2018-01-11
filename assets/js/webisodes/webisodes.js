@@ -17,16 +17,11 @@ $("#devicelogInButton").click(function(){
 for(i=1;i<=5;i++){
     $("#wallpaper-slider").append('<div id="button'+i+'" class="video-item text-center"></div>')
     console.log(i);
-    if(language == "ES"){
-        
-        var video_thumbnail = $('<img class="wallpaper-thumb low-padding videoButton" src="//img.youtube.com/vi/'+videolist[i-1].url_ES+'/0.jpg">');
+
+        var video_thumbnail = $('<img class="wallpaper-thumb low-padding videoButton" src="assets/images/videoThumbnail/'+videolist[i-1].thumbnail+'.png">');
         $("#button"+ i).append(video_thumbnail);
         $("#button"+ i).append('<img class="video-icon" src="assets/images/video_icon.png"/>');
-    }else{
-        var video_thumbnail = $('<img class="wallpaper-thumb low-padding videoButton" src="//img.youtube.com/vi/'+videolist[i-1].url_EN+'/0.jpg">');
-        $("#button"+ i).append(video_thumbnail);
-        $("#button"+ i).append('<img class="video-icon" src="assets/images/video_icon.png"/>');
-    }
+    
 }
 
 

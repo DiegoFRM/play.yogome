@@ -482,7 +482,8 @@ a.article, a.article:hover {
   z-index: 1;
   max-width: 150px;
   top: -12px;
-  left: -1px;
+    right: -1px;
+    /*transform: rotateY(180deg);*/
 }
 .img-planeta{
     

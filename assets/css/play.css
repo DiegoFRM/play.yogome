@@ -104,7 +104,10 @@ a, a:hover, a:focus {
     transition: all 0.3s;
 }
 
-.navbar-btn:hover,
+.navbar-btn:hover{
+    background-color: rgba(169,25,118,1);
+    color: white;
+}
 .navbar-btn:active,
 .navbar-btn:focus{
   color: white;

@@ -44,15 +44,21 @@ footer{
 }
 
 .textNew{
-    font-size: 2.5vh;
+    font-size: 2.5vw;
     font-family: 'Luckiest Guy';
     color: #FFF;
     transform: rotate(40deg);
     position: absolute;
-    bottom: 60%;
+    top: 12%;
     left: 50%;
     z-index: 1;
     transform-origin: 0% 0%;
+}
+
+@media screen and (min-width: 1000px){
+    .textNew{
+        font-size: 20px;
+    }
 }
 
 .title-name-video{
@@ -257,8 +263,8 @@ background-image: url(../images/container_full.png);
   z-index: 1;
   width: 15vw;
   max-width: 150px;
-  top: -10px;
-  right: 1px !important;
+  top: -5px;
+  right: 10px !important;
     /*transform: rotateY(180deg);*/
 }
 

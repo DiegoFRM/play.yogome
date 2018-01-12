@@ -480,11 +480,17 @@ a.article, a.article:hover {
 .videos-new-banner{
   position: absolute;
   z-index: 1;
-    width: 15vw;
+  width: 15vw;
   max-width: 150px;
-  top: -19px;
-    right: 9px;
+  top: -7px;
+  right: 14px !important;
     /*transform: rotateY(180deg);*/
+}
+
+@media screen and (min-width: 700px){
+    .videos-new-banner{
+        top: -20px;
+    }
 }
 
 .img-planeta{
@@ -971,14 +977,6 @@ footer{
 
   .navbar-logo{
     float: none;
-  }
-
-  .videos-new-banner{
-    position: absolute;
-    z-index: 1;
-    max-width: 100px;
-    top: -8px;
-    left: 6px;
   }
 
   .subject-btn{

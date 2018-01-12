@@ -75,9 +75,7 @@ footer{
 
 .video-icon{
     position: relative;
-    transform: translate(330%,-140%);
-    max-height: 6vh;
-    max-width: 6vh;
+    transform: translate(230%,-130%);
 }
 
 #wallpaper-slider{

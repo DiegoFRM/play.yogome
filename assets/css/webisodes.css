@@ -75,8 +75,9 @@ footer{
 
 .video-icon{
     position: relative;
-    transform: translate(350%,-100%);
+    transform: translate(330%,-140%);
     max-height: 6vh;
+    max-width: 6vh;
 }
 
 #wallpaper-slider{
@@ -280,9 +281,9 @@ background-image: url(../images/container_full.png);
 }
 
 .video-size{
-    width: 75% !important;
-    margin-left: 12%;
-    margin-top: 5% !important;
+    width: 70% !important;
+    margin-left: 15.5%;
+    margin-top: 8% !important;
 }
 
 /*queries-------------*/

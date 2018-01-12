@@ -481,10 +481,11 @@ a.article, a.article:hover {
   position: absolute;
   z-index: 1;
   max-width: 150px;
-  top: -12px;
-    right: -1px;
+  top: -19px;
+    right: 9px;
     /*transform: rotateY(180deg);*/
 }
+
 .img-planeta{
     
     position:absolute;
@@ -504,7 +505,7 @@ a.article, a.article:hover {
     text-align: center;
     position: relative;
     margin-top:-80%;
-    margin-left:-30%;
+    margin-right: -30%;
     -ms-transform: rotate(-45deg); /* IE 9 */
     -webkit-transform: rotate(-45deg); /* Safari 3-8 */
     transform: rotate(-45deg);

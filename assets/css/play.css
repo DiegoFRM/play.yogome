@@ -480,6 +480,7 @@ a.article, a.article:hover {
 .videos-new-banner{
   position: absolute;
   z-index: 1;
+    width: 15vw;
   max-width: 150px;
   top: -19px;
     right: 9px;
@@ -498,7 +499,7 @@ a.article, a.article:hover {
 
 #NewText{
     
-    font-size: 25px;
+    font-size: 2vw;
     font-weight: bold;
     font:"Quicksand_medium";
     color:#fff;

@@ -86,15 +86,15 @@ footer{
 
 .slick-nav-buttons{
     position: absolute;
-    width: 120%;
-    transform: translate(-10%,40%);
+    width: 140%;
+    transform: translate(-19%,40%);
 }
     
 
 .slick-next, .slick-prev {
 background-image: url("../images/books/BotonBooksNext.png");
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 .slick-next:hover ,.slick-prev:hover {
@@ -346,11 +346,18 @@ background-image: url(../images/container_full.png);
         font-size: 20px;
     }
 }
-@media screen and and (min-width: 1px)(max-width: 1000px){
+@media screen and (min-width: 770px){
+    
     .slick-nav-buttons{
         position: absolute;
-        width: 20%;
-        transform: translate(0%,0%);
+        width: 120%;
+        transform: translate(-10%,40%);
+    }
+
+    .slick-next, .slick-prev {
+    background-image: url("../images/books/BotonBooksNext.png");
+        width: 100px;
+        height: 100px;
     }
 }
 

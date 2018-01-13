@@ -188,6 +188,34 @@ onYouTubeIframeAPIReady()
   function stopVideo() {
       player.stopVideo();
   }
+    
+    $('#wallpaper-slider').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 3,
+      arrows: true,
+      appendArrows: $(".slick-nav-buttons"),
+      responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 2
+      }
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        arrows: true,
+        centerMode: true,
+        centerPadding: '0px',
+        slidesToShow: 3
+      }
+    }
+  ]
+   });
   
   //End Youtube video API
 }    

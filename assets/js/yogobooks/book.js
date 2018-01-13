@@ -17,14 +17,14 @@ function callBackLogIn(){
 }
 
 
-epicModel.loadPlayer(false,callBackLogIn); 
+epicModel.loadPlayer(false,callBackLogIn);
 
 $("#logInButton").click(function(){
-    modal.showLogin();
- });
-        
+	epicModel.loadPlayer(true, callBackLogIn)
+});
+
 $("#devicelogInButton").click(function(){
-    modal.showLogin();
+	epicModel.loadPlayer(true, callBackLogIn)
 });
 
 

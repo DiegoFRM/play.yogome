@@ -33,7 +33,8 @@ $(".register-btn").click(function(){
 
 $("#navbar-logo-container").mouseup(function(){
     magic.play()
-    window.location.href = "index.html?language=" + language;
+    // window.location.href = "//yogome.com?language=" + language;
+	window.history.go(-1);
 });
 
 

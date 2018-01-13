@@ -6,11 +6,11 @@ var videoId;
 var credentials = epicModel.getCredentials();
 
 $("#logInButton").click(function(){
-    modal.showLogin();
- });
-        
+	epicModel.loadPlayer(true, callBackLogIn)
+});
+
 $("#devicelogInButton").click(function(){
-    modal.showLogin();
+	epicModel.loadPlayer(true, callBackLogIn)
 });
 
 

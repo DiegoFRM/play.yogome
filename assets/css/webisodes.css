@@ -55,18 +55,14 @@ footer{
     transform-origin: 0% 0%;
 }
 
-@media screen and (min-width: 1000px){
-    .textNew{
-        font-size: 20px;
-    }
-}
-
 .title-name-video{
     text-align: left;
-    font-size: 2vw;
+    font-size: 4vw;
     font-family: 'Quicksand', sans-serif;
     color: #0ba3f7;
-    padding: 2vh;
+    padding: 1vw;
+    padding-top:8vw;
+    padding-bottom: 0;
     font-weight:bold;
 }
 
@@ -85,19 +81,20 @@ footer{
 }
 
 #wallpaper-slider{
-    width: 100%
+    width: 100%;
 }
 
 .slick-nav-buttons{
     position: absolute;
-    width: 110%;
-    transform: translate(-5%,80%);
+    width: 140%;
+    transform: translate(-19%,40%);
 }
+    
 
 .slick-next, .slick-prev {
 background-image: url("../images/books/BotonBooksNext.png");
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
 
 .slick-next:hover ,.slick-prev:hover {
@@ -307,26 +304,19 @@ background-image: url(../images/container_full.png);
 
 @media only screen and (min-width: 1px) and (max-width:1150px) {
     .mid-container {
-        width: 100%;
+        width: 200%;
         height: auto;
         margin: auto;
     }
     .wallpaper-thumb {
-    width: 85%;
+    width: 80%;
     margin: 20px;
     }
     
     .video-icon{
-        width: 40%;
+        width: 30%;
         transform: translate(-110%,-110%);
-    }
-
-    .slick-nav-buttons{
-        position: absolute;
-        width: 120%;
-        transform: translate(-10%,40%);
     }    
-    
 }
 
 @media only screen and (min-width: 1151px) {
@@ -348,6 +338,26 @@ background-image: url(../images/container_full.png);
     .main-text {
         font-size: 17px;
         width: 80%;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    .textNew{
+        font-size: 20px;
+    }
+}
+@media screen and (min-width: 770px){
+    
+    .slick-nav-buttons{
+        position: absolute;
+        width: 120%;
+        transform: translate(-10%,40%);
+    }
+
+    .slick-next, .slick-prev {
+    background-image: url("../images/books/BotonBooksNext.png");
+        width: 100px;
+        height: 100px;
     }
 }
 

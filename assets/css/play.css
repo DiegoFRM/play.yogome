@@ -921,6 +921,15 @@ footer{
   text-align: center;
 
 }
+
+@media screen and (max-width: 770px){
+    .play-footer{
+      padding: 5px;
+      text-align: center;
+        
+    }
+}
+
 .play-footer>*{
   display: inline;
   vertical-align: middle;

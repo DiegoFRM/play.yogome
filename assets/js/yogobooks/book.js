@@ -1,8 +1,11 @@
 epicModel.checkQuery();
-var credentials = getCredentials();
+var credentials = epicModel.getCredentials();
 var email = credentials.email;
 
 function callBackLogIn(){
+            console.log(credentials)
+            credentials = epicModel.getCredentials();
+	        email = credentials.email;
             if(email){
                 $("#menuUserMovil").css("display","block");
                 $("#menuUser").css("display","flex");

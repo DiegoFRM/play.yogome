@@ -242,13 +242,13 @@ function showGames(){
 
 
 			if(epicsite){
-				$("#minigamesContainer").append("<div id='minigameNumber" +num +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-4 col-sm-4'></div></div>");
+				$("#minigamesContainer").append("<div id='minigameNumber" +num +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></div>");
 				$("#minigameNumber" + num).attr("data-url",minigameHref)
 				$("#minigameNumber" + num).click(function(){
 					parent.location.href =  $(this).attr("data-url");
 				});
 			}else{
-				$("#minigamesContainer").append("<a href='"+ minigameHref +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-4 col-sm-4'></div></a>");
+				$("#minigamesContainer").append("<a href='"+ minigameHref +"' rev='"+games[i].name+"' class='gameCatalog " +games[i].subject +"' id='gameimg" + num +"'><div id='btnMinigame" + i + "' class='minigameBg col-xs-6 col-sm-4'></div></a>");
 			}
 
 			$("#btnMinigame" + num).css("background-image","url('epicweb/shared/minigames/images/icons/" + games[i].sceneName + ".png')");

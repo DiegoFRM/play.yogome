@@ -67,10 +67,8 @@ body{
 #tab-minigames{
     margin-top: -10%;
     margin-left: auto;
-    width: 100vw;
     margin-right: auto;
-    /*! min-width: 300px; */
-    max-width: 100vh;
+    max-width: 110vh;
 }
 
 .img-minigames{

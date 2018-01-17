@@ -36,7 +36,7 @@ var booksArray = [
                     id:22,
                     EN:"The Monster",
                     ES:"El Monstruo",
-                    url:"http://play.yogome.com/yogomebooks/22",
+                    url:"https://play.yogome.com/yogomebooks/22",
                     new:true,
                     lock:false
                     
@@ -45,7 +45,7 @@ var booksArray = [
                     id:21,
                     EN:"The River",
                     ES:"El Río",
-                    url:"http://play.yogome.com/yogomebooks/21",
+                    url:"https://play.yogome.com/yogomebooks/21",
                     new:true,
                     lock:false
                     
@@ -54,7 +54,7 @@ var booksArray = [
                     id:16,
                     EN:"The Christmas<br> Present",
                     ES:"El regalo<br> de navidad",
-                    url:"http://play.yogome.com/yogomebooks/16",
+                    url:"https://play.yogome.com/yogomebooks/16",
                     new:true,
                     lock:false
                     
@@ -63,7 +63,7 @@ var booksArray = [
                     id:27,
                     EN:"Eagle learns<br>about Christmas",
                     ES:"Eagle entiende<br>la navidad",
-                    url:"http://play.yogome.com/yogomebooks/27",
+                    url:"https://play.yogome.com/yogomebooks/27",
                     new:true,
                     lock:false
                     
@@ -72,7 +72,7 @@ var booksArray = [
                     id:6,
                     EN:"I am<br> Angry",
                     ES:"Estoy<br> Enojada",
-                    url:"http://play.yogome.com/yogomebooks/6",
+                    url:"https://play.yogome.com/yogomebooks/6",
                     new:false,
                     lock:false
                     
@@ -81,7 +81,7 @@ var booksArray = [
                     id:13,
                     EN:"Quiet <br>space",
                     ES:"El espacio <br> ideal",
-                    url:"http://play.yogome.com/yogomebooks/13",
+                    url:"https://play.yogome.com/yogomebooks/13",
                     new:false,
                     lock:false
                     

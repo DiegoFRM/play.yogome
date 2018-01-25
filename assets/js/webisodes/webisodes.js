@@ -14,7 +14,7 @@ $("#devicelogInButton").click(function(){
 });
 
 
-for(i=1;i<=5;i++){
+for(i=1;i<=videolist.length;i++){
     $("#wallpaper-slider").append('<div id="button'+i+'" class="video-item text-center"></div>')
     console.log(i);
 

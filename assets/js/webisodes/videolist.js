@@ -1,5 +1,24 @@
 var videolist = 
     [
+   
+        
+    {
+        videoID:7,
+        NAME_ES:"Limpia tu lugar: Una lección sobre contaminación",
+        NAME_EN:"Clean up your act: A lesson on littering",
+        url_ES:"JYl5icZBMdM",
+        url_EN:"4pbXLw6NDBM",
+        thumbnail: "Limpia"
+    },
+        
+    {
+        videoID:6,
+        NAME_ES:"Las rutinas pueden ser divertidas",
+        NAME_EN:"Routines can help you to have fun",
+        url_ES:"6fIgrw2Hdxw",
+        url_EN:"2iALafXZF7c",
+        thumbnail: "Rutinas"
+    },
 
     {
         videoID:1,

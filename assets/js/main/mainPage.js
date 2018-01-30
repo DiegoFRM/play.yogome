@@ -1,3 +1,4 @@
+window.isHome = true
 
 $(".mixpanel-call").click(function(e){
 //			e.preventDefault()

@@ -3,6 +3,14 @@ var videolist =
    
         
     {
+        videoID:8,
+        NAME_ES:"Sing with the Yogotars: head, shoulders, knees and toes.",
+        NAME_EN:"Sing with the Yogotars: head, shoulders, knees and toes.",
+        url_ES:"qMAj7LTeqK0",
+        url_EN:"qMAj7LTeqK0",
+        thumbnail: "Sing"
+    },        
+    {
         videoID:7,
         NAME_ES:"Limpia tu lugar: Una lección sobre contaminación",
         NAME_EN:"Clean up your act: A lesson on littering",

@@ -219,7 +219,7 @@ var epicModel = function () {
 		signInCallback = true
 
 		function callback(response){
-			onSuccess()
+			if(onSuccess) onSuccess()
 			checkLogin(response)
 		}
 
@@ -309,7 +309,7 @@ var epicModel = function () {
 	}
 
 	function checkQuery(callBack){
-		function onSuccess() {
+		currentCallback = function () {
 			modal.showWelcome()
 			if(callBack)callBack()
 		}
@@ -317,15 +317,15 @@ var epicModel = function () {
 		var email = getParameterByName("email")
 		token = token ? decodeURIComponent(token) : null
 		email = email ? decodeURIComponent(email) : null
-		//pa_%5BB%406d33b036
-		//aaron%2B20171207_2%40yogome.com
-		// var token = null//"pa_[B@15f1b80"
-		// var email = "aaron+20171207_2@yogome.com"
+
+		// var token = "pa_[B@14fb3f6b"//"pa_[B@15f1b80"
+		// var email = "erick@yogome.com"
 
 		if((token)&&(email)) {
+
 			localStorage.setItem("email", email)
 			// console.log(token)
-			epicModel.loginParent({token: token, email:email}, onSuccess)
+			epicModel.loginParent({token: token, email:email})
 		}
 		else
 			if(callBack)callBack()

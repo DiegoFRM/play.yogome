@@ -318,7 +318,14 @@ function callBackLogIn(){
 
 }
 
-epicModel.checkQuery();
-epicModel.loadPlayer(false,callBackLogIn); 
+function loadPlayer(){
+	var credentials = epicModel.getCredentials()
+	if(credentials.email){
+		epicModel.loadPlayer(false, callBackLogIn)
+	}else{
+		callBackLogIn()
+	}
+}
+epicModel.checkQuery(loadPlayer);
 
 

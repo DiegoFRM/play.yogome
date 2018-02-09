@@ -1,7 +1,14 @@
 var videolist = 
     [
    
-        
+    {
+        videoID:9,
+        NAME_ES:"El nuevo amigo de Eagle.",
+        NAME_EN:"Eagle's new friend.",
+        url_ES:"COwfmYFnznw",
+        url_EN:"COwfmYFnznw",
+        thumbnail: "Amigo"
+    },     
     {
         videoID:8,
         NAME_ES:"Sing with the Yogotars: head, shoulders, knees and toes.",

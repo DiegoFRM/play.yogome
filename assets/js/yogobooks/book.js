@@ -35,8 +35,8 @@ var booksArray = [
     //NEW
                 { 
                     id:10,
-                    EN:"Walking to School",
-                    ES:"Camino a la escuela",
+                    EN:"Walking <br>to School",
+                    ES:"Camino a <br>la escuela",
                     url:"http://play.yogome.com/yogomebooks/10",
                     new:true,
                     lock:false
@@ -44,8 +44,8 @@ var booksArray = [
                 },
                 { 
                     id:12,
-                    EN:"The Candy Tree",
-                    ES:"El árbol de los dulces",
+                    EN:"The Candy <br>Tree",
+                    ES:"El árbol de <br>los dulces",
                     url:"http://play.yogome.com/yogomebooks/12",
                     new:true,
                     lock:false
@@ -53,8 +53,8 @@ var booksArray = [
                 },
                 { 
                     id:15,
-                    EN:"Arthurius’ Home",
-                    ES:"El hogar de Arthurius",
+                    EN:"Arthurius’ <br>Home",
+                    ES:"El hogar de <br>Arthurius",
                     url:"http://play.yogome.com/yogomebooks/15",
                     new:true,
                     lock:false
@@ -81,7 +81,7 @@ var booksArray = [
                 { 
                     id:24,
                     EN:"Justice's Toys",
-                    ES:"Los objetos de Justice",
+                    ES:"Los objetos <br>de Justice",
                     url:"http://play.yogome.com/yogomebooks/24",
                     new:true,
                     lock:false
@@ -89,8 +89,8 @@ var booksArray = [
                 },
                 { 
                     id:25,
-                    EN:"Every item in it's place",
-                    ES:"Cada cosa en su lugar",
+                    EN:"Every item <br>in it's place",
+                    ES:"Cada cosa <br>en su lugar",
                     url:"http://play.yogome.com/yogomebooks/25",
                     new:true,
                     lock:false
@@ -107,8 +107,8 @@ var booksArray = [
                 },
                 { 
                     id:8,
-                    EN:"Dispute in the ice and fire reign",
-                    ES:"Pelea en la región de hielo y fuego",
+                    EN:"Dispute in the <br>ice and fire reign",
+                    ES:"Pelea en la región <br>de hielo y fuego",
                     url:"http://play.yogome.com/yogomebooks/8",
                     new:true,
                     lock:false
@@ -117,7 +117,7 @@ var booksArray = [
                 { 
                     id:9,
                     EN:"The Mood Ring",
-                    ES:"El anillo de las emociones",
+                    ES:"El anillo de <br>las emociones",
                     url:"http://play.yogome.com/yogomebooks/9",
                     new:true,
                     lock:false

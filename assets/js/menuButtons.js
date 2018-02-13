@@ -68,3 +68,13 @@ $("#buttonLogOut").click(function(){
     localStorage.clear();
     window.location.reload();
 });
+
+$("#logInButton").click(function(){
+	loginModal.showLogin(false, false, callBackLogIn)
+});
+
+$("#devicelogInButton").click(function(){
+	loginModal.showLogin(false, false, callBackLogIn)
+});
+
+loginModal.showLogin(false, true, callBackLogIn)

@@ -1,6 +1,5 @@
-epicModel.checkQuery();
-var credentials = epicModel.getCredentials();
-var email = credentials.email;
+var credentials = loginModal.getChildData();
+var email = credentials.parentMail;
 
 function callBackLogIn(){
             console.log(credentials)
@@ -18,25 +17,6 @@ function callBackLogIn(){
  
 
 }
-
-
-function loadPlayer(){
-	var credentials = epicModel.getCredentials()
-	if(credentials.email){
-		epicModel.loadPlayer(false, callBackLogIn)
-	}else{
-		callBackLogIn()
-	}
-}
-epicModel.checkQuery(loadPlayer);
-
-$("#logInButton").click(function(){
-	epicModel.loadPlayer(true, callBackLogIn)
-});
-
-$("#devicelogInButton").click(function(){
-	epicModel.loadPlayer(true, callBackLogIn)
-});
 
 
 var booksArray = [

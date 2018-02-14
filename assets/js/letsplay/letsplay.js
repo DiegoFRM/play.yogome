@@ -7,14 +7,6 @@ $(document).ready(function () {
 		cursorborder: 'none'
 	});
 
-	$("#logInButton").click(function(){
-		epicModel.loadPlayer(true, callBackLogIn)
-	});
-
-	$("#devicelogInButton").click(function(){
-		epicModel.loadPlayer(true, callBackLogIn)
-	});
-
 
 	$('#dismiss, .overlay').on('click', function () {
 		pop.play()
@@ -298,8 +290,8 @@ function showDemoGames(){
 
 
 function callBackLogIn(){
-	var credentials = epicModel.getCredentials()
-	var email = credentials.email
+	var credentials = loginModal.getChildData()
+	var email = credentials.parentMail
 	if(email){
 		$("#menuUserMovil").css("display","block");
 		$("#menuUser").css("display","flex");
@@ -318,14 +310,6 @@ function callBackLogIn(){
 
 }
 
-function loadPlayer(){
-	var credentials = epicModel.getCredentials()
-	if(credentials.email){
-		epicModel.loadPlayer(false, callBackLogIn)
-	}else{
-		callBackLogIn()
-	}
-}
-epicModel.checkQuery(loadPlayer);
+showDemoGames()
 
 

@@ -3,16 +3,7 @@ var flipcard = document.getElementById("flipcard");
 var magic = document.getElementById("magic");
 var videoLanguage;
 var videoId;
-var credentials = epicModel.getCredentials();
-
-$("#logInButton").click(function(){
-	epicModel.loadPlayer(true, callBackLogIn)
-});
-
-$("#devicelogInButton").click(function(){
-	epicModel.loadPlayer(true, callBackLogIn)
-});
-
+var credentials = loginModal.getChildData();
 
 for(i=1;i<=videolist.length;i++){
     $("#wallpaper-slider").append('<div id="button'+i+'" class="video-item text-center"></div>')
@@ -82,16 +73,6 @@ function callBackLogIn(){
 
 }
 
-function loadPlayer(){
-	var credentials = epicModel.getCredentials()
-	if(credentials.email){
-		epicModel.loadPlayer(false, callBackLogIn)
-	}else{
-		callBackLogIn()
-	}
-}
-epicModel.checkQuery(loadPlayer);
-
 
 function mixpanelYT(videoLanguage,idnumber,namevideo){
     
@@ -108,7 +89,7 @@ if($("#player").length == 0) {
   //    after the API code downloads.
   var player;
 
-  function onYouTubeIframeAPIReady() {
+  window.onYouTubeIframeAPIReady = function() {
       player = new YT.Player('player', {
           videoId: videoLanguage, //get var videoLanguage to load videoId
           playerVars: {
@@ -124,7 +105,7 @@ if($("#player").length == 0) {
         
   }
     
-onYouTubeIframeAPIReady()
+// onYouTubeIframeAPIReady()
   //The API will call this function when the video player is ready.
   function onPlayerReady(event) {
       console.log('Video Ready');

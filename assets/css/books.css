@@ -24,6 +24,7 @@ body{
     height: 40%;
 }
 
+
 .new-text{
     color: white;
     font-weight: bold;
@@ -78,6 +79,12 @@ body{
 .btn-back-main{
 }
 
+.responsivGallery-pic{
+
+
+cursor:pointer; 
+
+}
 
 /*COVERFLOW*/
 .w-gallery{

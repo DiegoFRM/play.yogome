@@ -33,8 +33,16 @@ $(".register-btn").click(function(){
 
 $("#navbar-logo-container").mouseup(function(){
     magic.play()
-    // window.location.href = "//yogome.com?language=" + language;
-	window.history.go(-1);
+    var credentials = epicModel.getCredentials()
+    var email = credentials.email
+    var location = "//play.yogome.com?language=" + language;
+    if(email)
+        location = "//play.yogome.com/epicweb/minigames/epicSite/?language=" + language;
+    else if(window.isHome)
+        location = "//yogome.com/" + language.toLowerCase()
+
+    window.location.href = location
+	// window.history.go(-1);
 });
 
 
@@ -60,3 +68,13 @@ $("#buttonLogOut").click(function(){
     localStorage.clear();
     window.location.reload();
 });
+
+$("#logInButton").click(function(){
+	loginModal.showLogin(false, false, callBackLogIn)
+});
+
+$("#devicelogInButton").click(function(){
+	loginModal.showLogin(false, false, callBackLogIn)
+});
+
+loginModal.showLogin(false, true, callBackLogIn)

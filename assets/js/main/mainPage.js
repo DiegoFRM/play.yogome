@@ -1,3 +1,4 @@
+window.isHome = true
 
 $(".mixpanel-call").click(function(e){
 //			e.preventDefault()
@@ -32,15 +33,6 @@ for(var i = 0 ; i <= games.length-1 ;i++){
 
 }
 
-
-$("#logInButton").click(function(){
-	epicModel.loadPlayer(true, callBackLogIn)
-});
-
-$("#devicelogInButton").click(function(){
-	epicModel.loadPlayer(true, callBackLogIn)
-});
-
 $("#videosButton").click(function(){
 	magic.play();
 	window.location.href = "webisodes.html?language=" + language;
@@ -58,8 +50,8 @@ $("#booksButton").click(function(){
 
 
 function callBackLogIn(){
-	var credentials = getCredentials()
-	var email = credentials.email
+	var credentials = loginModal.getChildData()
+	var email = credentials.parentMail
 	if(email){
 		$("#menuUserMovil").css("display","block");
 		$("#menuUser").css("display","flex");
@@ -76,5 +68,4 @@ function callBackLogIn(){
 
 }
 
-epicModel.checkQuery();
-epicModel.loadPlayer(false,callBackLogIn);
+

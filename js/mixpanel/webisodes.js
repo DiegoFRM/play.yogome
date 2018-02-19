@@ -1,7 +1,7 @@
     /**
      * * Metodo implementado en mixpanel.js
      */
-    var credentials = epicModel.getCredentials();
+    var credentials = loginModal.getChildData();
 
 $(document).ready(function () {
 

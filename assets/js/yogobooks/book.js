@@ -1,6 +1,5 @@
-epicModel.checkQuery();
-var credentials = epicModel.getCredentials();
-var email = credentials.email;
+var credentials = loginModal.getChildData();
+var email = credentials.parentMail;
 
 function callBackLogIn(){
             console.log(credentials)
@@ -20,24 +19,105 @@ function callBackLogIn(){
 }
 
 
-epicModel.loadPlayer(false,callBackLogIn);
-
-$("#logInButton").click(function(){
-	epicModel.loadPlayer(true, callBackLogIn)
-});
-
-$("#devicelogInButton").click(function(){
-	epicModel.loadPlayer(true, callBackLogIn)
-});
-
-
 var booksArray = [
+    //NEW
+                { 
+                    id:10,
+                    EN:"Walking <br>to School",
+                    ES:"Camino a <br>la escuela",
+                    url:"http://play.yogome.com/yogomebooks/10",
+                    new:true,
+                    lock:false
+                    
+                },
+                { 
+                    id:12,
+                    EN:"The Candy <br>Tree",
+                    ES:"El árbol de <br>los dulces",
+                    url:"http://play.yogome.com/yogomebooks/12",
+                    new:true,
+                    lock:false
+                    
+                },
+                { 
+                    id:15,
+                    EN:"Arthurius’ <br>Home",
+                    ES:"El hogar de <br>Arthurius",
+                    url:"http://play.yogome.com/yogomebooks/15",
+                    new:true,
+                    lock:false
+                    
+                },
+                { 
+                    id:20,
+                    EN:"Please",
+                    ES:"Por favor",
+                    url:"http://play.yogome.com/yogomebooks/20",
+                    new:true,
+                    lock:false
+                    
+                },
+                { 
+                    id:23,
+                    EN:"Thank You",
+                    ES:"Gracias",
+                    url:"http://play.yogome.com/yogomebooks/23",
+                    new:true,
+                    lock:false
+                    
+                },
+                { 
+                    id:24,
+                    EN:"Justice's Toys",
+                    ES:"Los objetos <br>de Justice",
+                    url:"http://play.yogome.com/yogomebooks/24",
+                    new:true,
+                    lock:false
+                    
+                },
+                { 
+                    id:25,
+                    EN:"Every item <br>in it's place",
+                    ES:"Cada cosa <br>en su lugar",
+                    url:"http://play.yogome.com/yogomebooks/25",
+                    new:true,
+                    lock:false
+                    
+                },
+                { 
+                    id:33,
+                    EN:"Hero",
+                    ES:"Héroe",
+                    url:"http://play.yogome.com/yogomebooks/33",
+                    new:true,
+                    lock:false
+                    
+                },
+                { 
+                    id:8,
+                    EN:"Dispute in the <br>ice and fire reign",
+                    ES:"Pelea en la región <br>de hielo y fuego",
+                    url:"http://play.yogome.com/yogomebooks/8",
+                    new:true,
+                    lock:false
+                    
+                },
+                { 
+                    id:9,
+                    EN:"The Mood Ring",
+                    ES:"El anillo de <br>las emociones",
+                    url:"http://play.yogome.com/yogomebooks/9",
+                    new:true,
+                    lock:false
+                    
+                },
+    //OLD
                 { 
                     id:22,
                     EN:"The Monster",
                     ES:"El Monstruo",
                     url:"https://play.yogome.com/yogomebooks/22",
-                    new:true,
+                    new:false,
                     lock:false
                     
                 },
@@ -46,7 +126,7 @@ var booksArray = [
                     EN:"The River",
                     ES:"El Río",
                     url:"https://play.yogome.com/yogomebooks/21",
-                    new:true,
+                    new:false,
                     lock:false
                     
                 },
@@ -55,7 +135,7 @@ var booksArray = [
                     EN:"The Christmas<br> Present",
                     ES:"El regalo<br> de navidad",
                     url:"https://play.yogome.com/yogomebooks/16",
-                    new:true,
+                    new:false,
                     lock:false
                     
                 },
@@ -64,7 +144,7 @@ var booksArray = [
                     EN:"Eagle learns<br>about Christmas",
                     ES:"Eagle entiende<br>la navidad",
                     url:"https://play.yogome.com/yogomebooks/27",
-                    new:true,
+                    new:false,
                     lock:false
                     
                 },

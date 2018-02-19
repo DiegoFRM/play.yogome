@@ -1,5 +1,39 @@
 var videolist = 
     [
+   
+    {
+        videoID:9,
+        NAME_ES:"El nuevo amigo de Eagle.",
+        NAME_EN:"Eagle's new friend.",
+        url_ES:"COwfmYFnznw",
+        url_EN:"COwfmYFnznw",
+        thumbnail: "Amigo"
+    },     
+    {
+        videoID:8,
+        NAME_ES:"Sing with the Yogotars: head, shoulders, knees and toes.",
+        NAME_EN:"Sing with the Yogotars: head, shoulders, knees and toes.",
+        url_ES:"qMAj7LTeqK0",
+        url_EN:"qMAj7LTeqK0",
+        thumbnail: "Sing"
+    },        
+    {
+        videoID:7,
+        NAME_ES:"Limpia tu lugar: Una lección sobre contaminación",
+        NAME_EN:"Clean up your act: A lesson on littering",
+        url_ES:"JYl5icZBMdM",
+        url_EN:"4pbXLw6NDBM",
+        thumbnail: "Limpia"
+    },
+        
+    {
+        videoID:6,
+        NAME_ES:"Las rutinas pueden ser divertidas",
+        NAME_EN:"Routines can help you to have fun",
+        url_ES:"6fIgrw2Hdxw",
+        url_EN:"2iALafXZF7c",
+        thumbnail: "Rutinas"
+    },
 
     {
         videoID:1,

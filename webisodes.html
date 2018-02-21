@@ -46,7 +46,7 @@
     <script src="assets/js/bootstrap.min.js" type="application/javascript"></script>
     <script src="epicweb/shared/minigames/js/helpers/yogomeGames.js" type="text/javascript"></script>
     <script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js" async=""></script>
-<script src="https://www.youtube.com/iframe_api"></script>
+    <script src="https://www.youtube.com/iframe_api"></script>
     <!--Detect language-->
     <script src="assets/js/detectlanguage.js"></script>
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -247,7 +247,7 @@
             </section>
                 </div>
             
-                <footer class="webPageSection">
+                <footer class="webPageSection2">
                     <div class="container">
                         <div class="col-xs-12 play-footer">
                             <img class="img img-responsive footer-logo" src="assets/images/logo-yogome.png" alt="Logo Yogome">
@@ -291,7 +291,7 @@ function getParameterByName(name, url) {
     name = name.replace(/[\[\]]/g, "\\$&");
     var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
         results = regex.exec(url);
-    if (!results) return null;
+    if (!results) return null;  
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
@@ -299,7 +299,7 @@ function getParameterByName(name, url) {
         detectOrigins = getParameterByName("app");
         
         if(detectOrigins){
-            $(".webPageSection").hide();
+            $(".webPageSection2").hide();
             $("nav").hide();
             $(".bg-zip").addClass("newBg-zip");
         }

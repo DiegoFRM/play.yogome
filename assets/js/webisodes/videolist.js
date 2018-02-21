@@ -1,6 +1,30 @@
 var videolist = 
     [
-   
+        
+    {
+        videoID:12,
+        NAME_ES:"Dinero alrededor del mundo.",
+        NAME_EN:"Money Around the World",
+        url_ES:"lPbPhuK7x7I",
+        url_EN:"pyopZ5p4Lzc",
+        thumbnail: "Money"
+    },     
+    {
+        videoID:11,
+        NAME_ES:"Únete a los Yogotars.",
+        NAME_EN:"Joint the Yogotars.",
+        url_ES:"Oljs3pVevCo",
+        url_EN:"Oljs3pVevCo",
+        thumbnail: "Yogotars"
+    },     
+    {
+        videoID:10,
+        NAME_ES:"Herramientas para compartir.",
+        NAME_EN:"Tools for sharing.",
+        url_ES:"rK0dMLEKBXQ",
+        url_EN:"nQo22VP4TEk",
+        thumbnail: "Herramientas"
+    },     
     {
         videoID:9,
         NAME_ES:"El nuevo amigo de Eagle.",

@@ -6,7 +6,7 @@ var videolist =
         NAME_ES:"Dinero alrededor del mundo.",
         NAME_EN:"Money Around the World",
         url_ES:"lPbPhuK7x7I",
-        url_EN:"pyopZ5p4Lzc",
+        url_EN:"2GGYCIY5WNY",
         thumbnail: "Money"
     },     
     {

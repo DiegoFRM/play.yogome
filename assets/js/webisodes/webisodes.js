@@ -5,6 +5,12 @@ var videoLanguage;
 var videoId;
 var credentials = loginModal.getChildData();
 
+var tag = document.createElement('script');
+
+tag.src = "https://www.youtube.com/iframe_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
 for(i=1;i<=videolist.length;i++){
 	$("#wallpaper-slider").append('<div id="button'+i+'" class="video-item text-center"></div>')
 	console.log(i);
@@ -43,10 +49,10 @@ for(i=1;i<=5;i++){
 	$("#button" + i).attr("number",i-1);
 	if(!$("#button" + i).hasClass("lock") ){
 		$("#button" + i).click(function(){
-			$( "#player" ).remove();
-			$( "#videoContainer" ).append("<div id='player'></div>");
+			// $( "#player" ).remove();
+			// $( "#videoContainer" ).append("<div id='player'></div>");
 			pop.play();
-			console.log(parseInt($(this).attr("number")) );
+			// console.log(parseInt($(this).attr("number")) );
 			loadVideos(parseInt($(this).attr("number")));
 		});
 
@@ -71,9 +77,8 @@ function callBackLogIn(){
 }
 
 var player;
-window.onYouTubeIframeAPIReady = function() {
+function onYouTubeIframeAPIReady() {
 	loadVideos(0);
-
 }
 
 function onPlayerReady(event) {
@@ -156,18 +161,23 @@ function loadYTPlayer(videoLanguage, idnumber, namevideo){
 		//Youtube video API
 		//This code loads the IFrame Player API code asynchronously.
 
-		player = new YT.Player('player', {
-			videoId: videoLanguage, //get var videoLanguage to load videoId
-			playerVars: {
-				rel: 0,
-				modestbranding: 1,
-				enablejsapi:1
-			},
-			events: {
-				'onReady': onPlayerReady,
-				'onStateChange': onPlayerStateChange
-			}
-		});
+        if(!player) {
+			player = new YT.Player('player', {
+				videoId: videoLanguage, //get var videoLanguage to load videoId
+				host:'https://www.youtube.com',
+				playerVars: {
+					rel: 0,
+					modestbranding: 1,
+					enablejsapi: 1
+				},
+				events: {
+					'onReady': onPlayerReady,
+					'onStateChange': onPlayerStateChange
+				}
+			});
+		}else{
+			player.loadVideoById({videoId:videoLanguage})
+        }
 
 
 

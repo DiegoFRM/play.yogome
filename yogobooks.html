@@ -32,7 +32,7 @@
     <title class="text3">Books</title>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery-responsiveGallery.css">
 
     <!-- Our Custom CSS -->
@@ -263,6 +263,37 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     <script src="assets/js/yogobooks/book.js"></script>
     <script src="assets/js/menuButtons.js"></script>
 
+    <script>
+    
+    
+    /*SCRIPT APP or PLAY YOGOME*/
+var detectOrigins;    
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;  
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+        detectOrigins = getParameterByName("app");
+        
+        
+        console.log(detectOrigins)
+        if(detectOrigins=="true"){
+            $(".navbar").hide();
+            $(".col-xs-12").hide();
+            //$(".bg-zip").addClass("newBg-zip");
+        }else if(detectOrigins=="false"){
+            $(".webPageSection2").show();
+            $("nav").show();
+        }
+
+    
+    
+    </script>
 
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>

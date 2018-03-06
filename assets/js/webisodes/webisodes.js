@@ -1,3 +1,7 @@
+
+      var newURL = window.location;
+        alert(newURL);
+
 var pop = document.getElementById("pop");
 var flipcard = document.getElementById("flipcard");
 var magic = document.getElementById("magic");
@@ -6,6 +10,8 @@ var videoId;
 var credentials = loginModal.getChildData();
 
 var tag = document.createElement('script');
+
+
 
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -181,12 +187,13 @@ function loadYTPlayer(videoLanguage, idnumber, namevideo){
 
 
 
-// onYouTubeIframeAPIReady()
+ onYouTubeIframeAPIReady()
 		//The API will call this function when the video player is ready.
 
 		//End Youtube video API
 	}
 }
+
 
 $('#wallpaper-slider').slick({
 	infinite: true,

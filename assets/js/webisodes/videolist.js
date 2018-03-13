@@ -2,6 +2,22 @@ var videolist =
     [
         
     {
+        videoID:14,
+        NAME_ES:"Como mantener una higiene adecuada.",
+        NAME_EN:"Ways to mantain good personal hygiene",
+        url_ES:"Pdk8wYO95qc",
+        url_EN:"jVFV9VC_ntY",
+        thumbnail: "Higiene"
+    },   
+    {
+        videoID:13,
+        NAME_ES:"¿Por qué me siento así?",
+        NAME_EN:"Why Do I Feel This Way?",
+        url_ES:"g-BodK1d6wc",
+        url_EN:"qVFhhkKBywM",
+        thumbnail: "Sentir"
+    },     
+    {
         videoID:12,
         NAME_ES:"Dinero alrededor del mundo.",
         NAME_EN:"Money Around the World",

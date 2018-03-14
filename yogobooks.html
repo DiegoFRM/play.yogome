@@ -266,7 +266,6 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     <script src="js/languages.js"></script>
     <script src="js/login.js"></script>
     <script src="assets/js/yogobooks/book.js"></script>
-    <script src="assets/js/menuButtons.js"></script>
 
     <script>
     
@@ -296,9 +295,25 @@ function getParameterByName(name, url) {
             $("nav").show();
         }
 
+	function callBackLogIn(){
+		var credentials = getCredentials()
+		var email = credentials.email
+		if(email){
+			$("#menuUserMovil").css("display","block");
+			$("#menuUser").css("display","flex");
+			$(".accesButtons").hide();
+			$(".accesButtonsMovil").hide();
+			$(".navbar").addClass("navbar-login");
+			$("#id_user").text(email)
+			$("#id_userMovil").text(email)
+		}
+
+
+	}
     
     
     </script>
+    <script src="assets/js/menuButtons.js"></script>
 
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>

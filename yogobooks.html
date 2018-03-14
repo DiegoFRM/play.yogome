@@ -296,8 +296,8 @@ function getParameterByName(name, url) {
         }
 
 	function callBackLogIn(){
-		var credentials = getCredentials()
-		var email = credentials.email
+		var credentials = loginModal.getChildData()
+		var email = credentials.parentMail
 		if(email){
 			$("#menuUserMovil").css("display","block");
 			$("#menuUser").css("display","flex");
@@ -307,7 +307,6 @@ function getParameterByName(name, url) {
 			$("#id_user").text(email)
 			$("#id_userMovil").text(email)
 		}
-
 
 	}
     

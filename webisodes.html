@@ -401,20 +401,18 @@ for(i=1;i<=videolist.length;i++){
 }
 
 
-function callBackLogIn(){
-	var credentials = getCredentials()
-	var email = credentials.email
-	if(email){
-		$("#menuUserMovil").css("display","block");
-		$("#menuUser").css("display","flex");
+function callBackLogIn() {
+	var credentials = loginModal.getChildData()
+	var email = credentials.parentMail
+	if (email) {
+		$("#menuUserMovil").css("display", "block");
+		$("#menuUser").css("display", "flex");
 		$(".accesButtons").hide();
 		$(".accesButtonsMovil").hide();
 		$(".navbar").addClass("navbar-login");
 		$("#id_user").text(email)
 		$("#id_userMovil").text(email)
 	}
-
-
 }
 
 var player;

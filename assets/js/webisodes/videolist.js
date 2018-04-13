@@ -2,6 +2,14 @@ var videolist =
     [
         
     {
+        videoID:19,
+        NAME_ES:"Cocinando con Matematicas",
+        NAME_EN:"Cooking with Math",
+        url_ES:"jCoLHFU5oWo",
+        url_EN:"cOYHxZ9-AjQ",
+        thumbnail: "matematicas"
+    },   
+    {
         videoID:18,
         NAME_ES:"La pista de hielo",
         NAME_EN:"A piece of pie",

@@ -144,12 +144,12 @@
 				];
 			} else if(support2d){
 				cssArray = [
-					getTransform2dCSS('-100%',	0.65,	'100%',		'50%',	1,	'visible'),
+					getTransform2dCSS('-100%',	0.65,	'100%',		'50%',	1,	'hidden'),
 
 					getTransform2dCSS('0', 		0.8,	'50%',		'50%',	1,	'visible'),
 					getTransform2dCSS('100%', 	1,		'50%',		'50%',	1,	'visible'),
 					getTransform2dCSS('200%', 	0.8,	'50%',		'50%',	1,	'visible'),
-					getTransform2dCSS('300%', 	0.65,	'0%',		'50%',	1,	'visible')
+					getTransform2dCSS('300%', 	0.65,	'0%',		'50%',	1,	'hidden')
 				];
 			}
 

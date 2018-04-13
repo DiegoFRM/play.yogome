@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
    
     <!-- ****** favicons ****** -->
      <link rel="shortcut icon" href="https://yogome.com/assets/favicon/favicon.ico">
@@ -80,8 +80,11 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     <audio preload="auto" id="flipcard"  src="assets/sounds/flipcard.mp3"></audio>
     <audio preload="auto" id="magic" src="assets/sounds/magic.mp3"></audio>
 <!-- MENU WEBPAGE -->
-            <nav id="sidebar">
-                <div id="dismiss">
+    
+
+    
+            <nav id="sidebar" tabindex="0" style="overflow: hidden; outline: none;">
+                <div id="dismiss" onclick="ShowHideBar()">
                     <i class="glyphicon glyphicon-arrow-left"></i>
                 </div>
 
@@ -140,6 +143,7 @@ $('.responsiveGallery-wrapper').responsiveGallery({
             </nav>
 
 
+    
             <div id="content">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
@@ -147,7 +151,7 @@ $('.responsiveGallery-wrapper').responsiveGallery({
 
                             <div class="navbar-header col-xs-12 col-sm-2">
                               <div class="col-xs-4 display-inline">
-                                <button type="button" id="sidebarCollapse" class="btn-burger-menu hidden-sm hidden-md hidden-lg">
+                                <button type="button" id="sidebarCollapse" class="btn-burger-menu hidden-sm hidden-md hidden-lg" onclick="ShowHideBar()">
                                       <i class="glyphicon glyphicon-menu-hamburger"></i>
                                       <span></span>
                                 </button>

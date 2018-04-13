@@ -6,6 +6,7 @@ var epicModel = function () {
 		minigames:{},
 		battles:[],
 		cards:[],
+        booksFinished:{},
 		yogotar:null,
 		minigamesPlayed:0,
 		currentPosition:0,
@@ -80,7 +81,6 @@ var epicModel = function () {
 				player.minigames[key].record = 0
 			}
 		}
-
 	}
 
 	function callMixpanelLogin(subscribed){

@@ -10,15 +10,31 @@ $(".slick-prev").click(function(){
          pop.play()
 })
 
+var langButton;
 var languagesPage = ["ES","EN","PT","ZH","JA","KO"];
 for(i=0;i<=5;i++){
     $(".botonLang" + i ).attr("number",i);
     $(".botonLang" + i ).click(function(){
         var str = window.location.search
         str = replaceQueryParam('language', languagesPage[$(this).attr("number")], str)
+        langButton=$(this).attr("number");
+        
+        if(langButton==0)localStorage.language="ES";
+        if(langButton==1)localStorage.language="EN";
+        if(langButton==2)localStorage.language="PT";
+        if(langButton==3)localStorage.language="ZH";
+        if(langButton==4)localStorage.language="JA";
+        if(langButton==5)localStorage.language="KO";
+        
         window.location = window.location.pathname + str;
 })    
     
+}
+
+if(localStorage.language){
+    language=localStorage.language;
+}else{
+    language="EN";
 }
 
 $("#navbar-logo-container").css("cursor","pointer");

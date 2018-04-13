@@ -26,10 +26,19 @@
     <meta name="msapplication-TileColor" content="#FFFFFF">
     <meta name="msapplication-TileImage" content="https://yogome.com/assets/favicon/favicon-144.png">
     <meta name="msapplication-config" content="https://yogome.com/assets/favicon/browserconfig.xml">
-    <!-- ****** favicons ****** -->      <title>Videos</title>
+    <!-- ****** favicons ****** -->      
+    <meta property="og:url"             content="https://play.yogome.com/webisodes.html" />
+    <meta property="og:type"            content="article" />
+    <meta property="og:title"           content="Yogome Books" />
+    <meta property="og:image"           content="https://play.yogome.com/banner_PY.png" />
+    <meta property="og:description" content="Encourage your child to learn while they have fun! Browse more than 2,000 activities in 8 fundamental subjects including educational apps, videos, games, and books. With the Yogome Learning Platform, your child will have the tools they need to succeed. Only 20 minutes a day can help improve your child’s social, emotional, and academic development. Start today!" />   
+    
+    
+    <title>Videos</title>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
            <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="css/modal.css">
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="assets/css/play.css">
     <link rel="stylesheet" href="assets/css/webisodes.css">
@@ -279,7 +288,6 @@
     <script src="js/mixpanel/webisodes.js"></script>
     <!-- End Mixpanel -->
     <!--menu actions    -->
-    <script src="assets/js/menuButtons.js"></script>
     <script>
 /*SCRIPT APP or PLAY YOGOME*/
 var detectOrigins;    
@@ -393,20 +401,18 @@ for(i=1;i<=videolist.length;i++){
 }
 
 
-function callBackLogIn(){
-	var credentials = getCredentials()
-	var email = credentials.email
-	if(email){
-		$("#menuUserMovil").css("display","block");
-		$("#menuUser").css("display","flex");
+function callBackLogIn() {
+	var credentials = loginModal.getChildData()
+	var email = credentials.parentMail
+	if (email) {
+		$("#menuUserMovil").css("display", "block");
+		$("#menuUser").css("display", "flex");
 		$(".accesButtons").hide();
 		$(".accesButtonsMovil").hide();
 		$(".navbar").addClass("navbar-login");
 		$("#id_user").text(email)
 		$("#id_userMovil").text(email)
 	}
-
-
 }
 
 var player;
@@ -555,5 +561,6 @@ $('#wallpaper-slider').slick({
 });
 
     </script>
+<script src="assets/js/menuButtons.js"></script>
 
 </html>

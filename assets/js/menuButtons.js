@@ -49,8 +49,8 @@ $(".register-btn").click(function(){
 
 $("#navbar-logo-container").mouseup(function(){
     magic.play()
-    var credentials = epicModel.getCredentials()
-    var email = credentials.email
+    var credentials = loginModal.getChildData()
+    var email = credentials.parentMail
     var location = "//play.yogome.com?language=" + language;
     if(email)
         location = "//play.yogome.com/epicweb/minigames/epicSite/?language=" + language;

@@ -2,6 +2,62 @@ var videolist =
     [
         
     {
+        videoID:19,
+        NAME_ES:"Cocinando con Matematicas",
+        NAME_EN:"Cooking with Math",
+        url_ES:"jCoLHFU5oWo",
+        url_EN:"cOYHxZ9-AjQ",
+        thumbnail: "matematicas"
+    },   
+    {
+        videoID:18,
+        NAME_ES:"La pista de hielo",
+        NAME_EN:"A piece of pie",
+        url_ES:"R9Ki-_rzWeM",
+        url_EN:"hQpkMUbLC9Q",
+        thumbnail: "pi"
+    },   
+    {
+        videoID:17,
+        NAME_ES:"Trabajemos juntos para salvar nuestro planeta",
+        NAME_EN:"Let's work together to save our planet",
+        url_ES:"A_p27fAZs9E",
+        url_EN:"hXSEwJe_Uuc",
+        thumbnail: "ambiente"
+    },   
+    {
+        videoID:16,
+        NAME_ES:"¿Qué es el año nuevo chino?",
+        NAME_EN:"The Chinese New Year",
+        url_ES:"OTHt0hj1Lwc",
+        url_EN:"mDbKV76vKDA",
+        thumbnail: "Chino"
+    },   
+    {
+        videoID:15,
+        NAME_ES:"Los planetas del sisitema solar.",
+        NAME_EN:"The planets of the solar system",
+        url_ES:"QCWQOuTZ95Y",
+        url_EN:"HhpPYTL3Urs",
+        thumbnail: "Planetas"
+    },   
+    {
+        videoID:14,
+        NAME_ES:"Como mantener una higiene adecuada.",
+        NAME_EN:"Ways to mantain good personal hygiene",
+        url_ES:"Pdk8wYO95qc",
+        url_EN:"jVFV9VC_ntY",
+        thumbnail: "Higiene"
+    },   
+    {
+        videoID:13,
+        NAME_ES:"¿Por qué me siento así?",
+        NAME_EN:"Why Do I Feel This Way?",
+        url_ES:"g-BodK1d6wc",
+        url_EN:"qVFhhkKBywM",
+        thumbnail: "Sentir"
+    },     
+    {
         videoID:12,
         NAME_ES:"Dinero alrededor del mundo.",
         NAME_EN:"Money Around the World",

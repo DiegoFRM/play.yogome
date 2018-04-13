@@ -31,13 +31,13 @@
     <meta property="og:type"            content="article" />
     <meta property="og:title"           content="Yogome Books" />
     <meta property="og:image"           content="https://play.yogome.com/banner_books.png" />
-    <meta property="og:description" content="Motivate your child to learn while having fun! Browse and play more than 2,000 curriculum-aligned learning games in 8 essential subjects. With the Yogome Learning Platform, your child has the support they need to improve their skills through educational apps, videos, games, and books.
-20 minutes a day are enough to improve your child’s development." />   
+    <meta property="og:description" content="Encourage your child to learn while they have fun! Browse more than 2,000 activities in 8 fundamental subjects including educational apps, videos, games, and books. With the Yogome Learning Platform, your child will have the tools they need to succeed. Only 20 minutes a day can help improve your child’s social, emotional, and academic development. Start today!" />   
     
     <title class="text3">Books</title>
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/modal.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" type="text/css" href="assets/css/jquery-responsiveGallery.css">
 
     <!-- Our Custom CSS -->
@@ -270,7 +270,6 @@ $('.responsiveGallery-wrapper').responsiveGallery({
     <script src="js/languages.js"></script>
     <script src="js/login.js"></script>
     <script src="assets/js/yogobooks/book.js"></script>
-    <script src="assets/js/menuButtons.js"></script>
 
     <script>
     
@@ -300,9 +299,24 @@ function getParameterByName(name, url) {
             $("nav").show();
         }
 
+	function callBackLogIn(){
+		var credentials = loginModal.getChildData()
+		var email = credentials.parentMail
+		if(email){
+			$("#menuUserMovil").css("display","block");
+			$("#menuUser").css("display","flex");
+			$(".accesButtons").hide();
+			$(".accesButtonsMovil").hide();
+			$(".navbar").addClass("navbar-login");
+			$("#id_user").text(email)
+			$("#id_userMovil").text(email)
+		}
+
+	}
     
     
     </script>
+    <script src="assets/js/menuButtons.js"></script>
 
     <!-- jQuery Nicescroll CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>

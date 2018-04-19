@@ -1,0 +1,43 @@
+<html>
+        <head>
+    </head>
+    <body>
+    
+    </body>
+    <script>           
+        
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]“/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+     }    
+        
+    var cachebust =  getParameterByName("cachebust");        
+    var language =  getParameterByName("language").toUpperCase();;
+    var email = getParameterByName("email");  
+    var name =  getParameterByName("name");  
+    var remoteid =  getParameterByName("remoteid");  
+    var educationid =  getParameterByName("educationid");  
+    var age =  getParameterByName("age");     
+    var app =  getParameterByName("app");     
+    var urlToGo="https://play.yogome.com/webisodes.html?cachebust=" +
+                 cachebust  + 
+                "&language=" +  language + 
+                "&email=" +  email + 
+                "&name=" +  name + 
+                "&remoteid=" +  remoteid + 
+                "&educationid=" +  educationid + 
+                "&age=" +  age + 
+                "&app=" +  app;
+                
+            
+        
+    window.location.href=urlToGo    
+        
+        
+    </script>
+</html>

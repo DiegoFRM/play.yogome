@@ -37,6 +37,15 @@ if(localStorage.language){
     language="EN";
 }
 
+
+
+
+if(localStorage.language){
+    language=localStorage.language;
+}else{
+    language="EN";
+}
+
 $("#navbar-logo-container").css("cursor","pointer");
 $(".text0").css("cursor","pointer");
 $(".text2").css("cursor","pointer");

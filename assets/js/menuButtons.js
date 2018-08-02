@@ -11,6 +11,7 @@ $(".slick-prev").click(function(){
 })
 
 var langButton;
+var location;
 var languagesPage = ["ES","EN","PT","ZH","JA","KO"];
 for(i=0;i<=5;i++){
     $(".botonLang" + i ).attr("number",i);
@@ -30,21 +31,13 @@ for(i=0;i<=5;i++){
 })    
     
 }
-
 if(localStorage.language){
     language=localStorage.language;
 }else{
     language="EN";
+	localStorage.language="EN";
 }
 
-
-
-
-if(localStorage.language){
-    language=localStorage.language;
-}else{
-    language="EN";
-}
 
 $("#navbar-logo-container").css("cursor","pointer");
 $(".text0").css("cursor","pointer");
@@ -60,7 +53,7 @@ $("#navbar-logo-container").mouseup(function(){
     magic.play()
     var credentials = loginModal.getChildData()
     var email = credentials.parentMail
-    var location = "//play.yogome.com?language=" + language;
+    location = "//play.yogome.com?language=" + language;
     if(email)
         location = "//play.yogome.com/epicweb/minigames/epicSite/?language=" + language;
     else if(window.isHome)
@@ -83,7 +76,7 @@ $(".text2").click(function(){
 });
 $(".text3").click(function(){
     magic.play();
-    window.location.href = "yogobooks.html?language=" + language;
+    window.location.href="https://books.yogome.com/?language=" + language;
 });
 $(".navbar-btn").click(function(){
     magic.play();
